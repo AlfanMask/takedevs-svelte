@@ -10,9 +10,13 @@ export default {
       },
       backgroundColor: {
         "base": "#171824",
+        "accent": "#5B74E5",
       },
       backgroundImage: {
         "blueish-gradient": "var(--blueish-gradient)",
+      },
+      borderColor: {
+        "secondary": "#8B929B",
       }
     },
   },
