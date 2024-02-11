@@ -7,6 +7,7 @@ export default {
         "primary": "#FFFFFF",
         "secondary": "#8B929B",
         "accent": "#5B74E5",
+        "dark": "#171824",
       },
       backgroundColor: {
         "base": "#171824",
@@ -19,6 +20,9 @@ export default {
         "accent-gradient": "var(--accent-gradient)",
       },
       borderColor: {
+        "secondary": "#8B929B",
+      },
+      outlineColor: {
         "secondary": "#8B929B",
       }
     },

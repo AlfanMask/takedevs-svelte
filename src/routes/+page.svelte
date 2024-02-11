@@ -9,6 +9,8 @@
 	import Tab from '$lib/components/ui/Tab.svelte';
 	import Gallery from '$lib/components/Gallery.svelte';
 	import { type Project, ProjectType } from '../constants/project';
+	import TextIcon from '$lib/components/ui/TextIcon.svelte';
+	import type { ContactFormData } from '../constants/contact_form';
 
 	// side-by-side-gallery-datas
 	const leftImgs: Array<string> = [
@@ -241,6 +243,16 @@
 				.sort((a, b) => a.title.toLocaleLowerCase().localeCompare(b.title.toLocaleLowerCase()));
 		}
 	}
+
+	// contact-us
+	let formData: ContactFormData = {
+		fullname: "",
+		email: "",
+		message: "",
+	}
+	const submitContact = () => {
+		// TODO: send to email
+	}
 </script>
 
 <div class="container mx-auto">
@@ -342,27 +354,24 @@
 		<Button text="CONTACT US" color="white" size="lg" />
 	</div>
 
-	<div class="flex py-12 bg-primary text-white">
+	<!-- #contact-us -->
+	<div id="contact-us" class="flex py-12">
 		<div class="container mx-40 flex justify-between">
 			<div class="my-10 w-full">
-				<h1 class="text-3xl font-bold mb-4"><span class="text-[#5B74E5]">CONTACT</span> US</h1>
-				<p class="text-[#8B929B] mb-5 text-lg">
+				<h2 class="text-accent mb-5">
+					CONTACT <span class="text-primary !text-3xl !font-bold">US</span>
+				</h2>
+				<p class="text-secondary mb-7 text-lg">
 					Reach out effortlessly. <br />
 					Connect with us for inquiries
 				</p>
-				<div>
-					<div class="my-3">
-						<p>email@gmail.com</p>
-					</div>
-					<div class="my-3">
-						<p>+62 1231 234123</p>
-					</div>
-					<div class="my-3">
-						<p>+62 1231 234123</p>
-					</div>
+				<div class="text-primary flex flex-col gap-5">
+					<TextIcon icon="fa-solid fa-envelope" text="email@gmail.com" />
+					<TextIcon icon="fa-brands fa-whatsapp" text="email@gmail.com" />
+					<TextIcon icon="fa-solid fa-phone" text="email@gmail.com" />
 				</div>
 			</div>
-			<div class="w-full my-10 border rounded-2xl bg-white p-8 text-black">
+			<div class="w-full my-10 border rounded-2xl px-7 py-10 bg-primary text-black">
 				<form action="">
 					<div class="mb-4">
 						<label for="fullName" class="block mb-2">Fullname</label>
@@ -370,7 +379,8 @@
 							type="text"
 							name="fullname"
 							id="fullname"
-							class="w-full px-4 py-2 border rounded-md focus:outline-1"
+							bind:value={formData.fullname}
+							class="w-full px-4 py-2 border rounded outline-secondary focus:outline-1 text-dark"
 						/>
 					</div>
 					<div class="mb-4">
@@ -379,7 +389,8 @@
 							type="email"
 							name="email"
 							id="email"
-							class="w-full px-4 py-2 border rounded-md focus:outline-1"
+							bind:value={formData.email}
+							class="w-full px-4 py-2 border rounded outline-secondary focus:outline-1 text-dark"
 						/>
 					</div>
 					<div class="mb-4">
@@ -387,12 +398,14 @@
 						<textarea
 							name="message"
 							id="message"
-							class="w-full px-4 py-2 border rounded-md focus:outline-1 h-56"
+							bind:value={formData.message}
+							class="w-full px-4 py-2 border rounded outline-secondary focus:outline-1 h-56 text-dark"
 						></textarea>
 					</div>
 					<button
 						type="submit"
 						class="py-2 px-10 border rounded-md bg-gradient-to-r from-[#1473FB] to-[#3B4B92] text-white font-semibold"
+						on:submit={submitContact}
 						>SUBMIT</button
 					>
 				</form>
@@ -400,24 +413,27 @@
 		</div>
 	</div>
 
-	<footer class="bg-gradient-to-b from-[#5B75E5] to-[#2476F9]">
+	<footer>
 		<div class="flex justify-between mx-40 py-5">
 			<div>
 				<img src={logo} alt="logo.png" class="mb-3" />
-				<p class="text-white">© 2024 TakeDevs. All rights reserved.</p>
+				<p class="text-primary">© 2024 TakeDevs. All rights reserved.</p>
 			</div>
-			<div class="inline-flex py-5">
+			<div class="socmed flex gap-5 py-5">
 				<a href="instagram.com">
-					<img src="" alt="logo.png" class="mr-4" />
+					<i class="fa-brands fa-instagram"></i>
 				</a>
 				<a href="facebook.com">
-					<img src="" alt="logo.png" class="mr-4" />
+					<i class="fa-brands fa-facebook"></i>
 				</a>
 				<a href="tiktok.com">
-					<img src="" alt="logo.png" class="mr-4" />
+					<i class="fa-brands fa-tiktok"></i>
 				</a>
 				<a href="google.com">
-					<img src="" alt="logo.png" class="mr-4" />
+					<i class="fa-brands fa-dribbble"></i>
+				</a>
+				<a href="google.com">
+					<i class="fa-brands fa-youtube"></i>
 				</a>
 			</div>
 		</div>
@@ -461,5 +477,16 @@
 		width: 100%;
 		height: 100%;
 		background: linear-gradient(to top, rgba(23, 24, 36, 0.75) 0%, rgba(23, 24, 36, 0) 100%);
+	}
+
+	/* footer */
+	footer {
+		background-image: var(--accent-footer-gradient);
+	}
+	footer .socmed a {
+		@apply w-12 h-12 rounded-full bg-primary flex items-center justify-center;
+	}
+	footer .socmed a i {
+		@apply text-2xl text-accent;
 	}
 </style>
