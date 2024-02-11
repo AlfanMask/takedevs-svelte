@@ -1,6 +1,5 @@
 <script lang="ts">
-    import { fade } from "svelte/transition";
-	import { quintOut } from "svelte/easing";
+	import { fadeAnimate } from "../../helper/fade";
 
 	/**
 	 * Collection of image assets;
@@ -25,24 +24,12 @@
     }
 
     const moveSlide = (move: "next" | "prev") => {
-        let isUp: boolean = false;
-        const interval = setInterval(() => {
-            if (!isUp){
-                imgsOpacity -= 5;
-                if (imgsOpacity < 0) {
-                    isUp = true;
-                    if (move === "next") slideIndex = slideIndex === slides.length - 1 ? 0 : slideIndex + 1;
-                    if (move === "prev") slideIndex = slideIndex === 0 ? slides.length - 1 : slideIndex - 1;
-                }
-            } else {
-                imgsOpacity += 5;
-                if (imgsOpacity > 100) {
-                    imgsOpacity = 100;
-                    clearInterval(interval)
-                }
-            }
-
-        }, 10);
+		const targetIndex = move === 'next' ? slideIndex === slides.length - 1 ? 0 : slideIndex + 1 : slideIndex === 0 ? slides.length - 1 : slideIndex - 1;
+        fadeAnimate(imgsOpacity, (itemOpacity) => {
+            imgsOpacity = itemOpacity;
+        }, () => {
+            slideIndex = targetIndex;
+        })
     }
 
 </script>

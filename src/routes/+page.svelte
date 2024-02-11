@@ -3,8 +3,12 @@
 	import SideBySideGallery from "$lib/components/SideBySideGallery.svelte";
 	import ScrollingLogos from "$lib/components/ScrollingLogos.svelte";
 	import LongSelector from "$lib/components/ui/LongSelector.svelte";
-	import type { LongSelectorItem } from "../constants/long_selector_item";
+	import type { SelectorItem } from "../constants/selector_item";
 	import type { ServiceDesc } from "../constants/service_desc";
+	import Tab from "$lib/components/ui/Tab.svelte";
+	import Gallery from "$lib/components/Gallery.svelte";
+  import type { Gallery as GalleryType } from "../constants/gallery";
+  import { type Project, ProjectType } from "../constants/project";
 
   // side-by-side-gallery-datas
   const leftImgs: Array<string> = [
@@ -34,14 +38,14 @@
 
   // services-selector
   const servicesDesc: Array<ServiceDesc> = [
-    { imgAsset: "/img/side-by-side-gallery/sbsg-1.png", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit nunc lectus, a tristique diam venenatis et" },
-    { imgAsset: "/img/side-by-side-gallery/sbsg-2.png", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit nunc lectus, a tristique diam venenatis et" },
-    { imgAsset: "/img/side-by-side-gallery/sbsg-3.png", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit nunc lectus, a tristique diam venenatis et" },
-    { imgAsset: "/img/side-by-side-gallery/sbsg-4.png", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit nunc lectus, a tristique diam venenatis et" },
-    { imgAsset: "/img/side-by-side-gallery/sbsg-5.png", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit nunc lectus, a tristique diam venenatis et" },
-    { imgAsset: "/img/side-by-side-gallery/sbsg-6.png", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit nunc lectus, a tristique diam venenatis et" },
+    { imgUrl: "/img/side-by-side-gallery/sbsg-1.png", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit nunc lectus, a tristique diam venenatis et" },
+    { imgUrl: "/img/side-by-side-gallery/sbsg-2.png", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit nunc lectus, a tristique diam venenatis et" },
+    { imgUrl: "/img/side-by-side-gallery/sbsg-3.png", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit nunc lectus, a tristique diam venenatis et" },
+    { imgUrl: "/img/side-by-side-gallery/sbsg-4.png", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit nunc lectus, a tristique diam venenatis et" },
+    { imgUrl: "/img/side-by-side-gallery/sbsg-5.png", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit nunc lectus, a tristique diam venenatis et" },
+    { imgUrl: "/img/side-by-side-gallery/sbsg-6.png", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit nunc lectus, a tristique diam venenatis et" },
   ]
-  const servicesSelectors: Array<LongSelectorItem> = [
+  const servicesSelectors: Array<SelectorItem> = [
     { text: "UI/UX Design", isActive: false },
     { text: "Website Design", isActive: false },
     { text: "WebApp Development", isActive: false },
@@ -55,6 +59,50 @@
       if (i !== activeServiceIndex) servicesSelectors[i].isActive = false
     }
     servicesSelectors[activeServiceIndex].isActive = true;
+  }
+
+  // projects-selector
+  const tabs: Array<SelectorItem> = [
+    { text: "All", isActive: true },
+    ...Object.values(ProjectType).map(o => ({ text: o, isActive: false }))
+  ]
+  let activeTabIndex: number = 0;
+
+  // proejct-galleries
+  const projectGalleries: Array<Project> = [
+    { imgUrl: "/img/side-by-side-gallery/sbsg-1.png", title: "test title", desc: ProjectType["UI/UX Design"], type: ProjectType["UI/UX Design"] },
+    { imgUrl: "/img/side-by-side-gallery/sbsg-1.png", title: "test title", desc: ProjectType["UI/UX Design"], type: ProjectType["UI/UX Design"] },
+    { imgUrl: "/img/side-by-side-gallery/sbsg-1.png", title: "test title", desc: ProjectType["UI/UX Design"], type: ProjectType["UI/UX Design"] },
+    { imgUrl: "/img/side-by-side-gallery/sbsg-1.png", title: "test title", desc: ProjectType["UI/UX Design"], type: ProjectType["UI/UX Design"] },
+    { imgUrl: "/img/side-by-side-gallery/sbsg-1.png", title: "test title", desc: ProjectType["UI/UX Design"], type: ProjectType["UI/UX Design"] },
+    { imgUrl: "/img/side-by-side-gallery/sbsg-1.png", title: "test title", desc: ProjectType["UI/UX Design"], type: ProjectType["UI/UX Design"] },
+    { imgUrl: "/img/side-by-side-gallery/sbsg-2.png", title: "test title 2", desc: ProjectType["Web Design"], type: ProjectType["Web Design"] },
+    { imgUrl: "/img/side-by-side-gallery/sbsg-2.png", title: "test title 2", desc: ProjectType["Web Design"], type: ProjectType["Web Design"] },
+    { imgUrl: "/img/side-by-side-gallery/sbsg-2.png", title: "test title 2", desc: ProjectType["Web Design"], type: ProjectType["Web Design"] },
+    { imgUrl: "/img/side-by-side-gallery/sbsg-2.png", title: "test title 2", desc: ProjectType["WebApp"], type: ProjectType["WebApp"] },
+    { imgUrl: "/img/side-by-side-gallery/sbsg-2.png", title: "test title 2", desc: ProjectType["WebApp"], type: ProjectType["WebApp"] },
+    { imgUrl: "/img/side-by-side-gallery/sbsg-3.png", title: "test title 3", desc: ProjectType["WebApp"], type: ProjectType["WebApp"] },
+    { imgUrl: "/img/side-by-side-gallery/sbsg-3.png", title: "test title 3", desc: ProjectType["WebApp"], type: ProjectType["WebApp"] },
+    { imgUrl: "/img/side-by-side-gallery/sbsg-3.png", title: "test title 3", desc: ProjectType["Mobile App"], type: ProjectType["Mobile App"] },
+    { imgUrl: "/img/side-by-side-gallery/sbsg-3.png", title: "test title 3", desc: ProjectType["Mobile App"], type: ProjectType["Mobile App"] },
+    { imgUrl: "/img/side-by-side-gallery/sbsg-3.png", title: "test title 3", desc: ProjectType["Custom Software"], type: ProjectType["Custom Software"] },
+    { imgUrl: "/img/side-by-side-gallery/sbsg-3.png", title: "test title 3", desc: ProjectType["Custom Software"], type: ProjectType["Custom Software"] },
+    { imgUrl: "/img/side-by-side-gallery/sbsg-3.png", title: "test title 3", desc: ProjectType["Bots & Automatics"], type: ProjectType["Bots & Automatics"] },
+  ]
+  let shownProjectGalleries: Array<Project> = [...projectGalleries];
+  $: {
+    for (let i = 0; i < tabs.length; i++) {
+      if (i !== activeTabIndex) tabs[i].isActive = false
+    }
+    tabs[activeTabIndex].isActive = true;
+
+    // update shown project galleries based on tab filter
+    const activeType: ProjectType | "All" = tabs[activeTabIndex].text as ProjectType | "All";
+    if (activeType === "All") {
+      shownProjectGalleries = [...projectGalleries];
+    } else {
+      shownProjectGalleries = projectGalleries.filter(o => o.type === activeType);
+    }
   }
 
 </script>
@@ -98,7 +146,7 @@
   <!-- #services -->
   <div id="services" class="flex h-full items-start gap-10 mb-28">
     <div class="left-group h-full relative flex-1">
-      <img src="{servicesDesc[activeServiceIndex].imgAsset}" alt="side-pict">
+      <img src="{servicesDesc[activeServiceIndex].imgUrl}" alt="side-pict">
       <p class="absolute z-20 px-7 py-10 bottom-4 text-primary italic">{servicesDesc[activeServiceIndex].desc}</p>
       <div class="gradient z-10"></div>
     </div>
@@ -111,6 +159,36 @@
       </div>
     </div>
   </div>
+
+  <!-- #projects -->
+  <div id="projects" class="flex flex-col mb-28">
+    <div class="title w-full flex flex-col items-center gap-5 mb-10">
+      <h2 class="text-primary">OUR <span class="text-accent !text-3xl !font-bold">PROJECTS</span></h2>
+      <p class="text-center text-secondary">Discover our portfolio: a testament to innovation, excellence,<br>and successful collaborations</p>
+    </div>
+    <div class="tabs flex gap-5 justify-center mb-14">
+      {#each tabs as tab, i }
+        <Tab item={tab} on:click={() => activeTabIndex = i} />
+      {/each}
+    </div>
+    <div class="galleries">
+      <!-- TODO: fix bug showProjectGalleries update cannot change the <Gallery /> -->
+      <Gallery galleries={shownProjectGalleries} />
+    </div>
+  </div>
+
+  <!-- #cta -->
+  <div id="cta" class="w-full flex flex-col items-center py-14 px-24 rounded-2xl bg-accent-gradient">
+    <h2 class="text-center text-primary mb-5">LET’S BUILD YOUR IDEAS WITH TAKEDEVS</h2>
+    <p class="text-center text-primary opacity-50 mb-10">Embark on a transformative journey as we collaborate to bring your ideas to life. With TakeDevs, innovation is a shared adventure, blending creativity and expertise to craft solutions that stand as a testament to your vision and our commitment to excellence</p>
+    <Button text="CONTACT US" color="white" size="lg" />
+  </div>
+
+
+
+
+
+  <div class="mb-80"></div>
 
 </div>
 

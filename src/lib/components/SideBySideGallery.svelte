@@ -37,8 +37,8 @@
         leftImgs = leftImgs.concat(leftImgs)
         rightImgs = rightImgs.concat(rightImgs)
 
-        // Update left and right gallery Y position every 10ms
-        // Reset if already on one loop
+        // update left and right gallery Y position every 10ms
+        // reset if already on one loop
         const interval = setInterval(() => {
             leftY -= 2;
             rightY -= 2;
@@ -53,7 +53,7 @@
 
         }, 10);
 
-        // Cleanup the interval when the component is destroyed
+        // cleanup the interval when the component is destroyed
         return () => clearInterval(interval);
     });
 

@@ -5,6 +5,7 @@
 
 :root{
     --blueish-gradient: linear-gradient(90deg, #1473FB 0%, #3B4B92 100%);
+    --accent-gradient: linear-gradient(90deg, #5C75E5 0%, #2476F9 100%);
 
     body {
         font-family: 'Poppins', sans-serif;

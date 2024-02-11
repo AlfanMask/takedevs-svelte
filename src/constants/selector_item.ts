@@ -1,4 +1,4 @@
-export interface LongSelectorItem {
+export interface SelectorItem {
     text: string,
     isActive: boolean,
 }

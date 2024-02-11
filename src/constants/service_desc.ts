@@ -1,4 +1,4 @@
 export interface ServiceDesc {
-    imgAsset: string,
+    imgUrl: string,
     desc: string,
 }

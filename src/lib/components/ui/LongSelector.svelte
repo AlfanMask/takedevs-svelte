@@ -1,11 +1,11 @@
 <script lang="ts">
-	import type { LongSelectorItem } from "../../../constants/long_selector_item";
+	import type { SelectorItem } from "../../../constants/selector_item";
 
     /**
      * Object of Selector Item
-     * @type {LongSelectorItem}
+     * @type {SelectorItem}
      */
-    export let item: LongSelectorItem
+    export let item: SelectorItem
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -18,7 +18,3 @@
     <span class="{item.isActive ? 'text-primary' : 'text-secondary'}">{item.text}</span>
     <i class="fa-solid fa-chevron-right {item.isActive ? 'text-primary' : 'text-secondary'}"></i>
 </div>
-
-<style lang="postcss">
-
-</style>
