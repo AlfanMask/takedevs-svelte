@@ -253,11 +253,23 @@
 		email: "",
 		message: "",
 	}
+
+	// open mail app and send the email
 	const submitContact = () => {
-		// TODO: send to email
+		const subject: string = formData.fullname + " - " + formData.email;
+		const mailtoUrl = `mailto:${process.env.ADMIN_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(formData.message)}`;
+		window.open(mailtoUrl);
+	}
+
+	// helper
+	const scrollToSection = (sectionId: string) => {
+		const section = document.getElementById(sectionId);
+		section?.scrollIntoView({ behavior: "smooth" });
 	}
 </script>
 
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 <div class="container mx-auto">
 	<!-- #navbar -->
 	<nav class="container fixed z-50 py-6 bg-base w-full flex flex-row justify-between items-center">
@@ -265,10 +277,10 @@
 			<img src="/img/logo-takedevs-white.png" alt="logo-takedevs-white" />
 		</a>
 		<ul class="flex flex-row gap-10 items-center">
-			<li class="menu-item"><a href="#header">Home</a></li>
-			<li class="menu-item"><a href="#services">Services</a></li>
-			<li class="menu-item"><a href="#projects">Projects</a></li>
-			<li class="menu-item"><a href="#contact">Contact Us</a></li>
+			<li class="menu-item cursor-pointer" on:click={() => scrollToSection('header')}>Home</li>
+			<li class="menu-item cursor-pointer" on:click={() => scrollToSection('services')}>Services</li>
+			<li class="menu-item cursor-pointer" on:click={() => scrollToSection('projects')}>Projects</li>
+			<li class="menu-item cursor-pointer" on:click={() => scrollToSection('contact-us')}>Contact Us</li>
 		</ul>
 	</nav>
 
@@ -338,7 +350,6 @@
 			{/each}
 		</div>
 		<div class="galleries">
-			<!-- TODO: fix bug showProjectGalleries update cannot change the <Gallery /> -->
 			<Gallery galleries={shownProjectGalleries} />
 		</div>
 	</div>
@@ -354,7 +365,8 @@
 			TakeDevs, innovation is a shared adventure, blending creativity and expertise to craft
 			solutions that stand as a testament to your vision and our commitment to excellence
 		</p>
-		<Button text="CONTACT US" color="white" size="lg" />
+		<!-- svelte-ignore missing-declaration -->
+		<Button text="CONTACT US" color="white" size="lg" on:click={() => scrollToSection('contact-us')} />
 	</div>
 
 	<!-- #contact-us -->
@@ -444,6 +456,11 @@
 </div>
 
 <style lang="postcss">
+	/* all sections */
+	#header, #services, #projects, #contact-us {
+		scroll-margin: 120px;
+	}
+	
 	/* navbar */
 	.menu-item {
 		@apply text-secondary inline-block;
