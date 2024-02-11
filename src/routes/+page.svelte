@@ -83,14 +83,14 @@
 	}
 
 	// projects-selector
-	const tabs: Array<SelectorItem> = [
+	let tabs: Array<SelectorItem> = [
 		{ text: 'All', isActive: true },
 		...Object.values(ProjectType).map((o) => ({ text: o, isActive: false }))
 	];
 	let activeTabIndex: number = 0;
 
 	// proejct-galleries
-	const projectGalleries: Array<Project> = [
+	let projectGalleries: Array<Project> = [
 		{
 			imgUrl: '/img/projects/bots-dulur-yuenes.jpg',
 			title: 'Dulur Yuenes Bot',
@@ -228,9 +228,10 @@
 			if (i !== activeTabIndex) tabs[i].isActive = false;
 		}
 		tabs[activeTabIndex].isActive = true;
-
+		
 		// update shown project galleries based on tab filter
 		const activeType: ProjectType | 'All' = tabs[activeTabIndex].text as ProjectType | 'All';
+		
 		if (activeType === 'All') {
 			shownProjectGalleries = [
 				...projectGalleries.sort((a, b) =>
@@ -238,9 +239,11 @@
 				)
 			];
 		} else {
-			shownProjectGalleries = projectGalleries
+			shownProjectGalleries = [
+				...projectGalleries
 				.filter((o) => o.type === activeType)
-				.sort((a, b) => a.title.toLocaleLowerCase().localeCompare(b.title.toLocaleLowerCase()));
+				.sort((a, b) => a.title.toLocaleLowerCase().localeCompare(b.title.toLocaleLowerCase()))
+			]
 		}
 	}
 

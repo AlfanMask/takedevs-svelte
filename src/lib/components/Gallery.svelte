@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import type { Gallery } from '../../constants/gallery';
 	import { fadeAnimate } from '../../helper/fade';
 
@@ -13,16 +14,25 @@
 	let slides: Array<Array<Gallery>> = [];
 	let slideIndex: number = 0;
 	let galleriesOpacity: number = 100;
+	let itemsPerSlide: number = 6;
 
-	let stack: Array<Gallery> = [];
-	for (let i = 0; i < galleries.length; i++) {
-		stack.push(galleries[i]);
+	$: {
+		// reset slides and slideIndex after props changes
+		slides = [];
+		slideIndex = 0;
+		let stack: Array<Gallery> = [];
+		
+		for (let i = 0; i < galleries.length; i++) {
+			stack.push(galleries[i]);
 
-		if ((i + 1) % 6 === 0 || i === galleries.length - 1) {
-			slides.push([...stack]);
-			stack = [];
+			if ((i + 1) % itemsPerSlide === 0 || i === galleries.length - 1) {
+				slides = [...slides, [...stack]];
+				stack = [];
+			}
 		}
 	}
+	
+
 
 	const moveSlide = (move: 'prev' | 'next') => {
 		const targetIndex = move === 'next' ? slideIndex === slides.length - 1 ? 0 : slideIndex + 1 : slideIndex === 0 ? slides.length - 1 : slideIndex - 1;
@@ -54,10 +64,11 @@
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div id="gallery" class="w-full mb-10 mx-auto">
 	<div id="top-group" class="relative w-full flex justify-between items-center mb-10">
-		{#if galleries.length > 6}
+		{#if galleries.length > itemsPerSlide}
 			<i on:click={() => moveSlide('prev')} class="fa-solid fa-chevron-left -left-14"></i>
 		{/if}
 		<div class="galleries-group w-full grid grid-cols-3 gap-5">
+			{#if (slides.length > 0)}
 			{#each slides[slideIndex] as gallery}
 				<div class="card relative w-full h-full cursor-pointer hover:scale-105 transition-transform">
 					<img src={gallery.imgUrl} alt={gallery.title} style="opacity: {galleriesOpacity}%" />
@@ -66,11 +77,13 @@
 					<div class="gradient z-10"></div>
 				</div>
 			{/each}
+			{/if}
 		</div>
-		{#if galleries.length > 6}
+		{#if galleries.length > itemsPerSlide}
 			<i on:click={() => moveSlide('next')} class="fa-solid fa-chevron-right -right-14"></i>
 		{/if}
 	</div>
+	{#if galleries.length > itemsPerSlide}
 	<div id="bottom-group">
 		<div class="indicators flex justify-center gap-3">
 			{#each slides as _, i}
@@ -81,6 +94,7 @@
 			{/each}
 		</div>
 	</div>
+	{/if}
 </div>
 
 <style lang="postcss">
