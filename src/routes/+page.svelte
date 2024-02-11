@@ -430,7 +430,7 @@
 
 </div>
 <footer>
-	<div class="flex justify-between py-5 mx-32">
+	<div class="container mx-auto flex justify-between py-5">
 		<div>
 			<img src={logo} alt="logo.png" class="mb-3" />
 			<p class="text-primary">© 2024 TakeDevs. All rights reserved.</p>
