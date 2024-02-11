@@ -3,6 +3,26 @@
 @tailwind utilities;
 
 
-body {
-    font-family: 'Poppins', sans-serif;
+:root{
+    --blueish-gradient: linear-gradient(90deg, #1473FB 0%, #3B4B92 100%);
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #171824;
+    }
+
+    h1 {
+        font-size: 48px;
+        font-weight: 700;
+    }
+
+    h2 {
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    p, span {
+        font-size: 18px;
+        font-weight: normal;
+    }
 }

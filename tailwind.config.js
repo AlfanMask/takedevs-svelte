@@ -10,6 +10,9 @@ export default {
       },
       backgroundColor: {
         "base": "#171824",
+      },
+      backgroundImage: {
+        "blueish-gradient": "var(--blueish-gradient)",
       }
     },
   },
