@@ -414,25 +414,25 @@
 	</div>
 
 	<footer>
-		<div class="flex justify-between mx-40 py-5">
+		<div class="flex justify-around py-5">
 			<div>
 				<img src={logo} alt="logo.png" class="mb-3" />
 				<p class="text-primary">© 2024 TakeDevs. All rights reserved.</p>
 			</div>
 			<div class="socmed flex gap-5 py-5">
-				<a href="instagram.com">
+				<a href="https://www.instagram.com/takedevs/" target="_blank">
 					<i class="fa-brands fa-instagram"></i>
 				</a>
-				<a href="facebook.com">
+				<a href="https://www.facebook.com/takedevs" target="_blank">
 					<i class="fa-brands fa-facebook"></i>
 				</a>
-				<a href="tiktok.com">
+				<a href="https://www.tiktok.com/@alfanmask_"target="_blank">
 					<i class="fa-brands fa-tiktok"></i>
 				</a>
-				<a href="google.com">
+				<a href="https://dribbble.com/alfanmask" target="_blank">
 					<i class="fa-brands fa-dribbble"></i>
 				</a>
-				<a href="google.com">
+				<a href="https://www.youtube.com/channel/UClL7X1vDCUAJ1rFvzI27Cbg" target="_blank">
 					<i class="fa-brands fa-youtube"></i>
 				</a>
 			</div>
