@@ -381,9 +381,9 @@
 					Connect with us for inquiries
 				</p>
 				<div class="text-primary flex flex-col gap-5">
-					<TextIcon icon="fa-solid fa-envelope" text="email@gmail.com" />
-					<TextIcon icon="fa-brands fa-whatsapp" text="email@gmail.com" />
-					<TextIcon icon="fa-solid fa-phone" text="email@gmail.com" />
+					<TextIcon icon="fa-solid fa-envelope" text="info.takedevs@gmail.com" />
+					<TextIcon icon="fa-brands fa-whatsapp" text="+6285 1711 58992" />
+					<TextIcon icon="fa-solid fa-phone" text="+6285 1711 58992" />
 				</div>
 			</div>
 			<div class="w-full my-10 border rounded-2xl px-7 py-10 bg-primary text-black">
@@ -430,7 +430,7 @@
 
 </div>
 <footer>
-	<div class="container mx-auto flex justify-between py-5">
+	<div class="container mx-auto flex justify-between items-center py-5">
 		<div>
 			<img src={logo} alt="logo.png" class="mb-3" />
 			<p class="text-primary">© 2024 TakeDevs. All rights reserved.</p>
