@@ -29,21 +29,22 @@
     "/img/clients/logo-client-3.png",
     "/img/clients/logo-client-4.png",
     "/img/clients/logo-client-5.png",
-    "/img/clients/logo-client-5.png",
-    "/img/clients/logo-client-4.png",
-    "/img/clients/logo-client-3.png",
-    "/img/clients/logo-client-2.png",
-    "/img/clients/logo-client-1.png",
+    "/img/clients/logo-client-6.png",
+    "/img/clients/logo-client-7.png",
+    "/img/clients/logo-client-8.png",
+    "/img/clients/logo-client-9.png",
+    "/img/clients/logo-client-10.png",
+    "/img/clients/logo-client-11.png",
   ]
 
   // services-selector
   const servicesDesc: Array<ServiceDesc> = [
-    { imgUrl: "/img/side-by-side-gallery/sbsg-1.png", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit nunc lectus, a tristique diam venenatis et" },
-    { imgUrl: "/img/side-by-side-gallery/sbsg-2.png", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit nunc lectus, a tristique diam venenatis et" },
-    { imgUrl: "/img/side-by-side-gallery/sbsg-3.png", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit nunc lectus, a tristique diam venenatis et" },
-    { imgUrl: "/img/side-by-side-gallery/sbsg-4.png", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit nunc lectus, a tristique diam venenatis et" },
-    { imgUrl: "/img/side-by-side-gallery/sbsg-5.png", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit nunc lectus, a tristique diam venenatis et" },
-    { imgUrl: "/img/side-by-side-gallery/sbsg-6.png", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit nunc lectus, a tristique diam venenatis et" },
+    { imgUrl: "/img/services/service-uiux.png", desc: "Elevate your brand with captivating UI/UX design, creating seamless digital experiences that resonate with your audience and boost user engagement" },
+    { imgUrl: "/img/services/service-webdesign.png", desc: "Transform your vision into a stunning online presence. Our web design solutions combine aesthetics and functionality to ensure your website stands out and drives results" },
+    { imgUrl: "/img/services/service-webapp.png", desc: "Empower your business with custom web applications tailored to your unique requirements. Enhance user experiences, streamline processes, and boost overall productivity" },
+    { imgUrl: "/img/services/service-mobile.png", desc: "Bring your ideas to life with our mobile app development. We craft innovative applications that cater to your users' needs, ensuring a seamless and engaging mobile journey" },
+    { imgUrl: "/img/services/service-custom-software.png", desc: "Propel your business forward with personalized software solutions. Tailored to your specific needs, our custom software enhances efficiency, scalability, and overall performance" },
+    { imgUrl: "/img/services/service-bots.png", desc: "Revolutionize your operations with intelligent bots and automation. Experience enhanced efficiency, speed, and improved user interactions, driving success in the digital landscape" },
   ]
   const servicesSelectors: Array<SelectorItem> = [
     { text: "UI/UX Design", isActive: false },
@@ -70,26 +71,29 @@
 
   // proejct-galleries
   const projectGalleries: Array<Project> = [
-    { imgUrl: "/img/side-by-side-gallery/sbsg-1.png", title: "test title", desc: ProjectType["UI/UX Design"], type: ProjectType["UI/UX Design"] },
-    { imgUrl: "/img/side-by-side-gallery/sbsg-1.png", title: "test title", desc: ProjectType["UI/UX Design"], type: ProjectType["UI/UX Design"] },
-    { imgUrl: "/img/side-by-side-gallery/sbsg-1.png", title: "test title", desc: ProjectType["UI/UX Design"], type: ProjectType["UI/UX Design"] },
-    { imgUrl: "/img/side-by-side-gallery/sbsg-1.png", title: "test title", desc: ProjectType["UI/UX Design"], type: ProjectType["UI/UX Design"] },
-    { imgUrl: "/img/side-by-side-gallery/sbsg-1.png", title: "test title", desc: ProjectType["UI/UX Design"], type: ProjectType["UI/UX Design"] },
-    { imgUrl: "/img/side-by-side-gallery/sbsg-1.png", title: "test title", desc: ProjectType["UI/UX Design"], type: ProjectType["UI/UX Design"] },
-    { imgUrl: "/img/side-by-side-gallery/sbsg-2.png", title: "test title 2", desc: ProjectType["Web Design"], type: ProjectType["Web Design"] },
-    { imgUrl: "/img/side-by-side-gallery/sbsg-2.png", title: "test title 2", desc: ProjectType["Web Design"], type: ProjectType["Web Design"] },
-    { imgUrl: "/img/side-by-side-gallery/sbsg-2.png", title: "test title 2", desc: ProjectType["Web Design"], type: ProjectType["Web Design"] },
-    { imgUrl: "/img/side-by-side-gallery/sbsg-2.png", title: "test title 2", desc: ProjectType["WebApp"], type: ProjectType["WebApp"] },
-    { imgUrl: "/img/side-by-side-gallery/sbsg-2.png", title: "test title 2", desc: ProjectType["WebApp"], type: ProjectType["WebApp"] },
-    { imgUrl: "/img/side-by-side-gallery/sbsg-3.png", title: "test title 3", desc: ProjectType["WebApp"], type: ProjectType["WebApp"] },
-    { imgUrl: "/img/side-by-side-gallery/sbsg-3.png", title: "test title 3", desc: ProjectType["WebApp"], type: ProjectType["WebApp"] },
-    { imgUrl: "/img/side-by-side-gallery/sbsg-3.png", title: "test title 3", desc: ProjectType["Mobile App"], type: ProjectType["Mobile App"] },
-    { imgUrl: "/img/side-by-side-gallery/sbsg-3.png", title: "test title 3", desc: ProjectType["Mobile App"], type: ProjectType["Mobile App"] },
-    { imgUrl: "/img/side-by-side-gallery/sbsg-3.png", title: "test title 3", desc: ProjectType["Custom Software"], type: ProjectType["Custom Software"] },
-    { imgUrl: "/img/side-by-side-gallery/sbsg-3.png", title: "test title 3", desc: ProjectType["Custom Software"], type: ProjectType["Custom Software"] },
-    { imgUrl: "/img/side-by-side-gallery/sbsg-3.png", title: "test title 3", desc: ProjectType["Bots & Automatics"], type: ProjectType["Bots & Automatics"] },
+    { imgUrl: "/img/projects/bots-dulur-yuenes.jpg", title: "Dulur Yuenes Bot", desc: ProjectType["Bots & Automatics"], type: ProjectType["Bots & Automatics"] },
+    { imgUrl: "/img/projects/custom-software-game-fighting.jpg", title: "Logan Paul Fighting Game", desc: ProjectType["Custom Software"], type: ProjectType["Custom Software"] },
+    { imgUrl: "/img/projects/uiux-pamapersada.jpg", title: "Warehouse PT. Pamapersada", desc: ProjectType["UI/UX Design"], type: ProjectType["UI/UX Design"] },
+    { imgUrl: "/img/projects/uiux-refit.png", title: "Refit Store", desc: ProjectType["UI/UX Design"], type: ProjectType["UI/UX Design"] },
+    { imgUrl: "/img/projects/uiux-logo-hakaplastik.png", title: "Hakaplastik Logo", desc: ProjectType["UI/UX Design"], type: ProjectType["UI/UX Design"] },
+    { imgUrl: "/img/projects/webapp-airival-shuttle.png", title: "Airival Shuttle", desc: ProjectType["WebApp"], type: ProjectType["WebApp"] },
+    { imgUrl: "/img/projects/webapp-socioinvest.png", title: "Socioinvest", desc: ProjectType["WebApp"], type: ProjectType["WebApp"] },
+    { imgUrl: "/img/projects/webapp-vizir-marketplace.png", title: "Vizir Marketplace", desc: ProjectType["WebApp"], type: ProjectType["WebApp"] },
+    { imgUrl: "/img/projects/webapp-vizir-notes.png", title: "Vizir Notes Taking", desc: ProjectType["WebApp"], type: ProjectType["WebApp"] },
+    { imgUrl: "/img/projects/webapp-vizir-product-manager.png", title: "Vizir Product Manager", desc: ProjectType["WebApp"], type: ProjectType["WebApp"] },
+    { imgUrl: "/img/projects/webapp-vizir-project-management.png", title: "Vizir Project Management", desc: ProjectType["WebApp"], type: ProjectType["WebApp"] },
+    { imgUrl: "/img/projects/webapp-vizir-ticketing.png", title: "Vizir Ticketing", desc: ProjectType["WebApp"], type: ProjectType["WebApp"] },
+    { imgUrl: "/img/projects/webapp-vizir-ticket-manager.png", title: "Vizir Ticket Manager", desc: ProjectType["WebApp"], type: ProjectType["WebApp"] },
+    { imgUrl: "/img/projects/webdesign-augmented-solution.png", title: "Augmented Solution", desc: ProjectType["Web Design"], type: ProjectType["Web Design"] },
+    { imgUrl: "/img/projects/webdesign-bt-rorsystem.png", title: "BT Rorsystem", desc: ProjectType["Web Design"], type: ProjectType["Web Design"] },
+    { imgUrl: "/img/projects/webdesign-cimport.png", title: "C-Import", desc: ProjectType["Web Design"], type: ProjectType["Web Design"] },
+    { imgUrl: "/img/projects/webdesign-hakaplastik.png", title: "PT. Haka Sentral Plastik Indonesia", desc: ProjectType["Web Design"], type: ProjectType["Web Design"] },
+    { imgUrl: "/img/projects/webdesign-holh.png", title: "Heroes of Last Haven", desc: ProjectType["Web Design"], type: ProjectType["Web Design"] },
+    { imgUrl: "/img/projects/webdesign-littlenewsears.png", title: "Littlenewsears", desc: ProjectType["Web Design"], type: ProjectType["Web Design"] },
+    { imgUrl: "/img/projects/webdesign-umkmpajang.png", title: "UMKM Pajang Martketplace", desc: ProjectType["Web Design"], type: ProjectType["Web Design"] },
+    { imgUrl: "/img/projects/webdesign-yesagroworld.png", title: "Yesagroworld", desc: ProjectType["Web Design"], type: ProjectType["Web Design"] },
   ]
-  let shownProjectGalleries: Array<Project> = [...projectGalleries];
+  let shownProjectGalleries: Array<Project> = [...projectGalleries.sort((a, b) => a.title.toLocaleLowerCase().localeCompare(b.title.toLocaleLowerCase()))];
   $: {
     for (let i = 0; i < tabs.length; i++) {
       if (i !== activeTabIndex) tabs[i].isActive = false
@@ -99,9 +103,9 @@
     // update shown project galleries based on tab filter
     const activeType: ProjectType | "All" = tabs[activeTabIndex].text as ProjectType | "All";
     if (activeType === "All") {
-      shownProjectGalleries = [...projectGalleries];
+      shownProjectGalleries = [...projectGalleries.sort((a, b) => a.title.toLocaleLowerCase().localeCompare(b.title.toLocaleLowerCase()))];
     } else {
-      shownProjectGalleries = projectGalleries.filter(o => o.type === activeType);
+      shownProjectGalleries = projectGalleries.filter(o => o.type === activeType).sort((a, b) => a.title.toLocaleLowerCase().localeCompare(b.title.toLocaleLowerCase()));
     }
   }
 
@@ -110,9 +114,11 @@
 <div class="container mx-auto">
   <!-- #navbar -->
   <nav class="w-full flex flex-row justify-between items-center mt-10">
-    <img src="/img/logo-takedevs-white.png" alt="logo-takedevs-white">
+    <a href="#header">
+      <img src="/img/logo-takedevs-white.png" alt="logo-takedevs-white">
+    </a>
     <ul class="flex flex-row gap-10 items-center">
-      <li class="menu-item"><a href="#home">Home</a></li>
+      <li class="menu-item"><a href="#header">Home</a></li>
       <li class="menu-item"><a href="#services">Services</a></li>
       <li class="menu-item"><a href="#projects">Projects</a></li>
       <li class="menu-item"><a href="#contact">Contact Us</a></li>
@@ -185,10 +191,6 @@
   </div>
 
 
-
-
-
-  <div class="mb-80"></div>
 
 </div>
 
