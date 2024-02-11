@@ -113,7 +113,7 @@
 
 <div class="container mx-auto">
   <!-- #navbar -->
-  <nav class="w-full flex flex-row justify-between items-center mt-10">
+  <nav class="container fixed z-50 py-6 bg-base w-full flex flex-row justify-between items-center">
     <a href="#header">
       <img src="/img/logo-takedevs-white.png" alt="logo-takedevs-white">
     </a>
@@ -126,7 +126,7 @@
   </nav>
 
   <!-- #header -->
-  <div id="header" class="flex mb-28">
+  <div id="header" class="flex pt-24 mb-28">
     <div class="left-group flex-1 my-auto">
       <h1 class="text-primary mb-5">Develop Your
         <span class="text-accent !text-5xl !font-bold">Ideas</span>
@@ -206,7 +206,7 @@
     height: 800px;
   }
   #header .top-gradient, #header .bottom-gradient {
-    @apply w-full h-60 absolute z-50;
+    @apply w-full h-60 absolute z-10;
   }
   #header .top-gradient {
     background: linear-gradient(to bottom, rgba(23,24,36,1) 10%, rgba(23,24,36,0) 100%);
