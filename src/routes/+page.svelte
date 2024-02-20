@@ -290,7 +290,7 @@
 			<h1 class="text-center lg:text-start text-primary mb-5">
 				Develop Your
 				<span class="text-accent !text-4xl lg:!text-5xl !font-bold">Ideas</span>
-				<br /> with
+				<br class="hidden lg:block"/> with
 				<span class="text-accent !text-4xl lg:!text-5xl !font-bold">TakeDevs</span>
 			</h1>
 			<p class="text-center lg:text-start text-secondary mb-10">
