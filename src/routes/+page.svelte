@@ -11,6 +11,16 @@
 	import { type Project, ProjectType } from '../constants/project';
 	import TextIcon from '$lib/components/ui/TextIcon.svelte';
 	import type { ContactFormData } from '../constants/contact_form';
+	import Navbar from './Navbar.svelte';
+	import type { NavbarItem } from '../constants/navbar_item';
+
+	// navbar
+	const navbarItems: Array<NavbarItem> = [
+		{ id: 'header', name: "Home" },
+		{ id: 'services', name: "Services" },
+		{ id: 'projects', name: "Projects" },
+		{ id: 'contact-us', name: "Contact Us" },
+	] 
 
 	// side-by-side-gallery-datas
 	const leftImgs: Array<string> = [
@@ -270,62 +280,58 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-<div class="container mx-auto">
+<div class="container mx-auto px-5 lg:px-0">
 	<!-- #navbar -->
-	<nav class="container fixed z-50 py-6 bg-base w-full flex flex-row justify-between items-center">
-		<a href="#header">
-			<img src="/img/logo-takedevs-white.png" alt="logo-takedevs-white" />
-		</a>
-		<ul class="flex flex-row gap-10 items-center">
-			<li class="menu-item cursor-pointer" on:click={() => scrollToSection('header')}>Home</li>
-			<li class="menu-item cursor-pointer" on:click={() => scrollToSection('services')}>Services</li>
-			<li class="menu-item cursor-pointer" on:click={() => scrollToSection('projects')}>Projects</li>
-			<li class="menu-item cursor-pointer" on:click={() => scrollToSection('contact-us')}>Contact Us</li>
-		</ul>
-	</nav>
+	<Navbar items={navbarItems} />
 
 	<!-- #header -->
-	<div id="header" class="flex pt-24 mb-28">
-		<div class="left-group flex-1 my-auto">
-			<h1 class="text-primary mb-5">
+	<div id="header" class="flex pt-20 lg:pt-24 mb-28 h-[500px] lg:h-[800px]">
+		<div class="left-group z-10 flex flex-1 flex-col items-center pt-14 lg:pt-0 lg:items-start my-auto">
+			<h1 class="text-center lg:text-start text-primary mb-5">
 				Develop Your
-				<span class="text-accent !text-5xl !font-bold">Ideas</span>
+				<span class="text-accent !text-4xl lg:!text-5xl !font-bold">Ideas</span>
 				<br /> with
-				<span class="text-accent !text-5xl !font-bold">TakeDevs</span>
+				<span class="text-accent !text-4xl lg:!text-5xl !font-bold">TakeDevs</span>
 			</h1>
-			<p class="text-secondary mb-10">
+			<p class="text-center lg:text-start text-secondary mb-10">
 				Unlock the full potential of your imagination and creativity with TakeDevs – where
 				innovation meets expertise
 			</p>
-			<Button text="Learn more" />
+			<Button text="Learn more" on:click={() => scrollToSection('clients')} />
 		</div>
 
-		<div class="right-group relative flex-1 overflow-hidden">
-			<div class="top-gradient"></div>
-			<SideBySideGallery {leftImgs} {rightImgs} />
-			<div class="bottom-gradient"></div>
+		<div class="right-group left-0 blur-sm opacity-25 lg:blur-none lg:opacity-100 z-0 absolute lg:relative flex-1">
+			<div class="max-h-[500px] lg:max-h-[800px] relative overflow-hidden">
+				<div class="top-gradient w-full h-10 lg:h-60 absolute z-10"></div>
+				<SideBySideGallery {leftImgs} {rightImgs} />
+				<div class="bottom-gradient w-full h-10 lg:h-60 absolute z-10"></div>
+			</div>
 		</div>
 	</div>
 
 	<!-- #clients -->
-	<div id="clients" class="mb-28">
+	<div id="clients" class="mb-20 lg:mb-28 lg:pt-20">
+		<!-- TODO: remove horizontal overflow -->
+		<h2 class="text-center text-primary mb-10">
+			OUR <span class="text-accent !text-2xl lg:!text-3xl !font-bold">CLIENTS</span>
+		</h2>
 		<ScrollingLogos imgs={scrollingLogoImgs} />
 	</div>
 
 	<!-- #services -->
-	<div id="services" class="flex h-full items-start gap-10 mb-28">
+	<div id="services" class="flex flex-col-reverse lg:flex-row h-full items-start gap-10 mb-20 lg:mb-28">
 		<div class="left-group h-full relative flex-1">
-			<img src={servicesDesc[activeServiceIndex].imgUrl} alt="side-pict" />
+			<img src={servicesDesc[activeServiceIndex].imgUrl} alt="side-pict" class="h-[300px] lg:h-[500px]" />
 			<p class="absolute z-20 px-7 py-10 bottom-4 text-primary italic">
 				{servicesDesc[activeServiceIndex].desc}
 			</p>
 			<div class="gradient z-10"></div>
 		</div>
 		<div class="right-group flex-1 mt-2">
-			<h2 class="text-primary mb-7">
-				OUR <span class="text-accent !text-3xl !font-bold">SERVICES</span>
+			<h2 class="text-center lg:text-start text-primary mb-7">
+				OUR <span class="text-accent !text-2xl lg:!text-3xl !font-bold">SERVICES</span>
 			</h2>
-			<div class="selectors flex flex-col gap-5">
+			<div class="selectors grid grid-cols-2 lg:flex lg:flex-col gap-5">
 				{#each servicesSelectors as service, i}
 					<LongSelector item={service} on:click={() => (activeServiceIndex = i)} />
 				{/each}
@@ -334,22 +340,35 @@
 	</div>
 
 	<!-- #projects -->
-	<div id="projects" class="flex flex-col mb-28">
+	<div id="projects" class="flex flex-col mb-20 lg:mb-28">
 		<div class="title w-full flex flex-col items-center gap-5 mb-10">
 			<h2 class="text-primary">
-				OUR <span class="text-accent !text-3xl !font-bold">PROJECTS</span>
+				OUR <span class="text-accent !text-2xl lg:!text-3xl !font-bold">PROJECTS</span>
 			</h2>
 			<p class="text-center text-secondary">
 				Discover our portfolio: a testament to innovation, excellence,<br />and successful
 				collaborations
 			</p>
 		</div>
-		<div class="tabs flex gap-5 justify-center mb-14">
+		<!-- TODO: the problem is because it is overflow horizontally -->
+		<div class="tabs-mobile flex lg:hidden flex-col gap-5 justify-center mb-14">
+			<!-- show ALL tab as a top tab that takes whole width -->
+			<Tab item={tabs[0]} on:click={() => (activeTabIndex = 0)} />
+			<div class="grid grid-cols-2 gap-5">
+				{#each tabs as tab, i}
+					{#if i !== 0}
+						<Tab item={tab} on:click={() => (activeTabIndex = i)} />
+					{/if}
+				{/each}
+			</div>
+		</div>
+		<div class="tab-desktop hidden lg:flex flex-col lg:flex-row gap-5 justify-center mb-14">
 			{#each tabs as tab, i}
 				<Tab item={tab} on:click={() => (activeTabIndex = i)} />
 			{/each}
 		</div>
 		<div class="galleries">
+			<!-- TODO: remove horizontal overflow -->
 			<Gallery galleries={shownProjectGalleries} />
 		</div>
 	</div>
@@ -357,7 +376,7 @@
 	<!-- #cta -->
 	<div
 		id="cta"
-		class="w-full flex flex-col items-center py-14 px-24 rounded-2xl bg-accent-gradient"
+		class="w-full flex flex-col items-center py-14 px-12 lg:px-24 rounded-2xl bg-accent-gradient mb-10"
 	>
 		<h2 class="text-center text-primary mb-5">LET’S BUILD YOUR IDEAS WITH TAKEDEVS</h2>
 		<p class="text-center text-primary opacity-50 mb-10">
@@ -371,22 +390,22 @@
 
 	<!-- #contact-us -->
 	<div id="contact-us" class="flex py-12">
-		<div class="container flex justify-between">
-			<div class="my-10 w-full">
-				<h2 class="text-accent mb-5">
-					CONTACT <span class="text-primary !text-3xl !font-bold">US</span>
+		<div class="container flex flex-col lg:flex-row gap-10 lg:gap-0 justify-between">
+			<div class="flex flex-col items-center lg:items-start lg:my-10 w-full">
+				<h2 class="text-center lg:text-start text-accent mb-5">
+					CONTACT <span class="text-primary !text-2xl lg:!text-3xl !font-bold">US</span>
 				</h2>
-				<p class="text-secondary mb-7 text-lg">
+				<p class="text-center lg:text-start text-secondary mb-7 text-lg">
 					Reach out effortlessly. <br />
 					Connect with us for inquiries
 				</p>
-				<div class="text-primary flex flex-col gap-5">
+				<div class="text-primary flex flex-col items-center lg:items-start gap-5">
 					<TextIcon icon="fa-solid fa-envelope" text="info.takedevs@gmail.com" />
 					<TextIcon icon="fa-brands fa-whatsapp" text="+6285 1711 58992" />
 					<TextIcon icon="fa-solid fa-phone" text="+6285 1711 58992" />
 				</div>
 			</div>
-			<div class="w-full my-10 border rounded-2xl px-7 py-10 bg-primary text-black">
+			<div class="w-full lg:my-10 border rounded-2xl px-7 py-10 bg-primary text-black">
 				<form action="">
 					<div class="mb-4">
 						<label for="fullName" class="block mb-2">Fullname</label>
@@ -419,7 +438,7 @@
 					</div>
 					<button
 						type="submit"
-						class="py-2 px-10 border rounded-md bg-gradient-to-r from-[#1473FB] to-[#3B4B92] text-white font-semibold"
+						class="w-full lg:w-fit py-2 px-10 border rounded-md bg-gradient-to-r from-[#1473FB] to-[#3B4B92] text-white font-semibold"
 						on:submit={submitContact}
 						>SUBMIT</button
 					>
@@ -430,8 +449,8 @@
 
 </div>
 <footer>
-	<div class="container mx-auto flex justify-between items-center py-5">
-		<div>
+	<div class="container mx-auto flex flex-col lg:flex-row justify-between items-center py-5">
+		<div class="flex flex-col items-center lg:items-start mb-5 lg:mb-0">
 			<img src={logo} alt="logo.png" class="mb-3" />
 			<p class="text-primary">© 2024 TakeDevs. All rights reserved.</p>
 		</div>
@@ -457,23 +476,11 @@
 
 <style lang="postcss">
 	/* all sections */
-	#header, #services, #projects, #contact-us {
+	#header, #clients, #services, #projects, #contact-us {
 		scroll-margin: 120px;
 	}
 	
-	/* navbar */
-	.menu-item {
-		@apply text-secondary inline-block;
-	}
-
 	/* header */
-	#header {
-		height: 800px;
-	}
-	#header .top-gradient,
-	#header .bottom-gradient {
-		@apply w-full h-60 absolute z-10;
-	}
 	#header .top-gradient {
 		background: linear-gradient(to bottom, rgba(23, 24, 36, 1) 10%, rgba(23, 24, 36, 0) 100%);
 	}
@@ -485,7 +492,7 @@
 	/* services */
 	#services .left-group img {
 		@apply relative w-full rounded-2xl object-cover;
-		height: 500px;
+		/* height: 500px; */
 		box-shadow:
 			0 20px 25px -5px rgba(0, 0, 0, 0.1),
 			0 10px 10px -5px rgba(0, 0, 0, 0.04);
@@ -509,4 +516,10 @@
 	footer .socmed a i {
 		@apply text-2xl text-accent;
 	}
+
+	/* @media screen and (max-width: 768px) {
+		#header {
+			height: 384px;
+		}
+	} */
 </style>
