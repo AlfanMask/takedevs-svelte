@@ -11,10 +11,10 @@
 	export let galleries: Array<Gallery>;
 
 	// use to make slides of logos
+	let itemsPerSlide: number = 6;
 	let slides: Array<Array<Gallery>> = [];
 	let slideIndex: number = 0;
 	let galleriesOpacity: number = 100;
-	let itemsPerSlide: number = 6;
 
 	$: {
 		// reset slides and slideIndex after props changes
@@ -58,16 +58,25 @@
 			}
 		);
 	};
+
+	onMount(() => {
+        // set number of logos per slide based on device mode
+        // desktop: 5
+        // mobile: 1
+        const screenWidth: number = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+        itemsPerSlide = screenWidth <= 768 ? 1 : 6;
+    })
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div id="gallery" class="w-full mb-10 mx-auto">
+    <!-- TODO: remove overflow horizontal scroll in mobile version -->
 	<div id="top-group" class="relative w-full flex justify-between items-center mb-10">
 		{#if galleries.length > itemsPerSlide}
-			<i on:click={() => moveSlide('prev')} class="fa-solid fa-chevron-left -left-14"></i>
+			<i on:click={() => moveSlide('prev')} class="fa-solid fa-chevron-left left-0"></i>
 		{/if}
-		<div class="galleries-group w-full grid grid-cols-3 gap-5">
+		<div class="galleries-group w-full grid grid-cols-1 lg:grid-cols-3 gap-5 px-10">
 			{#if (slides.length > 0)}
 			{#each slides[slideIndex] as gallery}
 				<div class="card relative w-full h-full cursor-pointer hover:scale-105 transition-transform">
@@ -80,12 +89,12 @@
 			{/if}
 		</div>
 		{#if galleries.length > itemsPerSlide}
-			<i on:click={() => moveSlide('next')} class="fa-solid fa-chevron-right -right-14"></i>
+			<i on:click={() => moveSlide('next')} class="fa-solid fa-chevron-right right-0"></i>
 		{/if}
 	</div>
 	{#if galleries.length > itemsPerSlide}
 	<div id="bottom-group">
-		<div class="indicators flex justify-center gap-3">
+		<div class="indicators hidden lg:flex justify-center gap-3">
 			{#each slides as _, i}
 				<div
 					class="indicator w-4 h-4 rounded-full cursor-pointer {slideIndex === i ? 'bg-primary' : 'bg-secondary'}"
