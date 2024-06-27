@@ -150,6 +150,12 @@
 			type: ProjectType['WebApp']
 		},
 		{
+			imgUrl: '/img/projects/webapp-undangan-ibnuabbas.png',
+			title: 'Undangan Digital Ponpes Ibnu Abbas',
+			desc: ProjectType['WebApp'],
+			type: ProjectType['WebApp']
+		},
+		{
 			imgUrl: '/img/projects/webapp-vizir-notes.png',
 			title: 'Vizir Notes Taking',
 			desc: ProjectType['WebApp'],
