@@ -46,7 +46,8 @@
 		'/img/clients/logo-client-8.png',
 		'/img/clients/logo-client-9.png',
 		'/img/clients/logo-client-10.png',
-		'/img/clients/logo-client-11.png'
+		'/img/clients/logo-client-11.png',
+		'/img/clients/logo-client-12.png',
 	];
 
 	// services-selector
@@ -467,13 +468,13 @@
 			<a href="https://www.facebook.com/takedevs" target="_blank">
 				<i class="fa-brands fa-facebook"></i>
 			</a>
-			<a href="https://www.tiktok.com/@alfanmask_"target="_blank">
+			<a href="https://www.tiktok.com/@takedevs"target="_blank">
 				<i class="fa-brands fa-tiktok"></i>
 			</a>
 			<a href="https://dribbble.com/alfanmask" target="_blank">
 				<i class="fa-brands fa-dribbble"></i>
 			</a>
-			<a href="https://www.youtube.com/channel/UClL7X1vDCUAJ1rFvzI27Cbg" target="_blank">
+			<a href="https://www.youtube.com/@takedevs_official" target="_blank">
 				<i class="fa-brands fa-youtube"></i>
 			</a>
 		</div>
