@@ -105,8 +105,8 @@
 		{
 			imgUrl: '/img/projects/bots-dulur-yuenes.jpg',
 			title: 'Dulur Yuenes Bot',
-			desc: ProjectType['Bots & Automatics'],
-			type: ProjectType['Bots & Automatics']
+			desc: ProjectType['Bots & Automation'],
+			type: ProjectType['Bots & Automation']
 		},
 		{
 			imgUrl: '/img/projects/custom-software-game-fighting.jpg',
