@@ -103,7 +103,7 @@
 	// proejct-galleries
 	let projectGalleries: Array<Project> = [
 		{
-			imgUrl: '/img/projects/bots-dulur-yuenes.jpg',
+			imgUrl: '/img/projects/bots-kampusku.jpg',
 			title: 'Kampusku Bot',
 			desc: ProjectType['Bots & Automation'],
 			type: ProjectType['Bots & Automation']
