@@ -274,7 +274,6 @@
 	// open mail app and send the email
 	const submitContact = () => {
 		const subject: string = formData.fullname + " - " + formData.email;
-		console.log("env: ", import.meta.env.VITE_ADMIN_EMAIL)
 		const mailtoUrl = `mailto:${import.meta.env.VITE_ADMIN_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(formData.message)}`;
 		window.open(mailtoUrl);
 	}
