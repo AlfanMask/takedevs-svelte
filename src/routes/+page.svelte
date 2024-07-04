@@ -274,7 +274,8 @@
 	// open mail app and send the email
 	const submitContact = () => {
 		const subject: string = formData.fullname + " - " + formData.email;
-		const mailtoUrl = `mailto:${process.env.ADMIN_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(formData.message)}`;
+		console.log("env: ", import.meta.env.VITE_ADMIN_EMAIL)
+		const mailtoUrl = `mailto:${import.meta.env.VITE_ADMIN_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(formData.message)}`;
 		window.open(mailtoUrl);
 	}
 
@@ -443,11 +444,13 @@
 							class="w-full px-4 py-2 border rounded outline-secondary focus:outline-1 h-56 text-dark"
 						></textarea>
 					</div>
-					<button
+					<!-- svelte-ignore a11y-missing-attribute -->
+					<!-- svelte-ignore a11y-no-static-element-interactions -->
+					<a
 						type="submit"
 						class="w-full lg:w-fit py-2 px-10 border rounded-md bg-gradient-to-r from-[#1473FB] to-[#3B4B92] text-white font-semibold"
-						on:submit={submitContact}
-						>SUBMIT</button
+						on:click={submitContact}
+						>SUBMIT</a
 					>
 				</form>
 			</div>
