@@ -103,10 +103,10 @@
 	// proejct-galleries
 	let projectGalleries: Array<Project> = [
 		{
-			imgUrl: '/img/projects/bots-dulur-yuenes.jpg',
-			title: 'Dulur Yuenes Bot',
-			desc: ProjectType['Bots & Automatics'],
-			type: ProjectType['Bots & Automatics']
+			imgUrl: '/img/projects/bots-kampusku.jpg',
+			title: 'Kampusku Bot',
+			desc: ProjectType['Bots & Automation'],
+			type: ProjectType['Bots & Automation']
 		},
 		{
 			imgUrl: '/img/projects/custom-software-game-fighting.jpg',
@@ -407,11 +407,13 @@
 					Connect with us for inquiries
 				</p>
 				<div class="text-primary flex flex-col items-center lg:items-start gap-5">
-					<TextIcon icon="fa-solid fa-envelope" text="info.takedevs@gmail.com" />
+					<TextIcon icon="fa-solid fa-envelope" text="contact@takedevs.com" />
 					<TextIcon icon="fa-brands fa-whatsapp" text="+6285 1711 58992" />
 					<TextIcon icon="fa-solid fa-phone" text="+6285 1711 58992" />
 				</div>
 			</div>
+
+			<!-- Form -->
 			<div class="w-full lg:my-10 border rounded-2xl px-7 py-10 bg-primary text-black">
 				<form action="">
 					<div class="mb-4">
