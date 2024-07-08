@@ -4,15 +4,15 @@
 	import SideBySideGallery from '$lib/components/SideBySideGallery.svelte';
 	import ScrollingLogos from '$lib/components/ScrollingLogos.svelte';
 	import LongSelector from '$lib/components/ui/LongSelector.svelte';
-	import type { SelectorItem } from '../constants/selector_item';
-	import type { ServiceDesc } from '../constants/service_desc';
+	import type { SelectorItem } from '../../constants/selector_item';
+	import type { ServiceDesc } from '../../constants/service_desc';
 	import Tab from '$lib/components/ui/Tab.svelte';
 	import Gallery from '$lib/components/Gallery.svelte';
-	import { type Project, ProjectType } from '../constants/project';
+	import { type Project, ProjectType } from '../../constants/project';
 	import TextIcon from '$lib/components/ui/TextIcon.svelte';
-	import type { ContactFormData } from '../constants/contact_form';
-	import Navbar from './Navbar.svelte';
-	import type { NavbarItem } from '../constants/navbar_item';
+	import type { ContactFormData } from '../../constants/contact_form';
+	import Navbar from '../Navbar.svelte';
+	import type { NavbarItem } from '../../constants/navbar_item';
 
 	// navbar
 	const navbarItems: Array<NavbarItem> = [
@@ -74,7 +74,7 @@
 		},
 		{
 			imgUrl: '/img/services/service-bots.png',
-			desc: 'Revolutionize your operations with intelligent bots and automation. Experience enhanced efficiency, speed, and improved user interactions, driving success in the digital landscape'
+			desc: 'Revolutionize your operations with intelligent bot and automation. Experience enhanced efficiency, speed, and improved user interactions, driving success in the digital landscape'
 		}
 	];
 	const servicesSelectors: Array<SelectorItem> = [
@@ -83,7 +83,7 @@
 		{ text: 'WebApp Development', isActive: false },
 		{ text: 'Mobile App Development', isActive: false },
 		{ text: 'Custom Software Development', isActive: false },
-		{ text: 'Bots & Automation', isActive: false }
+		{ text: 'Bot & Automation', isActive: false }
 	];
 	let activeServiceIndex: number = 0;
 	$: {
@@ -105,8 +105,8 @@
 		{
 			imgUrl: '/img/projects/bots-kampusku.jpg',
 			title: 'Kampusku Bot',
-			desc: ProjectType['Bots & Automation'],
-			type: ProjectType['Bots & Automation']
+			desc: ProjectType['Bot & Automation'],
+			type: ProjectType['Bot & Automation']
 		},
 		{
 			imgUrl: '/img/projects/custom-software-game-fighting.jpg',

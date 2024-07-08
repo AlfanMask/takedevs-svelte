@@ -10,5 +10,5 @@ export enum ProjectType {
     "WebApp" = "WebApp",
     "Mobile App" = "Mobile App",
     "Custom Software" = "Custom Software",
-    "Bots & Automation" = "Bots & Automation",
+    "Bot & Automation" = "Bot & Automation",
 }
