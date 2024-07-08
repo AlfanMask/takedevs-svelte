@@ -16,11 +16,11 @@
 
 	// navbar
 	const navbarItems: Array<NavbarItem> = [
-		{ id: 'header', name: "Home" },
-		{ id: 'services', name: "Services" },
-		{ id: 'projects', name: "Projects" },
-		{ id: 'contact-us', name: "Contact Us" },
-	] 
+		{ id: 'header', name: 'Home' },
+		{ id: 'services', name: 'Services' },
+		{ id: 'projects', name: 'Projects' },
+		{ id: 'contact-us', name: 'Contact Us' }
+	];
 
 	// side-by-side-gallery-datas
 	const leftImgs: Array<string> = [
@@ -47,7 +47,7 @@
 		'/img/clients/logo-client-9.png',
 		'/img/clients/logo-client-10.png',
 		'/img/clients/logo-client-11.png',
-		'/img/clients/logo-client-12.png',
+		'/img/clients/logo-client-12.png'
 	];
 
 	// services-selector
@@ -245,10 +245,10 @@
 			if (i !== activeTabIndex) tabs[i].isActive = false;
 		}
 		tabs[activeTabIndex].isActive = true;
-		
+
 		// update shown project galleries based on tab filter
 		const activeType: ProjectType | 'All' = tabs[activeTabIndex].text as ProjectType | 'All';
-		
+
 		if (activeType === 'All') {
 			shownProjectGalleries = [
 				...projectGalleries.sort((a, b) =>
@@ -258,31 +258,31 @@
 		} else {
 			shownProjectGalleries = [
 				...projectGalleries
-				.filter((o) => o.type === activeType)
-				.sort((a, b) => a.title.toLocaleLowerCase().localeCompare(b.title.toLocaleLowerCase()))
-			]
+					.filter((o) => o.type === activeType)
+					.sort((a, b) => a.title.toLocaleLowerCase().localeCompare(b.title.toLocaleLowerCase()))
+			];
 		}
 	}
 
 	// contact-us
 	let formData: ContactFormData = {
-		fullname: "",
-		email: "",
-		message: "",
-	}
+		fullname: '',
+		email: '',
+		message: ''
+	};
 
 	// open mail app and send the email
 	const submitContact = () => {
-		const subject: string = formData.fullname + " - " + formData.email;
+		const subject: string = formData.fullname + ' - ' + formData.email;
 		const mailtoUrl = `mailto:${import.meta.env.VITE_ADMIN_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(formData.message)}`;
 		window.open(mailtoUrl);
-	}
+	};
 
 	// helper
 	const scrollToSection = (sectionId: string) => {
 		const section = document.getElementById(sectionId);
-		section?.scrollIntoView({ behavior: "smooth" });
-	}
+		section?.scrollIntoView({ behavior: 'smooth' });
+	};
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -293,11 +293,13 @@
 
 	<!-- #header -->
 	<div id="header" class="flex pt-20 lg:pt-24 mb-28 h-[500px] lg:h-[800px]">
-		<div class="left-group z-10 flex flex-1 flex-col items-center pt-14 lg:pt-0 lg:items-start my-auto">
+		<div
+			class="left-group z-10 flex flex-1 flex-col items-center pt-14 lg:pt-0 lg:items-start my-auto"
+		>
 			<h1 class="text-center lg:text-start text-primary mb-5">
 				Develop Your
 				<span class="text-accent !text-4xl lg:!text-5xl !font-bold">Ideas</span>
-				<br class="hidden lg:block"/> with
+				<br class="hidden lg:block" /> with
 				<span class="text-accent !text-4xl lg:!text-5xl !font-bold">TakeDevs</span>
 			</h1>
 			<p class="text-center lg:text-start text-secondary mb-10">
@@ -307,7 +309,9 @@
 			<Button text="Learn more" on:click={() => scrollToSection('clients')} />
 		</div>
 
-		<div class="right-group left-0 blur-sm opacity-25 lg:blur-none lg:opacity-100 z-0 absolute lg:relative flex-1">
+		<div
+			class="right-group left-0 blur-sm opacity-25 lg:blur-none lg:opacity-100 z-0 absolute lg:relative flex-1"
+		>
 			<div class="max-h-[500px] lg:max-h-[800px] relative overflow-hidden">
 				<div class="top-gradient w-full h-10 lg:h-60 absolute z-10"></div>
 				<SideBySideGallery {leftImgs} {rightImgs} />
@@ -326,9 +330,16 @@
 	</div>
 
 	<!-- #services -->
-	<div id="services" class="flex flex-col-reverse lg:flex-row h-full items-start gap-10 mb-20 lg:mb-28">
+	<div
+		id="services"
+		class="flex flex-col-reverse lg:flex-row h-full items-start gap-10 mb-20 lg:mb-28"
+	>
 		<div class="left-group h-full relative flex-1">
-			<img src={servicesDesc[activeServiceIndex].imgUrl} alt="side-pict" class="h-[300px] lg:h-[500px]" />
+			<img
+				src={servicesDesc[activeServiceIndex].imgUrl}
+				alt="side-pict"
+				class="h-[300px] lg:h-[500px]"
+			/>
 			<p class="absolute z-20 px-7 py-10 bottom-4 text-primary italic">
 				{servicesDesc[activeServiceIndex].desc}
 			</p>
@@ -392,7 +403,12 @@
 			solutions that stand as a testament to your vision and our commitment to excellence
 		</p>
 		<!-- svelte-ignore missing-declaration -->
-		<Button text="CONTACT US" color="white" size="lg" on:click={() => scrollToSection('contact-us')} />
+		<Button
+			text="CONTACT US"
+			color="white"
+			size="lg"
+			on:click={() => scrollToSection('contact-us')}
+		/>
 	</div>
 
 	<!-- #contact-us -->
@@ -450,14 +466,12 @@
 					<a
 						type="submit"
 						class="w-full lg:w-fit py-2 px-10 border rounded-md bg-gradient-to-r from-[#1473FB] to-[#3B4B92] text-white font-semibold"
-						on:click={submitContact}
-						>SUBMIT</a
+						on:click={submitContact}>SUBMIT</a
 					>
 				</form>
 			</div>
 		</div>
 	</div>
-
 </div>
 <footer>
 	<div class="container mx-auto flex flex-col lg:flex-row justify-between items-center py-5">
@@ -472,7 +486,7 @@
 			<a href="https://www.facebook.com/takedevs" target="_blank">
 				<i class="fa-brands fa-facebook"></i>
 			</a>
-			<a href="https://www.tiktok.com/@takedevs"target="_blank">
+			<a href="https://www.tiktok.com/@takedevs" target="_blank">
 				<i class="fa-brands fa-tiktok"></i>
 			</a>
 			<a href="https://dribbble.com/alfanmask" target="_blank">
@@ -487,10 +501,14 @@
 
 <style lang="postcss">
 	/* all sections */
-	#header, #clients, #services, #projects, #contact-us {
+	#header,
+	#clients,
+	#services,
+	#projects,
+	#contact-us {
 		scroll-margin: 120px;
 	}
-	
+
 	/* header */
 	#header .top-gradient {
 		background: linear-gradient(to bottom, rgba(23, 24, 36, 1) 10%, rgba(23, 24, 36, 0) 100%);
