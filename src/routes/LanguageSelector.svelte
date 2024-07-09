@@ -13,7 +13,6 @@
 	const showFlags = writable(true);
 
 	onMount(() => {
-		// Check if the browser is Chrome
 		const userAgent = window.navigator.userAgent;
 		if (userAgent.includes('Chrome')) {
 			showFlags.set(false);
