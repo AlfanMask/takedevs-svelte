@@ -4,23 +4,23 @@
 	import SideBySideGallery from '$lib/components/SideBySideGallery.svelte';
 	import ScrollingLogos from '$lib/components/ScrollingLogos.svelte';
 	import LongSelector from '$lib/components/ui/LongSelector.svelte';
-	import type { SelectorItem } from '../constants/selector_item';
-	import type { ServiceDesc } from '../constants/service_desc';
+	import type { SelectorItem } from '../../constants/selector_item';
+	import type { ServiceDesc } from '../../constants/service_desc';
 	import Tab from '$lib/components/ui/Tab.svelte';
 	import Gallery from '$lib/components/Gallery.svelte';
-	import { type Project, ProjectType } from '../constants/project';
+	import { type Project, ProjectTypeID } from '../../constants/project_id';
 	import TextIcon from '$lib/components/ui/TextIcon.svelte';
-	import type { ContactFormData } from '../constants/contact_form';
-	import Navbar from './Navbar.svelte';
-	import type { NavbarItem } from '../constants/navbar_item';
+	import type { ContactFormData } from '../../constants/contact_form';
+	import Navbar from '../Navbar.svelte';
+	import type { NavbarItem } from '../../constants/navbar_item';
 
 	// navbar
 	const navbarItems: Array<NavbarItem> = [
-		{ id: 'header', name: "Home" },
-		{ id: 'services', name: "Services" },
-		{ id: 'projects', name: "Projects" },
-		{ id: 'contact-us', name: "Contact Us" },
-	] 
+		{ id: 'header', name: 'Beranda' },
+		{ id: 'services', name: 'Jasa' },
+		{ id: 'projects', name: 'Proyek' },
+		{ id: 'contact-us', name: 'Hubungi Kami' }
+	];
 
 	// side-by-side-gallery-datas
 	const leftImgs: Array<string> = [
@@ -47,43 +47,43 @@
 		'/img/clients/logo-client-9.png',
 		'/img/clients/logo-client-10.png',
 		'/img/clients/logo-client-11.png',
-		'/img/clients/logo-client-12.png',
+		'/img/clients/logo-client-12.png'
 	];
 
 	// services-selector
 	const servicesDesc: Array<ServiceDesc> = [
 		{
 			imgUrl: '/img/services/service-uiux.png',
-			desc: 'Elevate your brand with captivating UI/UX design, creating seamless digital experiences that resonate with your audience and boost user engagement'
+			desc: 'Tingkatkan brand Anda dengan desain UI/UX yang menarik, ciptakan pengalaman digital yang mulus yang baik dengan audiens Anda, serta tingkatkan keterlibatan pengguna.'
 		},
 		{
 			imgUrl: '/img/services/service-webdesign.png',
-			desc: 'Transform your vision into a stunning online presence. Our web design solutions combine aesthetics and functionality to ensure your website stands out and drives results'
+			desc: 'Ubah visi Anda menjadi kehadiran yang memukau. Desain web kami menggabungkan estetika dan fungsionalitas untuk memastikan web Anda menonjol dan menghasilkan.'
 		},
 		{
 			imgUrl: '/img/services/service-webapp.png',
-			desc: 'Empower your business with custom web applications tailored to your unique requirements. Enhance user experiences, streamline processes, and boost overall productivity'
+			desc: 'Perkuat bisnis Anda dengan aplikasi web kustom yang disesuaikan dengan kebutuhan unik Anda. Tingkatkan pengalaman pengguna, efisiensikan proses, dan dorong produktivitas keseluruhan.'
 		},
 		{
 			imgUrl: '/img/services/service-mobile.png',
-			desc: "Bring your ideas to life with our mobile app development. We craft innovative applications that cater to your users' needs, ensuring a seamless and engaging mobile journey"
+			desc: 'Hidupkan ide Anda dengan aplikasi mobile kami. Kami menciptakan aplikasi inovatif yang memenuhi kebutuhan pengguna Anda, memastikan perjalanan mobile yang mulus dan menarik.'
 		},
 		{
 			imgUrl: '/img/services/service-custom-software.png',
-			desc: 'Propel your business forward with personalized software solutions. Tailored to your specific needs, our custom software enhances efficiency, scalability, and overall performance'
+			desc: 'Majukan bisnis Anda dengan solusi perangkat lunak khusus. Disesuaikan dengan kebutuhan spesifik Anda, perangkat lunak kustom kami meningkatkan efisiensi, skalabilitas, dan kinerja secara keseluruhan.'
 		},
 		{
 			imgUrl: '/img/services/service-bots.png',
-			desc: 'Revolutionize your operations with intelligent bots and automation. Experience enhanced efficiency, speed, and improved user interactions, driving success in the digital landscape'
+			desc: 'Revolusikan operasional bisnis Anda dengan bot dan otomatisasi cerdas. Nikmati peningkatan efisiensi, kecepatan, dan interaksi pengguna yang lebih baik, mendorong kesuksesan di dunia digital.'
 		}
 	];
 	const servicesSelectors: Array<SelectorItem> = [
-		{ text: 'UI/UX Design', isActive: false },
-		{ text: 'Website Design', isActive: false },
-		{ text: 'WebApp Development', isActive: false },
-		{ text: 'Mobile App Development', isActive: false },
-		{ text: 'Custom Software Development', isActive: false },
-		{ text: 'Bots & Automation', isActive: false }
+		{ text: 'Desain UI/UX', isActive: false },
+		{ text: 'Desain Website', isActive: false },
+		{ text: 'Pengembangan Aplikasi Web', isActive: false },
+		{ text: 'Pengembangan Aplikasi Seluler', isActive: false },
+		{ text: 'Pengembangan Perangkat Lunak Khusus ', isActive: false },
+		{ text: 'Bot & Otomatisasi', isActive: false }
 	];
 	let activeServiceIndex: number = 0;
 	$: {
@@ -95,8 +95,8 @@
 
 	// projects-selector
 	let tabs: Array<SelectorItem> = [
-		{ text: 'All', isActive: true },
-		...Object.values(ProjectType).map((o) => ({ text: o, isActive: false }))
+		{ text: 'Semua', isActive: true },
+		...Object.values(ProjectTypeID).map((o) => ({ text: o, isActive: false }))
 	];
 	let activeTabIndex: number = 0;
 
@@ -105,134 +105,140 @@
 		{
 			imgUrl: '/img/projects/bots-kampusku.jpg',
 			title: 'Kampusku Bot',
-			desc: ProjectType['Bots & Automation'],
-			type: ProjectType['Bots & Automation']
+			desc: ProjectTypeID['Bot & Otomatisasi'],
+			type: ProjectTypeID['Bot & Otomatisasi']
 		},
 		{
 			imgUrl: '/img/projects/custom-software-game-fighting.jpg',
 			title: 'Logan Paul Fighting Game',
-			desc: ProjectType['Custom Software'],
-			type: ProjectType['Custom Software']
+			desc: ProjectTypeID['Kustom Software'],
+			type: ProjectTypeID['Kustom Software']
 		},
 		{
-			imgUrl: '/img/projects/uiux-pamapersada.jpg',
-			title: 'Warehouse PT. Pamapersada',
-			desc: ProjectType['UI/UX Design'],
-			type: ProjectType['UI/UX Design']
+			imgUrl: '/img/projects/uiux-pamapersada-desktop.jpg',
+			title: 'Warehouse PT. Pamapersada WebApp',
+			desc: ProjectTypeID['Desain UI/UX'],
+			type: ProjectTypeID['Desain UI/UX']
+		},
+		{
+			imgUrl: '/img/projects/uiux-pamapersada-mobile.png',
+			title: 'Warehouse PT. Pamapersada Mobile App',
+			desc: ProjectTypeID['Desain UI/UX'],
+			type: ProjectTypeID['Desain UI/UX']
 		},
 		{
 			imgUrl: '/img/projects/uiux-refit.png',
 			title: 'Refit Store',
-			desc: ProjectType['UI/UX Design'],
-			type: ProjectType['UI/UX Design']
+			desc: ProjectTypeID['Desain UI/UX'],
+			type: ProjectTypeID['Desain UI/UX']
 		},
 		{
 			imgUrl: '/img/projects/uiux-logo-hakaplastik.png',
 			title: 'Hakaplastik Logo',
-			desc: ProjectType['UI/UX Design'],
-			type: ProjectType['UI/UX Design']
+			desc: ProjectTypeID['Desain UI/UX'],
+			type: ProjectTypeID['Desain UI/UX']
 		},
 		{
 			imgUrl: '/img/projects/webapp-airival-shuttle.png',
 			title: 'Airival Shuttle',
-			desc: ProjectType['WebApp'],
-			type: ProjectType['WebApp']
+			desc: ProjectTypeID['App Web'],
+			type: ProjectTypeID['App Web']
 		},
 		{
 			imgUrl: '/img/projects/webapp-socioinvest.png',
 			title: 'Socioinvest',
-			desc: ProjectType['WebApp'],
-			type: ProjectType['WebApp']
+			desc: ProjectTypeID['App Web'],
+			type: ProjectTypeID['App Web']
 		},
 		{
 			imgUrl: '/img/projects/webapp-vizir-marketplace.png',
 			title: 'Vizir Marketplace',
-			desc: ProjectType['WebApp'],
-			type: ProjectType['WebApp']
+			desc: ProjectTypeID['App Web'],
+			type: ProjectTypeID['App Web']
 		},
 		{
 			imgUrl: '/img/projects/webapp-undangan-ibnuabbas.png',
 			title: 'Undangan Digital Ponpes Ibnu Abbas',
-			desc: ProjectType['WebApp'],
-			type: ProjectType['WebApp']
+			desc: ProjectTypeID['App Web'],
+			type: ProjectTypeID['App Web']
 		},
 		{
 			imgUrl: '/img/projects/webapp-vizir-notes.png',
 			title: 'Vizir Notes Taking',
-			desc: ProjectType['WebApp'],
-			type: ProjectType['WebApp']
+			desc: ProjectTypeID['App Web'],
+			type: ProjectTypeID['App Web']
 		},
 		{
 			imgUrl: '/img/projects/webapp-vizir-product-manager.png',
 			title: 'Vizir Product Manager',
-			desc: ProjectType['WebApp'],
-			type: ProjectType['WebApp']
+			desc: ProjectTypeID['App Web'],
+			type: ProjectTypeID['App Web']
 		},
 		{
 			imgUrl: '/img/projects/webapp-vizir-project-management.png',
 			title: 'Vizir Project Management',
-			desc: ProjectType['WebApp'],
-			type: ProjectType['WebApp']
+			desc: ProjectTypeID['App Web'],
+			type: ProjectTypeID['App Web']
 		},
 		{
 			imgUrl: '/img/projects/webapp-vizir-ticketing.png',
 			title: 'Vizir Ticketing',
-			desc: ProjectType['WebApp'],
-			type: ProjectType['WebApp']
+			desc: ProjectTypeID['App Web'],
+			type: ProjectTypeID['App Web']
 		},
 		{
 			imgUrl: '/img/projects/webapp-vizir-ticket-manager.png',
 			title: 'Vizir Ticket Manager',
-			desc: ProjectType['WebApp'],
-			type: ProjectType['WebApp']
+			desc: ProjectTypeID['App Web'],
+			type: ProjectTypeID['App Web']
 		},
 		{
 			imgUrl: '/img/projects/webdesign-augmented-solution.png',
 			title: 'Augmented Solution',
-			desc: ProjectType['Web Design'],
-			type: ProjectType['Web Design']
+			desc: ProjectTypeID['Desain Web'],
+			type: ProjectTypeID['Desain Web']
 		},
 		{
 			imgUrl: '/img/projects/webdesign-bt-rorsystem.png',
 			title: 'BT Rorsystem',
-			desc: ProjectType['Web Design'],
-			type: ProjectType['Web Design']
+			desc: ProjectTypeID['Desain Web'],
+			type: ProjectTypeID['Desain Web']
 		},
 		{
 			imgUrl: '/img/projects/webdesign-cimport.png',
 			title: 'C-Import',
-			desc: ProjectType['Web Design'],
-			type: ProjectType['Web Design']
+			desc: ProjectTypeID['Desain Web'],
+			type: ProjectTypeID['Desain Web']
 		},
 		{
 			imgUrl: '/img/projects/webdesign-hakaplastik.png',
 			title: 'PT. Haka Sentral Plastik Indonesia',
-			desc: ProjectType['Web Design'],
-			type: ProjectType['Web Design']
+			desc: ProjectTypeID['Desain Web'],
+			type: ProjectTypeID['Desain Web']
 		},
 		{
 			imgUrl: '/img/projects/webdesign-holh.png',
 			title: 'Heroes of Last Haven',
-			desc: ProjectType['Web Design'],
-			type: ProjectType['Web Design']
+			desc: ProjectTypeID['Desain Web'],
+			type: ProjectTypeID['Desain Web']
 		},
 		{
 			imgUrl: '/img/projects/webdesign-littlenewsears.png',
 			title: 'Littlenewsears',
-			desc: ProjectType['Web Design'],
-			type: ProjectType['Web Design']
+			desc: ProjectTypeID['Desain Web'],
+			type: ProjectTypeID['Desain Web']
 		},
 		{
 			imgUrl: '/img/projects/webdesign-umkmpajang.png',
 			title: 'UMKM Pajang Martketplace',
-			desc: ProjectType['Web Design'],
-			type: ProjectType['Web Design']
+			desc: ProjectTypeID['Desain Web'],
+			type: ProjectTypeID['Desain Web']
 		},
 		{
 			imgUrl: '/img/projects/webdesign-yesagroworld.png',
 			title: 'Yesagroworld',
-			desc: ProjectType['Web Design'],
-			type: ProjectType['Web Design']
+			desc: ProjectTypeID['Desain Web'],
+			type: ProjectTypeID['Desain Web']
 		}
 	];
 	let shownProjectGalleries: Array<Project> = [
@@ -245,11 +251,13 @@
 			if (i !== activeTabIndex) tabs[i].isActive = false;
 		}
 		tabs[activeTabIndex].isActive = true;
-		
+
 		// update shown project galleries based on tab filter
-		const activeType: ProjectType | 'All' = tabs[activeTabIndex].text as ProjectType | 'All';
-		
-		if (activeType === 'All') {
+		const activeType: ProjectTypeID | 'Semua' = tabs[activeTabIndex].text as
+			| ProjectTypeID
+			| 'Semua';
+
+		if (activeType === 'Semua') {
 			shownProjectGalleries = [
 				...projectGalleries.sort((a, b) =>
 					a.title.toLocaleLowerCase().localeCompare(b.title.toLocaleLowerCase())
@@ -258,31 +266,31 @@
 		} else {
 			shownProjectGalleries = [
 				...projectGalleries
-				.filter((o) => o.type === activeType)
-				.sort((a, b) => a.title.toLocaleLowerCase().localeCompare(b.title.toLocaleLowerCase()))
-			]
+					.filter((o) => o.type === activeType)
+					.sort((a, b) => a.title.toLocaleLowerCase().localeCompare(b.title.toLocaleLowerCase()))
+			];
 		}
 	}
 
 	// contact-us
 	let formData: ContactFormData = {
-		fullname: "",
-		email: "",
-		message: "",
-	}
+		fullname: '',
+		email: '',
+		message: ''
+	};
 
 	// open mail app and send the email
 	const submitContact = () => {
-		const subject: string = formData.fullname + " - " + formData.email;
+		const subject: string = formData.fullname + ' - ' + formData.email;
 		const mailtoUrl = `mailto:${import.meta.env.VITE_ADMIN_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(formData.message)}`;
 		window.open(mailtoUrl);
-	}
+	};
 
 	// helper
 	const scrollToSection = (sectionId: string) => {
 		const section = document.getElementById(sectionId);
-		section?.scrollIntoView({ behavior: "smooth" });
-	}
+		section?.scrollIntoView({ behavior: 'smooth' });
+	};
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -293,21 +301,25 @@
 
 	<!-- #header -->
 	<div id="header" class="flex pt-20 lg:pt-24 mb-28 h-[500px] lg:h-[800px]">
-		<div class="left-group z-10 flex flex-1 flex-col items-center pt-14 lg:pt-0 lg:items-start my-auto">
+		<div
+			class="left-group z-10 flex flex-1 flex-col items-center pt-14 lg:pt-0 lg:items-start my-auto"
+		>
 			<h1 class="text-center lg:text-start text-primary mb-5">
-				Develop Your
-				<span class="text-accent !text-4xl lg:!text-5xl !font-bold">Ideas</span>
-				<br class="hidden lg:block"/> with
+				Kembangkan
+				<span class="text-accent !text-4xl lg:!text-5xl !font-bold">Ide Anda</span>
+				<br class="hidden lg:block" />dengan
 				<span class="text-accent !text-4xl lg:!text-5xl !font-bold">TakeDevs</span>
 			</h1>
 			<p class="text-center lg:text-start text-secondary mb-10">
-				Unlock the full potential of your imagination and creativity with TakeDevs – where
-				innovation meets expertise
+				Bebaskan imajinasi dan kreativitas Anda sepenuhnya bersama TakeDevs – tempat inovasi bertemu
+				dengan keahlian.
 			</p>
-			<Button text="Learn more" on:click={() => scrollToSection('clients')} />
+			<Button text="Pelajari Lebih Lanjut" on:click={() => scrollToSection('clients')} />
 		</div>
 
-		<div class="right-group left-0 blur-sm opacity-25 lg:blur-none lg:opacity-100 z-0 absolute lg:relative flex-1">
+		<div
+			class="right-group left-0 blur-sm opacity-25 lg:blur-none lg:opacity-100 z-0 absolute lg:relative flex-1"
+		>
 			<div class="max-h-[500px] lg:max-h-[800px] relative overflow-hidden">
 				<div class="top-gradient w-full h-10 lg:h-60 absolute z-10"></div>
 				<SideBySideGallery {leftImgs} {rightImgs} />
@@ -320,15 +332,22 @@
 	<div id="clients" class="mb-20 lg:mb-28 lg:pt-20">
 		<!-- TODO: remove horizontal overflow -->
 		<h2 class="text-center text-primary mb-10">
-			OUR <span class="text-accent !text-2xl lg:!text-3xl !font-bold">CLIENTS</span>
+			KLIEN <span class="text-accent !text-2xl lg:!text-3xl !font-bold"> KAMI</span>
 		</h2>
 		<ScrollingLogos imgs={scrollingLogoImgs} />
 	</div>
 
 	<!-- #services -->
-	<div id="services" class="flex flex-col-reverse lg:flex-row h-full items-start gap-10 mb-20 lg:mb-28">
+	<div
+		id="services"
+		class="flex flex-col-reverse lg:flex-row h-full items-start gap-10 mb-20 lg:mb-28"
+	>
 		<div class="left-group h-full relative flex-1">
-			<img src={servicesDesc[activeServiceIndex].imgUrl} alt="side-pict" class="h-[300px] lg:h-[500px]" />
+			<img
+				src={servicesDesc[activeServiceIndex].imgUrl}
+				alt="side-pict"
+				class="h-[300px] lg:h-[500px]"
+			/>
 			<p class="absolute z-20 px-7 py-10 bottom-4 text-primary italic">
 				{servicesDesc[activeServiceIndex].desc}
 			</p>
@@ -336,7 +355,7 @@
 		</div>
 		<div class="right-group flex-1 mt-2">
 			<h2 class="text-center lg:text-start text-primary mb-7">
-				OUR <span class="text-accent !text-2xl lg:!text-3xl !font-bold">SERVICES</span>
+				<span class="text-accent !text-2xl lg:!text-3xl !font-bold">PELAYANAN</span> KAMI
 			</h2>
 			<div class="selectors grid grid-cols-2 lg:flex lg:flex-col gap-5">
 				{#each servicesSelectors as service, i}
@@ -350,11 +369,10 @@
 	<div id="projects" class="flex flex-col mb-20 lg:mb-28">
 		<div class="title w-full flex flex-col items-center gap-5 mb-10">
 			<h2 class="text-primary">
-				OUR <span class="text-accent !text-2xl lg:!text-3xl !font-bold">PROJECTS</span>
+				<span class="text-accent !text-2xl lg:!text-3xl !font-bold">PROYEK</span> KAMI
 			</h2>
 			<p class="text-center text-secondary">
-				Discover our portfolio: a testament to innovation, excellence,<br />and successful
-				collaborations
+				Jelajahi portofolio kami: bukti nyata dari inovasi, keunggulan,<br /> dan kolaborasi yang sukses.
 			</p>
 		</div>
 		<!-- TODO: the problem is because it is overflow horizontally -->
@@ -385,14 +403,19 @@
 		id="cta"
 		class="w-full flex flex-col items-center py-14 px-12 lg:px-24 rounded-2xl bg-accent-gradient mb-10"
 	>
-		<h2 class="text-center text-primary mb-5">LET’S BUILD YOUR IDEAS WITH TAKEDEVS</h2>
+		<h2 class="text-center text-primary mb-5">MARI BANGUN IDE ANDA BERSAMA TAKEDEVS</h2>
 		<p class="text-center text-primary opacity-50 mb-10">
-			Embark on a transformative journey as we collaborate to bring your ideas to life. With
-			TakeDevs, innovation is a shared adventure, blending creativity and expertise to craft
-			solutions that stand as a testament to your vision and our commitment to excellence
+			Bergabunglah dalam perjalanan transformatif bersama kami untuk menghidupkan ide-ide Anda.
+			Dengan TakeDevs, inovasi adalah petualangan bersama, memadukan kreativitas dan keahlian untuk
+			menciptakan solusi yang mencerminkan visi Anda dan komitmen kami terhadap keunggulan.
 		</p>
 		<!-- svelte-ignore missing-declaration -->
-		<Button text="CONTACT US" color="white" size="lg" on:click={() => scrollToSection('contact-us')} />
+		<Button
+			text="HUBUNGI KAMI"
+			color="white"
+			size="lg"
+			on:click={() => scrollToSection('contact-us')}
+		/>
 	</div>
 
 	<!-- #contact-us -->
@@ -400,11 +423,11 @@
 		<div class="container flex flex-col lg:flex-row gap-10 lg:gap-0 justify-between">
 			<div class="flex flex-col items-center lg:items-start lg:my-10 w-full">
 				<h2 class="text-center lg:text-start text-accent mb-5">
-					CONTACT <span class="text-primary !text-2xl lg:!text-3xl !font-bold">US</span>
+					HUBUNGI <span class="text-primary !text-2xl lg:!text-3xl !font-bold">KAMI</span>
 				</h2>
 				<p class="text-center lg:text-start text-secondary mb-7 text-lg">
-					Reach out effortlessly. <br />
-					Connect with us for inquiries
+					Jangkau kami dengan mudah <br />
+					Hubungi kami untuk pertanyaan
 				</p>
 				<div class="text-primary flex flex-col items-center lg:items-start gap-5">
 					<TextIcon icon="fa-solid fa-envelope" text="contact@takedevs.com" />
@@ -417,7 +440,7 @@
 			<div class="w-full lg:my-10 border rounded-2xl px-7 py-10 bg-primary text-black">
 				<form action="">
 					<div class="mb-4">
-						<label for="fullName" class="block mb-2">Fullname</label>
+						<label for="fullName" class="block mb-2">Nama Lengkap</label>
 						<input
 							type="text"
 							name="fullname"
@@ -437,7 +460,7 @@
 						/>
 					</div>
 					<div class="mb-4">
-						<label for="message" class="block mb-2">Message</label>
+						<label for="message" class="block mb-2">Pesan</label>
 						<textarea
 							name="message"
 							id="message"
@@ -450,14 +473,12 @@
 					<a
 						type="submit"
 						class="w-full lg:w-fit py-2 px-10 border rounded-md bg-gradient-to-r from-[#1473FB] to-[#3B4B92] text-white font-semibold"
-						on:click={submitContact}
-						>SUBMIT</a
+						on:click={submitContact}>KIRIM</a
 					>
 				</form>
 			</div>
 		</div>
 	</div>
-
 </div>
 <footer>
 	<div class="container mx-auto flex flex-col lg:flex-row justify-between items-center py-5">
@@ -472,7 +493,7 @@
 			<a href="https://www.facebook.com/takedevs" target="_blank">
 				<i class="fa-brands fa-facebook"></i>
 			</a>
-			<a href="https://www.tiktok.com/@takedevs"target="_blank">
+			<a href="https://www.tiktok.com/@takedevs" target="_blank">
 				<i class="fa-brands fa-tiktok"></i>
 			</a>
 			<a href="https://dribbble.com/alfanmask" target="_blank">
@@ -487,10 +508,14 @@
 
 <style lang="postcss">
 	/* all sections */
-	#header, #clients, #services, #projects, #contact-us {
+	#header,
+	#clients,
+	#services,
+	#projects,
+	#contact-us {
 		scroll-margin: 120px;
 	}
-	
+
 	/* header */
 	#header .top-gradient {
 		background: linear-gradient(to bottom, rgba(23, 24, 36, 1) 10%, rgba(23, 24, 36, 0) 100%);
