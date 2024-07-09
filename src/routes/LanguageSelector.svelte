@@ -14,7 +14,9 @@
 
 	onMount(() => {
 		const userAgent = window.navigator.userAgent;
-		if (userAgent.includes('Chrome')) {
+		console.log(userAgent);
+		//
+		if (userAgent.includes('Chrome') && !userAgent.includes('Mobile')) {
 			showFlags.set(false);
 		}
 
