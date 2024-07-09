@@ -2,13 +2,15 @@
 	import { createEventDispatcher, onMount } from 'svelte';
 	import { writable } from 'svelte/store';
 	import { goto } from '$app/navigation';
-
-	const dispatch = createEventDispatcher();
+	// import idFlag from '../../static/img/flags/id.svg';
+	// import gbFlag from '../../static/img/flags/gb.svg';
 
 	let countries = [
-		{ id: 'en', label: 'EN' },
-		{ id: 'id', label: 'ID' }
+		{ id: 'en', label: 'EN', flag: '/img/logo-takedevs-white.png' },
+		{ id: 'id', label: 'ID', flag: '/img/logo-takedevs-white.png' }
 	];
+
+	const dispatch = createEventDispatcher();
 
 	const selectedCountry = writable('en');
 
@@ -20,11 +22,11 @@
 	});
 
 	const handleCountryChange = (e: Event) => {
-		const selectedLabel = (e.target as HTMLSelectElement).value;
+		const selectedId = (e.target as HTMLSelectElement).value;
 
-		selectedCountry.set(selectedLabel);
-		dispatch('countrySelected', { id: selectedLabel });
-		goto(`/${selectedLabel}`);
+		selectedCountry.set(selectedId);
+		dispatch('countrySelected', { id: selectedId });
+		goto(`/${selectedId}`);
 	};
 </script>
 
@@ -34,6 +36,7 @@
 	on:change={handleCountryChange}
 >
 	{#each countries as country}
-		<option value={country.id}>{country.label}</option>
+		<option value={country.id}><img src={country.flag} alt={country.label} />{country.label}</option
+		>
 	{/each}
 </select>

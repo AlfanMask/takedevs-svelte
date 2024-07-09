@@ -8,7 +8,7 @@
 	import type { ServiceDesc } from '../../constants/service_desc';
 	import Tab from '$lib/components/ui/Tab.svelte';
 	import Gallery from '$lib/components/Gallery.svelte';
-	import { type Project, ProjectType } from '../../constants/project';
+	import { type Project, ProjectTypeEN } from '../../constants/project_en';
 	import TextIcon from '$lib/components/ui/TextIcon.svelte';
 	import type { ContactFormData } from '../../constants/contact_form';
 	import Navbar from '../Navbar.svelte';
@@ -96,7 +96,7 @@
 	// projects-selector
 	let tabs: Array<SelectorItem> = [
 		{ text: 'All', isActive: true },
-		...Object.values(ProjectType).map((o) => ({ text: o, isActive: false }))
+		...Object.values(ProjectTypeEN).map((o) => ({ text: o, isActive: false }))
 	];
 	let activeTabIndex: number = 0;
 
@@ -105,134 +105,134 @@
 		{
 			imgUrl: '/img/projects/bots-kampusku.jpg',
 			title: 'Kampusku Bot',
-			desc: ProjectType['Bot & Automation'],
-			type: ProjectType['Bot & Automation']
+			desc: ProjectTypeEN['Bot & Automation'],
+			type: ProjectTypeEN['Bot & Automation']
 		},
 		{
 			imgUrl: '/img/projects/custom-software-game-fighting.jpg',
 			title: 'Logan Paul Fighting Game',
-			desc: ProjectType['Custom Software'],
-			type: ProjectType['Custom Software']
+			desc: ProjectTypeEN['Custom Software'],
+			type: ProjectTypeEN['Custom Software']
 		},
 		{
 			imgUrl: '/img/projects/uiux-pamapersada.jpg',
 			title: 'Warehouse PT. Pamapersada',
-			desc: ProjectType['UI/UX Design'],
-			type: ProjectType['UI/UX Design']
+			desc: ProjectTypeEN['UI/UX Design'],
+			type: ProjectTypeEN['UI/UX Design']
 		},
 		{
 			imgUrl: '/img/projects/uiux-refit.png',
 			title: 'Refit Store',
-			desc: ProjectType['UI/UX Design'],
-			type: ProjectType['UI/UX Design']
+			desc: ProjectTypeEN['UI/UX Design'],
+			type: ProjectTypeEN['UI/UX Design']
 		},
 		{
 			imgUrl: '/img/projects/uiux-logo-hakaplastik.png',
 			title: 'Hakaplastik Logo',
-			desc: ProjectType['UI/UX Design'],
-			type: ProjectType['UI/UX Design']
+			desc: ProjectTypeEN['UI/UX Design'],
+			type: ProjectTypeEN['UI/UX Design']
 		},
 		{
 			imgUrl: '/img/projects/webapp-airival-shuttle.png',
 			title: 'Airival Shuttle',
-			desc: ProjectType['WebApp'],
-			type: ProjectType['WebApp']
+			desc: ProjectTypeEN['WebApp'],
+			type: ProjectTypeEN['WebApp']
 		},
 		{
 			imgUrl: '/img/projects/webapp-socioinvest.png',
 			title: 'Socioinvest',
-			desc: ProjectType['WebApp'],
-			type: ProjectType['WebApp']
+			desc: ProjectTypeEN['WebApp'],
+			type: ProjectTypeEN['WebApp']
 		},
 		{
 			imgUrl: '/img/projects/webapp-vizir-marketplace.png',
 			title: 'Vizir Marketplace',
-			desc: ProjectType['WebApp'],
-			type: ProjectType['WebApp']
+			desc: ProjectTypeEN['WebApp'],
+			type: ProjectTypeEN['WebApp']
 		},
 		{
 			imgUrl: '/img/projects/webapp-undangan-ibnuabbas.png',
 			title: 'Undangan Digital Ponpes Ibnu Abbas',
-			desc: ProjectType['WebApp'],
-			type: ProjectType['WebApp']
+			desc: ProjectTypeEN['WebApp'],
+			type: ProjectTypeEN['WebApp']
 		},
 		{
 			imgUrl: '/img/projects/webapp-vizir-notes.png',
 			title: 'Vizir Notes Taking',
-			desc: ProjectType['WebApp'],
-			type: ProjectType['WebApp']
+			desc: ProjectTypeEN['WebApp'],
+			type: ProjectTypeEN['WebApp']
 		},
 		{
 			imgUrl: '/img/projects/webapp-vizir-product-manager.png',
 			title: 'Vizir Product Manager',
-			desc: ProjectType['WebApp'],
-			type: ProjectType['WebApp']
+			desc: ProjectTypeEN['WebApp'],
+			type: ProjectTypeEN['WebApp']
 		},
 		{
 			imgUrl: '/img/projects/webapp-vizir-project-management.png',
 			title: 'Vizir Project Management',
-			desc: ProjectType['WebApp'],
-			type: ProjectType['WebApp']
+			desc: ProjectTypeEN['WebApp'],
+			type: ProjectTypeEN['WebApp']
 		},
 		{
 			imgUrl: '/img/projects/webapp-vizir-ticketing.png',
 			title: 'Vizir Ticketing',
-			desc: ProjectType['WebApp'],
-			type: ProjectType['WebApp']
+			desc: ProjectTypeEN['WebApp'],
+			type: ProjectTypeEN['WebApp']
 		},
 		{
 			imgUrl: '/img/projects/webapp-vizir-ticket-manager.png',
 			title: 'Vizir Ticket Manager',
-			desc: ProjectType['WebApp'],
-			type: ProjectType['WebApp']
+			desc: ProjectTypeEN['WebApp'],
+			type: ProjectTypeEN['WebApp']
 		},
 		{
 			imgUrl: '/img/projects/webdesign-augmented-solution.png',
 			title: 'Augmented Solution',
-			desc: ProjectType['Web Design'],
-			type: ProjectType['Web Design']
+			desc: ProjectTypeEN['Web Design'],
+			type: ProjectTypeEN['Web Design']
 		},
 		{
 			imgUrl: '/img/projects/webdesign-bt-rorsystem.png',
 			title: 'BT Rorsystem',
-			desc: ProjectType['Web Design'],
-			type: ProjectType['Web Design']
+			desc: ProjectTypeEN['Web Design'],
+			type: ProjectTypeEN['Web Design']
 		},
 		{
 			imgUrl: '/img/projects/webdesign-cimport.png',
 			title: 'C-Import',
-			desc: ProjectType['Web Design'],
-			type: ProjectType['Web Design']
+			desc: ProjectTypeEN['Web Design'],
+			type: ProjectTypeEN['Web Design']
 		},
 		{
 			imgUrl: '/img/projects/webdesign-hakaplastik.png',
 			title: 'PT. Haka Sentral Plastik Indonesia',
-			desc: ProjectType['Web Design'],
-			type: ProjectType['Web Design']
+			desc: ProjectTypeEN['Web Design'],
+			type: ProjectTypeEN['Web Design']
 		},
 		{
 			imgUrl: '/img/projects/webdesign-holh.png',
 			title: 'Heroes of Last Haven',
-			desc: ProjectType['Web Design'],
-			type: ProjectType['Web Design']
+			desc: ProjectTypeEN['Web Design'],
+			type: ProjectTypeEN['Web Design']
 		},
 		{
 			imgUrl: '/img/projects/webdesign-littlenewsears.png',
 			title: 'Littlenewsears',
-			desc: ProjectType['Web Design'],
-			type: ProjectType['Web Design']
+			desc: ProjectTypeEN['Web Design'],
+			type: ProjectTypeEN['Web Design']
 		},
 		{
 			imgUrl: '/img/projects/webdesign-umkmpajang.png',
 			title: 'UMKM Pajang Martketplace',
-			desc: ProjectType['Web Design'],
-			type: ProjectType['Web Design']
+			desc: ProjectTypeEN['Web Design'],
+			type: ProjectTypeEN['Web Design']
 		},
 		{
 			imgUrl: '/img/projects/webdesign-yesagroworld.png',
 			title: 'Yesagroworld',
-			desc: ProjectType['Web Design'],
-			type: ProjectType['Web Design']
+			desc: ProjectTypeEN['Web Design'],
+			type: ProjectTypeEN['Web Design']
 		}
 	];
 	let shownProjectGalleries: Array<Project> = [
@@ -247,7 +247,7 @@
 		tabs[activeTabIndex].isActive = true;
 
 		// update shown project galleries based on tab filter
-		const activeType: ProjectType | 'All' = tabs[activeTabIndex].text as ProjectType | 'All';
+		const activeType: ProjectTypeEN | 'All' = tabs[activeTabIndex].text as ProjectTypeEN | 'All';
 
 		if (activeType === 'All') {
 			shownProjectGalleries = [
