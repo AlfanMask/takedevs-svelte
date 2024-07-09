@@ -66,7 +66,9 @@
 						{item.name}
 					</li>
 				{/each}
-				<LanguageSelector />
+				<li class="text-primary inline-block text-xl cursor-pointer text-end">
+					<LanguageSelector />
+				</li>
 			</ul>
 		</div>
 	{/if}
