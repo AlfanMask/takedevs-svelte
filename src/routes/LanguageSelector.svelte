@@ -6,8 +6,8 @@
 	// import gbFlag from '../../static/img/flags/gb.svg';
 
 	let countries = [
-		{ id: 'en', label: 'EN', flag: '/img/logo-takedevs-white.png' },
-		{ id: 'id', label: 'ID', flag: '/img/logo-takedevs-white.png' }
+		{ id: 'en', label: 'EN', flag: '🇬🇧' },
+		{ id: 'id', label: 'ID', flag: '🇮🇩' }
 	];
 
 	const dispatch = createEventDispatcher();
@@ -36,7 +36,6 @@
 	on:change={handleCountryChange}
 >
 	{#each countries as country}
-		<option value={country.id}><img src={country.flag} alt={country.label} />{country.label}</option
-		>
+		<option value={country.id}>{country.flag}&nbsp;&nbsp;{country.label}</option>
 	{/each}
 </select>

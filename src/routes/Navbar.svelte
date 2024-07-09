@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { fade, slide } from 'svelte/transition';
 	import type { NavbarItem } from '../constants/navbar_item';
-	import LanguageSelected from './LanguageSelected.svelte';
+	import LanguageSelector from './LanguageSelector.svelte';
 
 	/***
 	 * List of navbar items
@@ -66,7 +66,7 @@
 						{item.name}
 					</li>
 				{/each}
-				<LanguageSelected />
+				<LanguageSelector />
 			</ul>
 		</div>
 	{/if}
@@ -88,7 +88,7 @@
 					{item.name}
 				</li>
 			{/each}
-			<LanguageSelected />
+			<LanguageSelector />
 		</ul>
 	</div>
 </nav>

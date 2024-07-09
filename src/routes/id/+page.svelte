@@ -369,7 +369,7 @@
 	<div id="projects" class="flex flex-col mb-20 lg:mb-28">
 		<div class="title w-full flex flex-col items-center gap-5 mb-10">
 			<h2 class="text-primary">
-				<span class="text-accent !text-2xl lg:!text-3xl !font-bold">PROYEK</span> Kami
+				<span class="text-accent !text-2xl lg:!text-3xl !font-bold">PROYEK</span> KAMI
 			</h2>
 			<p class="text-center text-secondary">
 				Jelajahi portofolio kami: bukti nyata dari inovasi, keunggulan,<br /> dan kolaborasi yang sukses.
