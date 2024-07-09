@@ -35,7 +35,7 @@
 
 <select
 	bind:value={$selectedCountry}
-	class="bg-base text-primary rounded p-2 md:text-secondary sm:text-base md:text-base lg:text-base xl:text-base"
+	class="bg-base text-secondary rounded p-2 sm:text-base md:text-base lg:text-base xl:text-base"
 	on:change={handleCountryChange}
 >
 	{#each countries as country}
