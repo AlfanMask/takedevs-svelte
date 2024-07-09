@@ -115,8 +115,14 @@
 			type: ProjectTypeEN['Custom Software']
 		},
 		{
-			imgUrl: '/img/projects/uiux-pamapersada.jpg',
-			title: 'Warehouse PT. Pamapersada',
+			imgUrl: '/img/projects/uiux-pamapersada-desktop.jpg',
+			title: 'Warehouse PT. Pamapersada WebApp',
+			desc: ProjectTypeEN['UI/UX Design'],
+			type: ProjectTypeEN['UI/UX Design']
+		},
+		{
+			imgUrl: '/img/projects/uiux-pamapersada-mobile.png',
+			title: 'Warehouse PT. Pamapersada Mobile App',
 			desc: ProjectTypeEN['UI/UX Design'],
 			type: ProjectTypeEN['UI/UX Design']
 		},

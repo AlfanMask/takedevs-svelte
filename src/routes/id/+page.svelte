@@ -115,8 +115,14 @@
 			type: ProjectTypeID['Kustom Software']
 		},
 		{
-			imgUrl: '/img/projects/uiux-pamapersada.jpg',
-			title: 'Warehouse PT. Pamapersada',
+			imgUrl: '/img/projects/uiux-pamapersada-desktop.jpg',
+			title: 'Warehouse PT. Pamapersada WebApp',
+			desc: ProjectTypeID['Desain UI/UX'],
+			type: ProjectTypeID['Desain UI/UX']
+		},
+		{
+			imgUrl: '/img/projects/uiux-pamapersada-mobile.png',
+			title: 'Warehouse PT. Pamapersada Mobile App',
 			desc: ProjectTypeID['Desain UI/UX'],
 			type: ProjectTypeID['Desain UI/UX']
 		},
