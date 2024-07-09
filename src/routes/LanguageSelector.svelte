@@ -2,8 +2,6 @@
 	import { createEventDispatcher, onMount } from 'svelte';
 	import { writable } from 'svelte/store';
 	import { goto } from '$app/navigation';
-	// import idFlag from '../../static/img/flags/id.svg';
-	// import gbFlag from '../../static/img/flags/gb.svg';
 
 	let countries = [
 		{ id: 'en', label: 'EN', flag: '🇬🇧' },
@@ -11,10 +9,16 @@
 	];
 
 	const dispatch = createEventDispatcher();
-
 	const selectedCountry = writable('en');
+	const showFlags = writable(true);
 
 	onMount(() => {
+		// Check if the browser is Chrome
+		const userAgent = window.navigator.userAgent;
+		if (userAgent.includes('Chrome')) {
+			showFlags.set(false);
+		}
+
 		const path = window.location.pathname.slice(1);
 		if (path === 'id' || path === 'en') {
 			selectedCountry.set(path);
@@ -36,6 +40,11 @@
 	on:change={handleCountryChange}
 >
 	{#each countries as country}
-		<option value={country.id}>{country.flag}&nbsp;&nbsp;{country.label}</option>
+		<option value={country.id}>
+			{#if $showFlags}
+				{country.flag}&nbsp;&nbsp;
+			{/if}
+			{country.label}
+		</option>
 	{/each}
 </select>
