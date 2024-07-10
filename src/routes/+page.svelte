@@ -3,7 +3,16 @@
 	import { onMount } from 'svelte';
 
 	onMount(() => {
-		goto('/en');
+		const initialPath = window.location.pathname;
+
+		// redirect to spesific routes
+		if (initialPath === '/id') {
+			goto('/id');
+		} else if (initialPath === '/en') {
+			goto('/en');
+		} else if (initialPath !== '/en' && initialPath !== '/id') {
+			goto('/en');
+		}
 	});
 </script>
 
