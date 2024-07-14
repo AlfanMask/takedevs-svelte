@@ -9,8 +9,17 @@
 	];
 
 	const dispatch = createEventDispatcher();
-	const selectedCountry = writable('en');
+	const selectedCountry = writable(getInitialSelectedCountry());
 	const showFlags = writable(true);
+
+	// get selected country on local storage
+	function getInitialSelectedCountry() {
+		if (typeof localStorage !== 'undefined') {
+			return localStorage.getItem('selectedCountry') || 'en';
+		} else {
+			return 'en';
+		}
+	}
 
 	onMount(() => {
 		const userAgent = window.navigator.userAgent;
@@ -28,11 +37,15 @@
 		const selectedId = (e.target as HTMLSelectElement).value;
 
 		selectedCountry.set(selectedId);
+		if (typeof localStorage !== 'undefined') {
+			localStorage.setItem('selectedCountry', selectedId);
+		}
 		dispatch('countrySelected', { id: selectedId });
 		goto(`/${selectedId}`);
 	};
 </script>
 
+<!-- Select Country -->
 <select
 	bind:value={$selectedCountry}
 	class="bg-base text-secondary rounded p-2 sm:text-base md:text-base lg:text-base xl:text-base"
