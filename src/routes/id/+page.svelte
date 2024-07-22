@@ -55,35 +55,35 @@
 	const servicesDesc: Array<ServiceDesc> = [
 		{
 			imgUrl: '/img/services/service-uiux.png',
-			desc: 'Tingkatkan brand Anda dengan desain UI/UX yang menarik, ciptakan pengalaman digital yang mulus yang baik dengan audiens Anda, serta tingkatkan keterlibatan pengguna.'
+			desc: 'Tingkatkan brand Anda dengan desain UI/UX yang menarik, ciptakan pengalaman digital yang mulus dan baik untuk target pasar Anda.'
 		},
 		{
 			imgUrl: '/img/services/service-webdesign.png',
-			desc: 'Ubah visi Anda menjadi kehadiran yang memukau. Desain web kami menggabungkan estetika dan fungsionalitas untuk memastikan web Anda menonjol dan menghasilkan.'
+			desc: 'Transformasikan Ide visi Anda menjadi kehadiran online yang menakjubkan. Desain web kami mengkombinasikan antara estetika dan fungsionalitas demi memastikan web Anda lebih menonjol dari yang lain.'
 		},
 		{
 			imgUrl: '/img/services/service-webapp.png',
-			desc: 'Perkuat bisnis Anda dengan aplikasi web kustom yang disesuaikan dengan kebutuhan unik Anda. Tingkatkan pengalaman pengguna, efisiensikan proses, dan dorong produktivitas keseluruhan.'
+			desc: 'Perkuat bisnis Anda dengan aplikasi web yang sesuai dengan kebutuhan Anda. Tingkatkan pengalaman target pasar Anda, efisiensikan setiap proses, serta dorong produktivitas dan perkembangan bisnis Anda.'
 		},
 		{
 			imgUrl: '/img/services/service-mobile.png',
-			desc: 'Hidupkan ide Anda dengan aplikasi mobile kami. Kami menciptakan aplikasi inovatif yang memenuhi kebutuhan pengguna Anda, memastikan perjalanan mobile yang mulus dan menarik.'
+			desc: 'Hidupkan ide Anda dengan aplikasi mobile yang sesuai kebutuhan Anda. Aplikasi mobile yang kami ciptakan tidak hanya memenuhi kebutuhan pasar Anda, tetapi juga memastikan terciptanya aplikasi yang menarik dan inovatif.'
 		},
 		{
 			imgUrl: '/img/services/service-custom-software.png',
-			desc: 'Majukan bisnis Anda dengan solusi perangkat lunak khusus. Disesuaikan dengan kebutuhan spesifik Anda, perangkat lunak kustom kami meningkatkan efisiensi, skalabilitas, dan kinerja secara keseluruhan.'
+			desc: 'Majukan bisnis Anda dengan Kustom software yang telah disesuaikan dengan kebutuhan Anda. Kustom software kami mampu meningkatkan efisiensi, skalabilitas, dan kinerja bisnis Anda secara keseluruhan.'
 		},
 		{
 			imgUrl: '/img/services/service-bots.png',
-			desc: 'Revolusikan operasional bisnis Anda dengan bot dan otomatisasi cerdas. Nikmati peningkatan efisiensi, kecepatan, dan interaksi pengguna yang lebih baik, mendorong kesuksesan di dunia digital.'
+			desc: 'Revolusikan operasional bisnis Anda dengan bot dan otomatisasi. Nikmati peningkatan kecepatan dan interaksi bisnis Anda dengan target pasar Anda, Sukseskan bisnis Anda dalam dunia digital.'
 		}
 	];
 	const servicesSelectors: Array<SelectorItem> = [
 		{ text: 'Desain UI/UX', isActive: false },
 		{ text: 'Desain Website', isActive: false },
 		{ text: 'Pengembangan Aplikasi Web', isActive: false },
-		{ text: 'Pengembangan Aplikasi Seluler', isActive: false },
-		{ text: 'Pengembangan Perangkat Lunak Khusus ', isActive: false },
+		{ text: 'Pengembangan Aplikasi Mobile', isActive: false },
+		{ text: 'Pengembangan Kustom Software ', isActive: false },
 		{ text: 'Bot & Otomatisasi', isActive: false }
 	];
 	let activeServiceIndex: number = 0;
@@ -312,8 +312,8 @@
 				<span class="text-accent !text-4xl lg:!text-5xl !font-bold">TakeDevs</span>
 			</h1>
 			<p class="text-center lg:text-start text-secondary mb-10">
-				Bebaskan imajinasi dan kreativitas Anda sepenuhnya bersama TakeDevs – tempat inovasi bertemu
-				dengan keahlian.
+				Bebaskan imajinasi dan kreativitas Anda sepenuhnya bersama TakeDevs – tempat bertemunya inovasi
+				dengan imajinasi.
 			</p>
 			<Button text="Pelajari Lebih Lanjut" on:click={() => scrollToSection('clients')} />
 		</div>
@@ -373,7 +373,7 @@
 				<span class="text-accent !text-2xl lg:!text-3xl !font-bold">PROYEK</span> KAMI
 			</h2>
 			<p class="text-center text-secondary">
-				Jelajahi portofolio kami: bukti nyata dari inovasi, keunggulan,<br /> dan kolaborasi yang sukses.
+				Jelajahi portofolio kami yang telah terbukti inovasi, <br /> serta keunggulannya
 			</p>
 		</div>
 		<!-- TODO: the problem is because it is overflow horizontally -->
@@ -406,9 +406,9 @@
 	>
 		<h2 class="text-center text-primary mb-5">MARI BANGUN IDE ANDA BERSAMA TAKEDEVS</h2>
 		<p class="text-center text-primary opacity-50 mb-10">
-			Bergabunglah dalam perjalanan transformatif bersama kami untuk menghidupkan ide-ide Anda.
-			Dengan TakeDevs, inovasi adalah petualangan bersama, memadukan kreativitas dan keahlian untuk
-			menciptakan solusi yang mencerminkan visi Anda dan komitmen kami terhadap keunggulan.
+			Bergabunglah dalam perjalanan transformasi digital Anda bersama kami untuk menghidupkan ide-ide Anda.
+			Bersama TakeDevs, inovasi adalah petualangan bersama yang memadukan antara kreativitas dan keahlian demi
+			terciptanya solusi dari permasalahan usaha Anda. 
 		</p>
 		<!-- svelte-ignore missing-declaration -->
 		<Button
@@ -427,8 +427,8 @@
 					HUBUNGI <span class="text-primary !text-2xl lg:!text-3xl !font-bold">KAMI</span>
 				</h2>
 				<p class="text-center lg:text-start text-secondary mb-7 text-lg">
-					Jangkau kami dengan mudah <br />
-					Hubungi kami untuk pertanyaan
+					Jangkau kami dengan mudah. <br />
+					Hubungi kami untuk diskusi lebih lanjut
 				</p>
 				<div class="text-primary flex flex-col items-center lg:items-start gap-5">
 					<TextIcon icon="fa-solid fa-envelope" text="contact@takedevs.com" />
