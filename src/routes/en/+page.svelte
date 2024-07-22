@@ -47,7 +47,8 @@
 		'/img/clients/logo-client-9.png',
 		'/img/clients/logo-client-10.png',
 		'/img/clients/logo-client-11.png',
-		'/img/clients/logo-client-12.png'
+		'/img/clients/logo-client-12.png',
+		'/img/clients/logo-client-13.png'
 	];
 
 	// services-selector
