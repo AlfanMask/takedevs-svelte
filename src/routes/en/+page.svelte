@@ -54,36 +54,36 @@
 	const servicesDesc: Array<ServiceDesc> = [
 		{
 			imgUrl: '/img/services/service-uiux.png',
-			desc: 'Elevate your brand with captivating UI/UX design, creating seamless digital experiences that resonate with your audience and boost user engagement'
+			desc: 'We create intuitive and visually appealing digital experiences that delight users. Our focus is on user-centered design to ensure optimal product usability.'
 		},
 		{
-			imgUrl: '/img/services/service-webdesign.png',
-			desc: 'Transform your vision into a stunning online presence. Our web design solutions combine aesthetics and functionality to ensure your website stands out and drives results'
+			imgUrl: '/img/services/service-landing-page.png',
+			desc: 'We design high-converting landing pages that capture attention and drive conversions. Our goal is to create compelling online experiences that deliver results.'
 		},
 		{
-			imgUrl: '/img/services/service-webapp.png',
-			desc: 'Empower your business with custom web applications tailored to your unique requirements. Enhance user experiences, streamline processes, and boost overall productivity'
+			imgUrl: '/img/services/service-online-shop.png',
+			desc: 'We build robust e-commerce platforms tailored to your business needs. Our solutions offer seamless shopping experiences and drive sales growth.'
 		},
 		{
-			imgUrl: '/img/services/service-mobile.png',
-			desc: "Bring your ideas to life with our mobile app development. We craft innovative applications that cater to your users' needs, ensuring a seamless and engaging mobile journey"
+			imgUrl: '/img/services/service-company-profile.png',
+			desc: "We craft compelling brand identities that reflect your company's values. Our designs create a strong visual presence and leave a lasting impression."
+		},
+		{
+			imgUrl: '/img/services/service-website-desa.png',
+			desc: "Your one-stop digital hub for village information. Access news, events, services, and community updates conveniently online."
 		},
 		{
 			imgUrl: '/img/services/service-custom-software.png',
-			desc: 'Propel your business forward with personalized software solutions. Tailored to your specific needs, our custom software enhances efficiency, scalability, and overall performance'
+			desc: 'We develop bespoke software solutions to address your unique challenges. Our team delivers tailored applications that enhance business operations.'
 		},
-		{
-			imgUrl: '/img/services/service-bots.png',
-			desc: 'Revolutionize your operations with intelligent bot and automation. Experience enhanced efficiency, speed, and improved user interactions, driving success in the digital landscape'
-		}
 	];
 	const servicesSelectors: Array<SelectorItem> = [
-		{ text: 'UI/UX Design', isActive: false },
-		{ text: 'Website Design', isActive: false },
-		{ text: 'WebApp Development', isActive: false },
-		{ text: 'Mobile App Development', isActive: false },
-		{ text: 'Custom Software Development', isActive: false },
-		{ text: 'Bot & Automation', isActive: false }
+		{ text: ProjectTypeEN['UI/UX Design'], isActive: false },
+		{ text: ProjectTypeEN['Landing Page'], isActive: false },
+		{ text: ProjectTypeEN['Online Shop'], isActive: false },
+		{ text: ProjectTypeEN['Company Profile'], isActive: false },
+		{ text: ProjectTypeEN['Website Desa'], isActive: false },
+		{ text: ProjectTypeEN['Custom Software'], isActive: false },
 	];
 	let activeServiceIndex: number = 0;
 	$: {
@@ -103,10 +103,10 @@
 	// proejct-galleries
 	let projectGalleries: Array<Project> = [
 		{
-			imgUrl: '/img/projects/bots-kampusku.jpg',
+			imgUrl: '/img/projects/custom-software-kampusku.jpg',
 			title: 'Kampusku Bot',
-			desc: ProjectTypeEN['Bot & Automation'],
-			type: ProjectTypeEN['Bot & Automation']
+			desc: ProjectTypeEN['Custom Software'],
+			type: ProjectTypeEN['Custom Software']
 		},
 		{
 			imgUrl: '/img/projects/custom-software-game-fighting.jpg',
@@ -139,107 +139,137 @@
 			type: ProjectTypeEN['UI/UX Design']
 		},
 		{
-			imgUrl: '/img/projects/webapp-airival-shuttle.png',
+			imgUrl: '/img/projects/custom-software-airival-shuttle.png',
 			title: 'Airival Shuttle',
-			desc: ProjectTypeEN['WebApp'],
-			type: ProjectTypeEN['WebApp']
+			desc: ProjectTypeEN['Custom Software'],
+			type: ProjectTypeEN['Custom Software']
 		},
 		{
-			imgUrl: '/img/projects/webapp-socioinvest.png',
+			imgUrl: '/img/projects/custom-software-socioinvest.png',
 			title: 'Socioinvest',
-			desc: ProjectTypeEN['WebApp'],
-			type: ProjectTypeEN['WebApp']
+			desc: ProjectTypeEN['Custom Software'],
+			type: ProjectTypeEN['Custom Software']
 		},
 		{
-			imgUrl: '/img/projects/webapp-vizir-marketplace.png',
+			imgUrl: '/img/projects/custom-software-vizir-marketplace.png',
 			title: 'Vizir Marketplace',
-			desc: ProjectTypeEN['WebApp'],
-			type: ProjectTypeEN['WebApp']
+			desc: ProjectTypeEN['Custom Software'],
+			type: ProjectTypeEN['Custom Software']
 		},
 		{
-			imgUrl: '/img/projects/webapp-undangan-ibnuabbas.png',
+			imgUrl: '/img/projects/custom-software-undangan-ibnuabbas.png',
 			title: 'Undangan Digital Ponpes Ibnu Abbas',
-			desc: ProjectTypeEN['WebApp'],
-			type: ProjectTypeEN['WebApp']
+			desc: ProjectTypeEN['Custom Software'],
+			type: ProjectTypeEN['Custom Software']
 		},
 		{
-			imgUrl: '/img/projects/webapp-vizir-notes.png',
+			imgUrl: '/img/projects/custom-software-vizir-notes.png',
 			title: 'Vizir Notes Taking',
-			desc: ProjectTypeEN['WebApp'],
-			type: ProjectTypeEN['WebApp']
+			desc: ProjectTypeEN['Custom Software'],
+			type: ProjectTypeEN['Custom Software']
 		},
 		{
-			imgUrl: '/img/projects/webapp-vizir-product-manager.png',
+			imgUrl: '/img/projects/custom-software-vizir-product-manager.png',
 			title: 'Vizir Product Manager',
-			desc: ProjectTypeEN['WebApp'],
-			type: ProjectTypeEN['WebApp']
+			desc: ProjectTypeEN['Custom Software'],
+			type: ProjectTypeEN['Custom Software']
 		},
 		{
-			imgUrl: '/img/projects/webapp-vizir-project-management.png',
+			imgUrl: '/img/projects/custom-software-vizir-project-management.png',
 			title: 'Vizir Project Management',
-			desc: ProjectTypeEN['WebApp'],
-			type: ProjectTypeEN['WebApp']
+			desc: ProjectTypeEN['Custom Software'],
+			type: ProjectTypeEN['Custom Software']
 		},
 		{
-			imgUrl: '/img/projects/webapp-vizir-ticketing.png',
+			imgUrl: '/img/projects/custom-software-vizir-ticketing.png',
 			title: 'Vizir Ticketing',
-			desc: ProjectTypeEN['WebApp'],
-			type: ProjectTypeEN['WebApp']
+			desc: ProjectTypeEN['Custom Software'],
+			type: ProjectTypeEN['Custom Software']
 		},
 		{
-			imgUrl: '/img/projects/webapp-vizir-ticket-manager.png',
+			imgUrl: '/img/projects/custom-software-vizir-ticket-manager.png',
 			title: 'Vizir Ticket Manager',
-			desc: ProjectTypeEN['WebApp'],
-			type: ProjectTypeEN['WebApp']
+			desc: ProjectTypeEN['Custom Software'],
+			type: ProjectTypeEN['Custom Software']
 		},
 		{
-			imgUrl: '/img/projects/webdesign-augmented-solution.png',
+			imgUrl: '/img/projects/company-profile-augmented-solution.png',
 			title: 'Augmented Solution',
-			desc: ProjectTypeEN['Web Design'],
-			type: ProjectTypeEN['Web Design']
+			desc: ProjectTypeEN['Company Profile'],
+			type: ProjectTypeEN['Company Profile']
 		},
 		{
-			imgUrl: '/img/projects/webdesign-bt-rorsystem.png',
+			imgUrl: '/img/projects/company-profile-bt-rorsystem.png',
 			title: 'BT Rorsystem',
-			desc: ProjectTypeEN['Web Design'],
-			type: ProjectTypeEN['Web Design']
+			desc: ProjectTypeEN['Company Profile'],
+			type: ProjectTypeEN['Company Profile']
 		},
 		{
-			imgUrl: '/img/projects/webdesign-cimport.png',
+			imgUrl: '/img/projects/online-shop-cimport.png',
 			title: 'C-Import',
-			desc: ProjectTypeEN['Web Design'],
-			type: ProjectTypeEN['Web Design']
+			desc: ProjectTypeEN['Online Shop'],
+			type: ProjectTypeEN['Online Shop']
 		},
 		{
-			imgUrl: '/img/projects/webdesign-hakaplastik.png',
+			imgUrl: '/img/projects/company-profile-hakaplastik.png',
 			title: 'PT. Haka Sentral Plastik Indonesia',
-			desc: ProjectTypeEN['Web Design'],
-			type: ProjectTypeEN['Web Design']
+			desc: ProjectTypeEN['Company Profile'],
+			type: ProjectTypeEN['Company Profile']
 		},
 		{
-			imgUrl: '/img/projects/webdesign-holh.png',
+			imgUrl: '/img/projects/company-profile-holh.png',
 			title: 'Heroes of Last Haven',
-			desc: ProjectTypeEN['Web Design'],
-			type: ProjectTypeEN['Web Design']
+			desc: ProjectTypeEN['Company Profile'],
+			type: ProjectTypeEN['Company Profile']
 		},
 		{
-			imgUrl: '/img/projects/webdesign-littlenewsears.png',
+			imgUrl: '/img/projects/custom-software-littlenewsears.png',
 			title: 'Littlenewsears',
-			desc: ProjectTypeEN['Web Design'],
-			type: ProjectTypeEN['Web Design']
+			desc: ProjectTypeEN['Custom Software'],
+			type: ProjectTypeEN['Custom Software']
 		},
 		{
-			imgUrl: '/img/projects/webdesign-umkmpajang.png',
-			title: 'UMKM Pajang Martketplace',
-			desc: ProjectTypeEN['Web Design'],
-			type: ProjectTypeEN['Web Design']
+			imgUrl: '/img/projects/online-shop-umkmpajang.png',
+			title: 'UMKM Pajang',
+			desc: ProjectTypeEN['Online Shop'],
+			type: ProjectTypeEN['Online Shop']
 		},
 		{
-			imgUrl: '/img/projects/webdesign-yesagroworld.png',
+			imgUrl: '/img/projects/company-profile-yesagroworld.png',
 			title: 'Yesagroworld',
-			desc: ProjectTypeEN['Web Design'],
-			type: ProjectTypeEN['Web Design']
-		}
+			desc: ProjectTypeEN['Company Profile'],
+			type: ProjectTypeEN['Company Profile']
+		},
+		{
+			imgUrl: '/img/projects/online-shop-sumberrejeki-basreng.png',
+			title: 'Bakso Goreng Sumber Rejeki',
+			desc: ProjectTypeEN['Online Shop'],
+			type: ProjectTypeEN['Online Shop']
+		},
+		{
+			imgUrl: '/img/projects/online-shop-alana-store.png',
+			title: 'Alana Store',
+			desc: ProjectTypeEN['Online Shop'],
+			type: ProjectTypeEN['Online Shop']
+		},
+		{
+			imgUrl: '/img/projects/website-desa-giriroto.png',
+			title: 'Desa Giriroto',
+			desc: ProjectTypeEN['Website Desa'],
+			type: ProjectTypeEN['Website Desa']
+		},
+		{
+			imgUrl: '/img/projects/website-desa-joho.png',
+			title: 'Desa Joho',
+			desc: ProjectTypeEN['Website Desa'],
+			type: ProjectTypeEN['Website Desa']
+		},
+		{
+			imgUrl: '/img/projects/website-desa-sengging.png',
+			title: 'Desa Sengging',
+			desc: ProjectTypeEN['Website Desa'],
+			type: ProjectTypeEN['Website Desa']
+		},
 	];
 	let shownProjectGalleries: Array<Project> = [
 		...projectGalleries.sort((a, b) =>

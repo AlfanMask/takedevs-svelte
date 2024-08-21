@@ -6,9 +6,9 @@ export interface Project extends Gallery {
 
 export enum ProjectTypeEN {
     "UI/UX Design" = "UI/UX Design",
-    "Web Design" = "Web Design",
-    "WebApp" = "WebApp",
-    "Mobile App" = "Mobile App",
+    "Landing Page" = "Landing Page",
+    "Online Shop" = "Online Shop",
+    "Company Profile" = "Company Profile",
+    "Website Desa" = "Website Desa",
     "Custom Software" = "Custom Software",
-    "Bot & Automation" = "Bot & Automation",
 }

@@ -5,10 +5,10 @@ export interface Project extends Gallery {
 }
 
 export enum ProjectTypeID {
-    "Desain UI/UX" = "Desain UI/UX",
-    "Desain Web" = "Desain Web",
-    "App Web" = "Aplikasi Web",
-    "App Seluler" = "Aplikasi Seluler",
-    "Kustom Software" = "Kustom Software",
-    "Bot & Otomatisasi" = "Bot & Otomatisasi",
+    "UI/UX Design" = "UI/UX Design",
+    "Landing Page" = "Landing Page",
+    "Online Shop" = "Online Shop",
+    "Company Profile" = "Company Profile",
+    "Website Desa" = "Website Desa",
+    "Custom Software" = "Custom Software",
 }
