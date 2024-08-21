@@ -71,12 +71,12 @@
 		},
 		{
 			imgUrl: '/img/services/service-website-desa.png',
-			desc: "Your one-stop digital hub for village information. Access news, events, services, and community updates conveniently online."
+			desc: 'Your one-stop digital hub for village information. Access news, events, services, and community updates conveniently online.'
 		},
 		{
 			imgUrl: '/img/services/service-custom-software.png',
 			desc: 'We develop bespoke software solutions to address your unique challenges. Our team delivers tailored applications that enhance business operations.'
-		},
+		}
 	];
 	const servicesSelectors: Array<SelectorItem> = [
 		{ text: ProjectTypeEN['UI/UX Design'], isActive: false },
@@ -84,7 +84,7 @@
 		{ text: ProjectTypeEN['Online Shop'], isActive: false },
 		{ text: ProjectTypeEN['Company Profile'], isActive: false },
 		{ text: ProjectTypeEN['Website Desa'], isActive: false },
-		{ text: ProjectTypeEN['Custom Software'], isActive: false },
+		{ text: ProjectTypeEN['Custom Software'], isActive: false }
 	];
 	let activeServiceIndex: number = 0;
 	$: {
@@ -271,6 +271,36 @@
 			desc: ProjectTypeEN['Website Desa'],
 			type: ProjectTypeEN['Website Desa']
 		},
+		{
+			imgUrl: '/img/projects/landing-page-stylo.webp',
+			title: 'Stylo Design',
+			desc: ProjectTypeEN['Landing Page'],
+			type: ProjectTypeEN['Landing Page']
+		},
+		{
+			imgUrl: '/img/projects/landing-page-eatz.webp',
+			title: 'Eatz Restaurant',
+			desc: ProjectTypeEN['Landing Page'],
+			type: ProjectTypeEN['Landing Page']
+		},
+		{
+			imgUrl: '/img/projects/landing-page-ayara.webp',
+			title: 'Ayara Fashion',
+			desc: ProjectTypeEN['Landing Page'],
+			type: ProjectTypeEN['Landing Page']
+		},
+		{
+			imgUrl: '/img/projects/landing-page-kreativa.webp',
+			title: 'Kreativa',
+			desc: ProjectTypeEN['Landing Page'],
+			type: ProjectTypeEN['Landing Page']
+		},
+		{
+			imgUrl: '/img/projects/landing-page-monitor.webp',
+			title: 'Monitor App',
+			desc: ProjectTypeEN['Landing Page'],
+			type: ProjectTypeEN['Landing Page']
+		}
 	];
 	let shownProjectGalleries: Array<Project> = [
 		...projectGalleries.sort((a, b) =>

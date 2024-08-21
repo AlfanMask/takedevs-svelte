@@ -76,7 +76,7 @@
 		{
 			imgUrl: '/img/services/service-custom-software.png',
 			desc: 'Kami mengembangkan solusi perangkat lunak khusus untuk mengatasi tantangan unik Anda. Tim kami memberikan aplikasi khusus yang meningkatkan operasi bisnis.'
-		},
+		}
 	];
 	const servicesSelectors: Array<SelectorItem> = [
 		{ text: ProjectTypeID['UI/UX Design'], isActive: false },
@@ -84,7 +84,7 @@
 		{ text: ProjectTypeID['Online Shop'], isActive: false },
 		{ text: ProjectTypeID['Company Profile'], isActive: false },
 		{ text: ProjectTypeID['Website Desa'], isActive: false },
-		{ text: ProjectTypeID['Custom Software'], isActive: false },
+		{ text: ProjectTypeID['Custom Software'], isActive: false }
 	];
 	let activeServiceIndex: number = 0;
 	$: {
@@ -271,6 +271,36 @@
 			desc: ProjectTypeID['Website Desa'],
 			type: ProjectTypeID['Website Desa']
 		},
+		{
+			imgUrl: '/img/projects/landing-page-stylo.webp',
+			title: 'Stylo Design',
+			desc: ProjectTypeID['Landing Page'],
+			type: ProjectTypeID['Landing Page']
+		},
+		{
+			imgUrl: '/img/projects/landing-page-eatz.webp',
+			title: 'Eatz Restaurant',
+			desc: ProjectTypeID['Landing Page'],
+			type: ProjectTypeID['Landing Page']
+		},
+		{
+			imgUrl: '/img/projects/landing-page-ayara.webp',
+			title: 'Ayara Fashion',
+			desc: ProjectTypeID['Landing Page'],
+			type: ProjectTypeID['Landing Page']
+		},
+		{
+			imgUrl: '/img/projects/landing-page-kreativa.webp',
+			title: 'Kreativa',
+			desc: ProjectTypeID['Landing Page'],
+			type: ProjectTypeID['Landing Page']
+		},
+		{
+			imgUrl: '/img/projects/landing-page-monitor.webp',
+			title: 'Monitor App',
+			desc: ProjectTypeID['Landing Page'],
+			type: ProjectTypeID['Landing Page']
+		}
 	];
 	let shownProjectGalleries: Array<Project> = [
 		...projectGalleries.sort((a, b) =>
@@ -342,8 +372,8 @@
 				<span class="text-accent !text-4xl lg:!text-5xl !font-bold">TakeDevs</span>
 			</h1>
 			<p class="text-center lg:text-start text-secondary mb-10">
-				Bebaskan imajinasi dan kreativitas Anda sepenuhnya bersama TakeDevs – tempat bertemunya inovasi
-				dengan imajinasi.
+				Bebaskan imajinasi dan kreativitas Anda sepenuhnya bersama TakeDevs – tempat bertemunya
+				inovasi dengan imajinasi.
 			</p>
 			<Button text="Pelajari Lebih Lanjut" on:click={() => scrollToSection('clients')} />
 		</div>
@@ -436,9 +466,9 @@
 	>
 		<h2 class="text-center text-primary mb-5">MARI BANGUN IDE ANDA BERSAMA TAKEDEVS</h2>
 		<p class="text-center text-primary opacity-50 mb-10">
-			Bergabunglah dalam perjalanan transformasi digital Anda bersama kami untuk menghidupkan ide-ide Anda.
-			Bersama TakeDevs, inovasi adalah petualangan bersama yang memadukan antara kreativitas dan keahlian demi
-			terciptanya solusi dari permasalahan usaha Anda. 
+			Bergabunglah dalam perjalanan transformasi digital Anda bersama kami untuk menghidupkan
+			ide-ide Anda. Bersama TakeDevs, inovasi adalah petualangan bersama yang memadukan antara
+			kreativitas dan keahlian demi terciptanya solusi dari permasalahan usaha Anda.
 		</p>
 		<!-- svelte-ignore missing-declaration -->
 		<Button
