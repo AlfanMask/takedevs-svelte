@@ -6,14 +6,14 @@
 
 	/**
 	 * if there is no param
-	 * return to url param /en
+	 * return to url param /id
 	 */
 	onMount(() => {
 		const pageData = get(page);
 		const { pathname } = pageData.url;
 
 		if (pathname === '/') {
-			goto('/en');
+			goto('/id');
 		}
 	});
 </script>

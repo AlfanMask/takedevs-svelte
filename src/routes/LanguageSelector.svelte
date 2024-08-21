@@ -4,8 +4,8 @@
 	import { goto } from '$app/navigation';
 
 	let countries = [
-		{ id: 'en', label: 'EN', flag: '🇬🇧' },
-		{ id: 'id', label: 'ID', flag: '🇮🇩' }
+		{ id: 'id', label: 'ID', flag: '🇮🇩' },
+		{ id: 'en', label: 'EN', flag: '🇬🇧' }
 	];
 
 	const dispatch = createEventDispatcher();
