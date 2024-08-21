@@ -47,7 +47,8 @@
 		'/img/clients/logo-client-9.png',
 		'/img/clients/logo-client-10.png',
 		'/img/clients/logo-client-11.png',
-		'/img/clients/logo-client-12.png'
+		'/img/clients/logo-client-12.png',
+		'/img/clients/logo-client-13.png'
 	];
 
 	// services-selector
@@ -341,8 +342,8 @@
 				<span class="text-accent !text-4xl lg:!text-5xl !font-bold">TakeDevs</span>
 			</h1>
 			<p class="text-center lg:text-start text-secondary mb-10">
-				Bebaskan imajinasi dan kreativitas Anda sepenuhnya bersama TakeDevs – tempat inovasi bertemu
-				dengan keahlian.
+				Bebaskan imajinasi dan kreativitas Anda sepenuhnya bersama TakeDevs – tempat bertemunya inovasi
+				dengan imajinasi.
 			</p>
 			<Button text="Pelajari Lebih Lanjut" on:click={() => scrollToSection('clients')} />
 		</div>
@@ -402,7 +403,7 @@
 				<span class="text-accent !text-2xl lg:!text-3xl !font-bold">PROYEK</span> KAMI
 			</h2>
 			<p class="text-center text-secondary">
-				Jelajahi portofolio kami: bukti nyata dari inovasi, keunggulan,<br /> dan kolaborasi yang sukses.
+				Jelajahi portofolio kami yang telah terbukti inovasi, <br /> serta keunggulannya
 			</p>
 		</div>
 		<!-- TODO: the problem is because it is overflow horizontally -->
@@ -435,9 +436,9 @@
 	>
 		<h2 class="text-center text-primary mb-5">MARI BANGUN IDE ANDA BERSAMA TAKEDEVS</h2>
 		<p class="text-center text-primary opacity-50 mb-10">
-			Bergabunglah dalam perjalanan transformatif bersama kami untuk menghidupkan ide-ide Anda.
-			Dengan TakeDevs, inovasi adalah petualangan bersama, memadukan kreativitas dan keahlian untuk
-			menciptakan solusi yang mencerminkan visi Anda dan komitmen kami terhadap keunggulan.
+			Bergabunglah dalam perjalanan transformasi digital Anda bersama kami untuk menghidupkan ide-ide Anda.
+			Bersama TakeDevs, inovasi adalah petualangan bersama yang memadukan antara kreativitas dan keahlian demi
+			terciptanya solusi dari permasalahan usaha Anda. 
 		</p>
 		<!-- svelte-ignore missing-declaration -->
 		<Button
@@ -456,8 +457,8 @@
 					HUBUNGI <span class="text-primary !text-2xl lg:!text-3xl !font-bold">KAMI</span>
 				</h2>
 				<p class="text-center lg:text-start text-secondary mb-7 text-lg">
-					Jangkau kami dengan mudah <br />
-					Hubungi kami untuk pertanyaan
+					Jangkau kami dengan mudah. <br />
+					Hubungi kami untuk diskusi lebih lanjut
 				</p>
 				<div class="text-primary flex flex-col items-center lg:items-start gap-5">
 					<TextIcon icon="fa-solid fa-envelope" text="contact@takedevs.com" />
@@ -502,7 +503,7 @@
 					<!-- svelte-ignore a11y-no-static-element-interactions -->
 					<a
 						type="submit"
-						class="w-full lg:w-fit py-2 px-10 border rounded-md bg-gradient-to-r from-[#1473FB] to-[#3B4B92] text-white font-semibold"
+						class="w-full lg:w-fit py-2 px-10 border rounded-md bg-gradient-to-r from-[#1473FB] to-[#3B4B92] text-white font-semibold text-center cursor-pointer"
 						on:click={submitContact}>KIRIM</a
 					>
 				</form>

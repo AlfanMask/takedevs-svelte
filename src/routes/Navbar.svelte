@@ -60,13 +60,15 @@
 			<ul class="flex flex-col gap-8 justify-start">
 				{#each items as item}
 					<li
-						class="text-primary inline-block text-xl cursor-pointer text-end"
+						class="text-secondary inline-block text-xl cursor-pointer text-end"
 						on:click={() => scrollToSection(`${item.id}`)}
 					>
 						{item.name}
 					</li>
 				{/each}
-				<LanguageSelector />
+				<li class="text-secondary inline-block text-xl cursor-pointer text-end">
+					<LanguageSelector />
+				</li>
 			</ul>
 		</div>
 	{/if}

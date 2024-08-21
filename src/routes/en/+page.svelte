@@ -47,7 +47,8 @@
 		'/img/clients/logo-client-9.png',
 		'/img/clients/logo-client-10.png',
 		'/img/clients/logo-client-11.png',
-		'/img/clients/logo-client-12.png'
+		'/img/clients/logo-client-12.png',
+		'/img/clients/logo-client-13.png'
 	];
 
 	// services-selector
@@ -501,7 +502,7 @@
 					<!-- svelte-ignore a11y-no-static-element-interactions -->
 					<a
 						type="submit"
-						class="w-full lg:w-fit py-2 px-10 border rounded-md bg-gradient-to-r from-[#1473FB] to-[#3B4B92] text-white font-semibold"
+						class="w-full lg:w-fit py-2 px-10 border rounded-md bg-gradient-to-r from-[#1473FB] to-[#3B4B92] text-white font-semibold text-center cursor-pointer"
 						on:click={submitContact}>SUBMIT</a
 					>
 				</form>
