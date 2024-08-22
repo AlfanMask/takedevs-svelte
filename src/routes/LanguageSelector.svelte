@@ -15,9 +15,9 @@
 	// get selected country on local storage
 	function getInitialSelectedCountry() {
 		if (typeof localStorage !== 'undefined') {
-			return localStorage.getItem('selectedCountry') || 'en';
+			return localStorage.getItem('selectedCountry') || 'id';
 		} else {
-			return 'en';
+			return 'id';
 		}
 	}
 
