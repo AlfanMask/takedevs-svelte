@@ -1,5 +1,4 @@
 <script lang="ts">
-	import logo from '$lib/assets/logo-footer.png';
 	import Button from '$lib/components/ui/Button.svelte';
 	import SideBySideGallery from '$lib/components/SideBySideGallery.svelte';
 	import ScrollingLogos from '$lib/components/ScrollingLogos.svelte';
@@ -13,6 +12,9 @@
 	import type { ContactFormData } from '../../constants/contact_form';
 	import Navbar from '../Navbar.svelte';
 	import type { NavbarItem } from '../../constants/navbar_item';
+	import Logo from '$lib/components/ui/Logo.svelte';
+	import Footer from '../Footer.svelte';
+	import { scrollToSection } from '../../helper/goto';
 
 	// navbar
 	const navbarItems: Array<NavbarItem> = [
@@ -347,18 +349,15 @@
 		window.open(mailtoUrl);
 	};
 
-	// helper
-	const scrollToSection = (sectionId: string) => {
-		const section = document.getElementById(sectionId);
-		section?.scrollIntoView({ behavior: 'smooth' });
-	};
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+<!-- #navbar -->
+<div class="bg-base h-full">
+<Navbar items={navbarItems} />
+
 <div class="container mx-auto px-5 lg:px-0">
-	<!-- #navbar -->
-	<Navbar items={navbarItems} />
 
 	<!-- #header -->
 	<div id="header" class="flex pt-20 lg:pt-24 mb-28 h-[500px] lg:h-[800px]">
@@ -375,7 +374,7 @@
 				Bebaskan imajinasi dan kreativitas Anda sepenuhnya bersama TakeDevs – tempat bertemunya
 				inovasi dengan imajinasi.
 			</p>
-			<Button text="Pelajari Lebih Lanjut" on:click={() => scrollToSection('clients')} />
+			<Button text="Pelajari Lebih Lanjut" bgColor="bg-blueish-gradient" textColor="text-white" on:click={() => scrollToSection('clients')} />
 		</div>
 
 		<div
@@ -473,7 +472,8 @@
 		<!-- svelte-ignore missing-declaration -->
 		<Button
 			text="HUBUNGI KAMI"
-			color="white"
+			bgColor="bg-white"
+			textColor="text-accent"
 			size="lg"
 			on:click={() => scrollToSection('contact-us')}
 		/>
@@ -541,39 +541,12 @@
 		</div>
 	</div>
 </div>
-<footer>
-	<div class="container mx-auto flex flex-col lg:flex-row justify-between items-center py-5">
-		<div class="flex flex-col items-center lg:items-start mb-5 lg:mb-0">
-			<img src={logo} alt="logo.png" class="mb-3" />
-			<p class="text-primary">© 2024 TakeDevs. All rights reserved.</p>
-		</div>
-		<div class="socmed flex gap-5 py-5">
-			<a href="https://www.instagram.com/takedevs/" target="_blank">
-				<i class="fa-brands fa-instagram"></i>
-			</a>
-			<a href="https://www.facebook.com/takedevs" target="_blank">
-				<i class="fa-brands fa-facebook"></i>
-			</a>
-			<a href="https://www.tiktok.com/@takedevs" target="_blank">
-				<i class="fa-brands fa-tiktok"></i>
-			</a>
-			<a href="https://dribbble.com/alfanmask" target="_blank">
-				<i class="fa-brands fa-dribbble"></i>
-			</a>
-			<a href="https://www.youtube.com/@takedevs_official" target="_blank">
-				<i class="fa-brands fa-youtube"></i>
-			</a>
-		</div>
-	</div>
-</footer>
+<Footer bgGradientColor="bg-accent-footer-gradient" logoColor="#FFFFFF" bgIcon="bg-primary" iconColor="text-accent" />
+</div>
 
 <style lang="postcss">
 	/* all sections */
-	#header,
-	#clients,
-	#services,
-	#projects,
-	#contact-us {
+	div {
 		scroll-margin: 120px;
 	}
 
@@ -602,21 +575,4 @@
 		height: 100%;
 		background: linear-gradient(to top, rgba(23, 24, 36, 0.75) 0%, rgba(23, 24, 36, 0) 100%);
 	}
-
-	/* footer */
-	footer {
-		background-image: var(--accent-footer-gradient);
-	}
-	footer .socmed a {
-		@apply w-12 h-12 rounded-full bg-primary flex items-center justify-center;
-	}
-	footer .socmed a i {
-		@apply text-2xl text-accent;
-	}
-
-	/* @media screen and (max-width: 768px) {
-		#header {
-			height: 384px;
-		}
-	} */
 </style>

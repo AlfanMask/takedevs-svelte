@@ -7,6 +7,7 @@
     --blueish-gradient: linear-gradient(90deg, #1473FB 0%, #3B4B92 100%);
     --accent-gradient: linear-gradient(90deg, #5C75E5 0%, #2476F9 100%);
     --accent-footer-gradient: linear-gradient(180deg, #5C75E5 0%, #2476F9 100%);
+    --lp-gradient: linear-gradient(225deg, #E98E3B 100%, #E4720B 100%);
 
     body {
         font-family: 'Poppins', sans-serif;
@@ -40,5 +41,12 @@
         p, span {
             font-size: 14px;
         }
+    }
+}
+
+:root[theme-mode="light"] {
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #FFFCF7;
     }
 }

@@ -3,11 +3,14 @@
 	import { writable } from 'svelte/store';
 	import { goto } from '$app/navigation';
 
+	export let baseColor: string = "bg-base"
+	
 	let countries = [
 		{ id: 'id', label: 'ID', flag: '🇮🇩' },
 		{ id: 'en', label: 'EN', flag: '🇬🇧' }
 	];
 
+	// TODO: put in store.ts
 	const dispatch = createEventDispatcher();
 	const selectedCountry = writable(getInitialSelectedCountry());
 	const showFlags = writable(true);
@@ -48,7 +51,7 @@
 <!-- Select Country -->
 <select
 	bind:value={$selectedCountry}
-	class="bg-base text-secondary rounded p-2 sm:text-base md:text-base lg:text-base xl:text-base"
+	class="{baseColor} text-secondary rounded p-2 sm:text-base md:text-base lg:text-base xl:text-base"
 	on:change={handleCountryChange}
 >
 	{#each countries as country}
