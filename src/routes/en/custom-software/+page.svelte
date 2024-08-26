@@ -71,7 +71,7 @@
 		<p class="text-center lg:text-start text-secondary mb-10">
 		  Need custom software for your business? We're here to help!
 		</p>
-		<Button text="LEARN MORE" bgColor="bg-primary-cs" textColor="text-white" size="lg" on:click={() => { scrollToSection('pricelist') }}/>
+		<Button text="LEARN MORE" bgColor="bg-primary-cs" textColor="text-white" size="lg" on:click={() => { scrollToSection('importance-of') }}/>
 	  </div>
 	  <ImageGradient flexSize="flex-[7]" imgSrc="/img/landing-pages/cs/header-cs.jpg" gradientOverlay="bg-primary-cs" gradientOpacity="opacity-10" isHideOnMobile />
 	</div>

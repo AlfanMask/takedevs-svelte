@@ -137,7 +137,7 @@
 					{#if (item.children)}
 						<select
 							placeholder={item.name}
-							class="{baseColor} text-secondary rounded p-2 sm:text-base md:text-base lg:text-base xl:text-base {lang == 'id' ? '!max-w-[75px]' : '!max-w-[100px]'}"
+							class="{baseColor} text-secondary rounded p-2 sm:text-base md:text-base lg:text-base xl:text-base {lang == 'id' ? '!max-w-[85px]' : '!max-w-[110px]'}"
 							on:change={handleSubitemChange}
 						>
 							<!-- Placeholder -->
