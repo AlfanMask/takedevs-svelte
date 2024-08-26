@@ -119,7 +119,7 @@
 		class="fixed py-6 hidden lg:flex {baseColor} w-full justify-center"
 	>
 		<div class="container hidden lg:flex flex-row justify-between items-center">
-			<a href="{window.location.origin}">
+			<a href={import.meta.env.VITE_HOST}>
 				<Logo color={logoColor} width={96} />
 			</a>
 			<ul class="flex flex-row gap-10 items-center">

@@ -1,7 +1,8 @@
 ## ENVIRONMENT VARIABLES
 VITE_ADMIN_EMAIL
 VITE_ADMIN_WA_NUMBER
-WA_CTA_HELLO_MSG
+VITE_WA_CTA_HELLO_MSG
+VITE_HOST
 
 ## TODO:
 1. animate landing-page elements (DONE)
@@ -11,4 +12,4 @@ WA_CTA_HELLO_MSG
 5. mobile responsiveness (DONE)
 6. make LP for other services: Online Shop, Company Profile, Custom Software
 7. make LP for en language
-8. error: type link manually (eg: http://localhost:5173/id/landing-page?referral=123) is 500 internal error
+8. error: type link manually (eg: http://localhost:5173/id/landing-page?referral=123) is 500 internal error (DONE)
