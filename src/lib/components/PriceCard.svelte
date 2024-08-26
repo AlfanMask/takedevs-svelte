@@ -21,7 +21,7 @@
 </script>
 
 <!-- HTML -->
-<div class="w-full max-w-[400px] min-h-[650px] h-fit flex flex-col justify-between items-center px-8 py-10 rounded-lg bg-white relative {isBestSeller ? '-mt-14 shadow-lp' : ''}">
+<div class="container w-full max-w-[400px] min-h-[650px] h-fit flex flex-col justify-between items-center px-8 py-10 rounded-lg bg-white relative {isBestSeller ? 'lg:-mt-14 shadow-lp' : ''}">
     {#if isBestSeller }
         <div class="badge-best-seller {bestSellerBadgeColor} px-3 py-1 rounded-md text-white absolute -top-4 text-lg font-semibold">
             PALING LARIS!
@@ -40,3 +40,13 @@
     </div>
     <Button text="PESAN SEKARANG" bgColor="bg-primary-lp" textColor="text-white" size="lg" on:click/>
 </div>
+
+<style lang="postcss">
+    .container {
+        transition: all 0.3s ease-in-out;
+    }
+    .container:hover {
+        transform: scale(1.05);
+        transition: all 0.3s ease-in-out;
+    }
+</style>

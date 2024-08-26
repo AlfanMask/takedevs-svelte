@@ -8,3 +8,13 @@
 <button on:click class="w-fit { size === 'sm' ? 'px-6 py-1' : size === 'md' ? 'px-8 py-2' : 'px-10 py-4' } rounded {textColor} {bgColor} font-semibold ">
     {text}
 </button>
+
+<style>
+    button {
+        transition: all 0.3s ease-in-out;
+    }
+    button:hover {
+        transform: scale(1.05);
+        transition: all 0.3s ease-in-out;
+    }
+</style>

@@ -13,10 +13,13 @@
 	import { goToUrl, scrollToSection } from '../../../helper/goto';
 
 	const navbarItems: Array<NavbarItem> = [
-		{ id: 'header', name: 'Beranda' },
-		{ id: 'services', name: 'Jasa' },
-		{ id: 'projects', name: 'Proyek' },
-		{ id: 'contact-us', name: 'Hubungi Kami' }
+		{ id: 'id', name: 'Beranda', isLink: true },
+		{ id: 'services', name: 'Jasa', isLink: false, children: [
+			{ id: 'landing-page', name: "Landing Page", isLink: false },
+			{ id: 'online-shop', name: "Online Shop", isLink: false },
+			{ id: 'company-profile', name: "Company Profile", isLink: false },
+			{ id: 'custom-software', name: "Custom Software", isLink: false },
+		] },
 	];
 
 	let waUrl: string;
@@ -38,15 +41,15 @@
 
 
 <!-- HTML -->
-<div class="bg-base-lp-os-cp-cs h-full">
+<div class="bg-base-lp-os-cp-cs h-full px-5 lg:p-0">
 
 <!-- #navbar -->
-<Navbar items={navbarItems} baseColor="bg-base-lp-os-cp-cs" logoColor="#E4720B" />
+<Navbar items={navbarItems} baseColor="bg-base-lp-os-cp-cs" logoColor="#E4720B" textColor="text-secondary" />
 
 <!-- header -->
 <div id="header" class="container mx-auto px-5 lg:px-0">
-	<div class="flex justify-between items-center mb-28" style="padding-top: 160px">
-        <div class="left-group flex-[5] w-full pr-20">
+	<div class="flex lg:flex-row justify-between items-center mb-28" style="padding-top: 160px">
+        <div class="left-group flex flex-col items-center lg:items-start flex-[5] w-full lg:pr-20">
 			<h1 class="text-center lg:text-start text-primary-lp-os-cp-cs mb-5">
 				Lebih Banyak Pelanggan dengan
 				<span class="text-accent-lp !text-4xl lg:!text-5xl !font-bold">Landing Page</span>
@@ -56,17 +59,17 @@
 			</p>
             <Button text="PELAJARI LEBIH LANJUT" bgColor="bg-primary-lp" textColor="text-white" size="lg" on:click={() => { scrollToSection('pricelist') }}/>
         </div>
-		<ImageGradient flexSize="flex-[7]" imgSrc="/img/landing-pages/lp/header-lp.jpg" gradientOverlay="bg-primary-lp" gradientOpacity="opacity-10" />
+		<ImageGradient flexSize="flex-[7]" imgSrc="/img/landing-pages/lp/header-lp.jpg" gradientOverlay="bg-primary-lp" gradientOpacity="opacity-10" isHideOnMobile />
 	</div>
 </div>
 
 <!-- importance of -->
 <div id="importance-of" class="flex flex-col items-center mb-28">
 	<div class="header-text flex flex-col items-center gap-5 mb-14">
-		<h2>Kenapa Landing Page <span class="text-accent-lp !text-3xl !font-semibold">Penting</span></h2>
+		<h2 class="text-center">Kenapa Landing Page <span class="text-accent-lp !text-2xl lg:!text-3xl !font-semibold">Penting</span></h2>
 		<p class="text-secondary-lp-os-cp-cs max-w-[800px] text-center">Landing Page akan membantu mengarahkan orang-orang ke tindakan tertentu, seperti mengisi formulir atau membeli produk Anda</p>
 	</div>
-	<div class="items flex gap-10 h-[500px]">
+	<div class="items flex flex-col lg:flex-row gap-10">
 		<RotatedImgDesc desc="Tingkatkan Konversi" imgSrc="/img/landing-pages/lp/importance-lp-1.jpg" gradientOverlayFrom="from-primary-lp" />
 		<RotatedImgDesc desc="Perkuat Branding" imgSrc="/img/landing-pages/lp/importance-lp-2.jpg" gradientOverlayFrom="from-primary-lp" />
 		<RotatedImgDesc desc="Perjelas Produk" imgSrc="/img/landing-pages/lp/importance-lp-3.jpg" gradientOverlayFrom="from-primary-lp" />
@@ -75,30 +78,30 @@
 
 <!-- past projects -->
 <div id="projects" class="py-14 bg-gradient-lp flex flex-col items-center mb-20">
-	<div class="container">
+	<div class="container px-4 lg:px-0">
 		<div class="header-text flex flex-col items-center gap-5 mb-14 text-white">
 			<h2 class="underline">Proyek Landing Page Kami</h2>
 			<p class="max-w-[800px] text-center">Kami telah berhasil menciptakan landing page yang efektif untuk berbagai jenis bisnis. Berikut adalah beberapa contoh proyek kami</p>
 		</div>
-		<div class="project-galleries grid grid-cols-3 gap-x-5 gap-y-7">
-			<GalleryCard srcImg="/img/landing-pages/lp/project-1.png" />
-			<GalleryCard srcImg="/img/landing-pages/lp/project-2.png" />
-			<GalleryCard srcImg="/img/landing-pages/lp/project-3.png" />
-			<GalleryCard srcImg="/img/landing-pages/lp/project-4.png" />
-			<GalleryCard srcImg="/img/landing-pages/lp/project-5.png" />
-			<GalleryCard srcImg="/img/landing-pages/lp/project-6.png" />
-			<GalleryCard srcImg="/img/landing-pages/lp/project-7.png" />
-			<GalleryCard srcImg="/img/landing-pages/lp/project-8.png" />
-			<GalleryCard srcImg="/img/landing-pages/lp/project-9.png" />
+		<div class="project-galleries grid grid-cols-1 lg:grid-cols-3 gap-x-5 gap-y-7">
+			<GalleryCard srcImg="/img/landing-pages/lp/project-1.png" url="https://stylo.takedevs.com/" />
+			<GalleryCard srcImg="/img/landing-pages/lp/project-2.png" url="https://ayara.takedevs.com/" />
+			<GalleryCard srcImg="/img/landing-pages/lp/project-3.png" url="https://kreativa.takedevs.com/" />
+			<GalleryCard srcImg="/img/landing-pages/lp/project-4.png" url="https://eatz.takedevs.com/" />
+			<GalleryCard srcImg="/img/landing-pages/lp/project-5.png" url="https://monitor.takedevs.com/" />
+			<GalleryCard srcImg="/img/landing-pages/lp/project-6.png" url="https://stylo.takedevs.com/" />
+			<GalleryCard srcImg="/img/landing-pages/lp/project-7.png" url="https://ayara.takedevs.com/" />
+			<GalleryCard srcImg="/img/landing-pages/lp/project-8.png" url="https://kreativa.takedevs.com/" />
+			<GalleryCard srcImg="/img/landing-pages/lp/project-9.png" url="https://monitor.takedevs.com/" />
 		</div>
 	</div>
 </div>
 
 <!-- why-us -->
 <div id="why-us" class="container flex mx-auto items-center gap-5 mb-24">
-	<ImageGradient flexSize="flex-[5]" customTailwindCSS="max-h-[650px]" imgSrc="/img/landing-pages/lp/why-us-lp.jpg" gradientOverlay="bg-primary-lp" gradientOpacity="opacity-10" />
-	<div class="right-group flex flex-[7] flex-col gap-7 items-start">
-		<h2 class="!font-semibold">Kenapa <span class="text-accent-lp !text-3xl !font-semibold">Kami?</span></h2>
+	<ImageGradient flexSize="flex-[5]" customTailwindCSS="max-h-[650px]" imgSrc="/img/landing-pages/lp/why-us-lp.jpg" gradientOverlay="bg-primary-lp" gradientOpacity="opacity-10" isHideOnMobile />
+	<div class="right-group flex flex-[7] flex-col gap-7 items-center lg:items-start">
+		<h2 class="!font-bold">Kenapa <span class="text-accent-lp !text-2xl lg:!text-3xl !font-bold">Kami?</span></h2>
 		<div class="points flex flex-col gap-5">
 			<TextIcon iconColor="text-green-500" textColor="text-secondary-lp-os-cp-cs" icon="fa-solid fa-circle-check" text="Pengalaman luas: Kami memiliki pengalaman bertahun-tahun dalam merancang dan membangun landing page yang sukses." />
 			<TextIcon iconColor="text-green-500" textColor="text-secondary-lp-os-cp-cs" icon="fa-solid fa-circle-check" text="Keahlian desain: Tim desain kami ahli dalam menciptakan desain yang menarik dan responsif." />
@@ -114,12 +117,12 @@
 
 <!-- pricelist -->
 <div id="pricelist" class="py-14 bg-gradient-lp flex flex-col items-center mb-20">
-	<div class="container">
+	<div class="container px-4 lg:px-0">
 		<div class="header-text flex flex-col items-center gap-5 mb-7 text-white">
 			<h2 class="underline">Pilih Paket</h2>
 			<p class="max-w-[800px] text-center">Kami menawarkan beberapa paket layanan<br>untuk memenuhi kebutuhan bisnis Anda</p>
 		</div>
-		<div class="prices flex justify-center gap-5 pt-20">
+		<div class="prices flex flex-col lg:flex-row items-center lg:justify-center gap-7 lg:gap-5 pt-2 lg:pt-20">
 			<PriceCard
 			name="Basic"
 			oldPrice={650000}
@@ -162,32 +165,32 @@
 </div>
 
 <!-- persuasion -->
-<div id="persuasion" class="container flex flex-col mx-auto mb-24 w-[75%]">
+<div id="persuasion" class="container flex flex-col mx-auto mb-32 lg:mb-24 lg:w-[75%] px-4 lg:px-0">
 	<span class="!text-2xl text-accent-lp !font-semibold text-center mb-5">Jangan Lewatkan Kesempatan Ini</span>
 	<span class="!text-lg text-secondary-lp-os-cp-cs text-center">Semakin cepat Anda menghubungi kami, semakin cepat kami dapat membantu bisnis Anda tumbuh. Jangan biarkan pesaing Anda mengambil keuntungan. Hubungi kami sekarang untuk konsultasi gratis</span>
 </div>
 
 <!-- consultation -->
-<div id="consultation" class="w-full h-[400px] flex justify-center mb-20">
-	<div class="container flex justify-between items-center">
-		<div class="left-group flex flex-1 flex-col">
+<div id="consultation" class="w-full h-[520px] lg:h-[400px] flex justify-center mb-20 lg:mt-0">
+	<div class="container flex flex-col-reverse lg:flex-row justify-between items-center">
+		<div class="left-group flex flex-1 flex-col items-center lg:items-start">
 			<h2 class="!font-semibold text-white underline mb-5">Konsultasi Gratis</h2>
-			<p class="text-white !text-lg mb-10">Hubungi kami untuk konsultasi gratis. Kami akan membantu Anda menentukan kebutuhan landing page bisnis Anda</p>
+			<p class="text-white text-center !text-lg mb-10">Hubungi kami untuk konsultasi gratis. Kami akan membantu Anda menentukan kebutuhan landing page bisnis Anda</p>
 			<Button text="HUBUNGI KAMI SEKARANG" size="lg" bgColor="bg-base-lp-os-cp-cs" textColor="text-primary-lp" on:click={() => { goToUrl(waUrl) }} />
 		</div>
-		<div class="right-group flex flex-1 justify-end items-center">
+		<div class="right-group flex flex-1 justify-end items-center w-[75%] lg:w-full -mt-20 lg:mt-0 mb-4 lg:mb-0">
 			<img src="/img/landing-pages/consultation-circle.png" alt="consultation-circle">
 		</div>
 	</div>	
 </div>
 
 <!-- faq -->
-<div id="faq" class="container mb-20 mx-auto">
+<div id="faq" class="container mb-20 mx-auto px-4 lg:px-0">
 	<div class="header-text flex flex-col items-center gap-5 mb-14">
-		<h2 class="!font-semibold"><span class="text-accent-lp !text-3xl !font-semibold">Pertanyaan</span>Yang Sering Diajukan</h2>
+		<h2 class="text-center !text-3xl !font-bold"><span class="text-accent-lp !text-3xl !font-bold">Pertanyaan</span>Yang Sering Diajukan</h2>
 		<p class="text-secondary-lp-os-cp-cs max-w-[650px] text-center">Berikut adalah beberapa pertanyaan yang sering diajukan tentang layanan Landing Page kami</p>
 	</div>
-	<div class="faq-items grid grid-cols-2 gap-10">
+	<div class="faq-items grid grid-cols-1 lg:grid-cols-2 gap-10">
 		<AccordionItem icon="fa-solid fa-info" iconBgColor="bg-primary-lp" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Apakah Anda menawarkan layanan SEO?" desc="Ya, kami menawarkan layanan SEO untuk meningkatkan visibilitas landing page Anda di mesin pencari." />
 		<AccordionItem icon="fa-solid fa-info" iconBgColor="bg-primary-lp" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Apakah Anda dapat bekerja dengan klien di luar kota?" desc="Ya, kami bekerja dengan klien dari seluruh Indonesia." />
 		<AccordionItem icon="fa-solid fa-info" iconBgColor="bg-primary-lp" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Berapa lama waktu pengerjaan?" desc="Waktu pengerjaan tergantung pada kompleksitas proyek, namun biasanya 2-4 hari." />

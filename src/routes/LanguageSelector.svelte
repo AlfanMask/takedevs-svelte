@@ -44,7 +44,9 @@
 			localStorage.setItem('selectedCountry', selectedId);
 		}
 		dispatch('countrySelected', { id: selectedId });
-		goto(`/${selectedId}`);
+		const url: string = window.location.href;
+		const openUrl: string = url.includes('id') ? url.replace('id', selectedId) : url.replace('en', selectedId); 
+		goto(openUrl);
 	};
 </script>
 

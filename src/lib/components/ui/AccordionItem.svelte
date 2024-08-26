@@ -9,7 +9,7 @@
 </script>
 
 <!-- HTML -->
-<div class="flex gap-5 items-start">
+<div class="container flex gap-5 items-start">
     <div class="icon-container w-16 h-16 rounded flex justify-center items-center {iconBgColor} flex-shrink-0">
         <i class="{icon} {iconColor} text-3xl"></i>
     </div>
@@ -18,3 +18,13 @@
         <span class="desc !text-lg {textColor}">{desc}</span>
     </div>  
 </div>
+
+<style lang="postcss">
+    .container {
+        transition: all 0.3s ease-in-out;
+    }
+    .container:hover {
+        transform: scale(1.05);
+        transition: all 0.3s ease-in-out;
+    }
+</style>

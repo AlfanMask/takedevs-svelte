@@ -18,10 +18,15 @@
 
 	// navbar
 	const navbarItems: Array<NavbarItem> = [
-		{ id: 'header', name: 'Beranda' },
-		{ id: 'services', name: 'Jasa' },
-		{ id: 'projects', name: 'Proyek' },
-		{ id: 'contact-us', name: 'Hubungi Kami' }
+		{ id: 'header', name: 'Beranda', isLink: false },
+		{ id: 'services', name: 'Jasa', isLink: false, children: [
+			{ id: 'landing-page', name: "Landing Page", isLink: false },
+			{ id: 'online-shop', name: "Online Shop", isLink: false },
+			{ id: 'company-profile', name: "Company Profile", isLink: false },
+			{ id: 'custom-software', name: "Custom Software", isLink: false },
+		] },
+		{ id: 'projects', name: 'Proyek', isLink: false },
+		{ id: 'contact-us', name: 'Hubungi Kami', isLink: false },
 	];
 
 	// side-by-side-gallery-datas

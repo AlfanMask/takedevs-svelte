@@ -18,10 +18,15 @@
 
 	// navbar
 	const navbarItems: Array<NavbarItem> = [
-		{ id: 'header', name: 'Home' },
-		{ id: 'services', name: 'Services' },
-		{ id: 'projects', name: 'Projects' },
-		{ id: 'contact-us', name: 'Contact Us' }
+		{ id: 'header', name: 'Home', isLink: false },
+		{ id: 'services', name: 'Services', isLink: false, children: [
+			{ id: 'landing-page', name: "Landing Page", isLink: false },
+			{ id: 'online-shop', name: "Online Shop", isLink: false },
+			{ id: 'company-profile', name: "Company Profile", isLink: false },
+			{ id: 'custom-software', name: "Custom Software", isLink: false },
+		] },
+		{ id: 'projects', name: 'Projects', isLink: false },
+		{ id: 'contact-us', name: 'Contact Us', isLink: false }
 	];
 
 	// side-by-side-gallery-datas
