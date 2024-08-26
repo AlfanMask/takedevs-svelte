@@ -13,7 +13,7 @@
     export let textColor: string = "text-white"; // tailwind: 'text-white'
 </script>
 
-<div class="flex gap-5 items-center {textColor}">
-    <i class="{icon} {iconColor}"></i>
+<div class="flex gap-5 items-start {textColor}">
+    <i class="{icon} {iconColor} pt-2"></i>
     <p>{text}</p>
 </div>

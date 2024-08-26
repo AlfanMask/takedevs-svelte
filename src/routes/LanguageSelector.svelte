@@ -30,7 +30,7 @@
 			showFlags.set(false);
 		}
 
-		const path = window.location.pathname.slice(1);
+		const path = window.location.pathname.slice(1,3);
 		if (path === 'id' || path === 'en') {
 			selectedCountry.set(path);
 		}

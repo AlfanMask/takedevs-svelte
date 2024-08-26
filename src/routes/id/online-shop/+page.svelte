@@ -13,7 +13,7 @@
 	import { goToUrl, scrollToSection } from '../../../helper/goto';
 
 	const navbarItems: Array<NavbarItem> = [
-		{ id: 'id', name: 'Beranda', isLink: true },
+		{ id: '', name: 'Beranda', isLink: true },
 		{ id: 'services', name: 'Jasa', isLink: false, children: [
 			{ id: 'landing-page', name: "Landing Page", isLink: false },
 			{ id: 'online-shop', name: "Online Shop", isLink: false },

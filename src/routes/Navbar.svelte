@@ -47,6 +47,12 @@
 		goto(newUrl);
 	}
 
+	let lang: string = '';
+	onMount(() => {
+		// set lang based on the active url
+		lang = window.location.pathname.slice(1, 3);
+	})
+
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -87,7 +93,7 @@
 				{#if (item.children)}
 					<select
 						placeholder={item.name}
-						class="{baseColor} text-secondary rounded sm:text-base md:text-base lg:text-base xl:text-base !max-w-[60px] m-0 p-0"
+						class="{baseColor} text-secondary rounded sm:text-base md:text-base lg:text-base xl:text-base {lang == 'id' ? '!max-w-[60px]' : '!max-w-[100px]'} m-0 p-0"
 						on:change={handleSubitemChange}
 					>
 						<!-- Placeholder -->
@@ -123,7 +129,7 @@
 		class="fixed py-6 hidden lg:flex {baseColor} w-full justify-center"
 	>
 		<div class="container hidden lg:flex flex-row justify-between items-center">
-			<a href={import.meta.env.VITE_HOST}>
+			<a href={`${import.meta.env.VITE_HOST}/${lang}/`}>
 				<Logo color={logoColor} width={96} />
 			</a>
 			<ul class="flex flex-row gap-10 items-center">
@@ -131,7 +137,7 @@
 					{#if (item.children)}
 						<select
 							placeholder={item.name}
-							class="{baseColor} text-secondary rounded p-2 sm:text-base md:text-base lg:text-base xl:text-base !max-w-[80px]"
+							class="{baseColor} text-secondary rounded p-2 sm:text-base md:text-base lg:text-base xl:text-base {lang == 'id' ? '!max-w-[75px]' : '!max-w-[100px]'}"
 							on:change={handleSubitemChange}
 						>
 							<!-- Placeholder -->

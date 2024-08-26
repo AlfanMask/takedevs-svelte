@@ -12,8 +12,12 @@
 		const pageData = get(page);
 		const { pathname } = pageData.url;
 
+		console.log(pageData)
+
 		if (pathname === '/') {
-			goto('/id');
+			// try to get lang data from localstorage
+			const lang = localStorage.getItem('selectedCountry');
+			lang ? goto(`/${lang}/`) : goto('/id/');
 		}
 	});
 </script>
