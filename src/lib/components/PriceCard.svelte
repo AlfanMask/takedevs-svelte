@@ -8,6 +8,7 @@
     export let description: string = "";
     export let isBestSeller: boolean = false;
     export let bestSellerBadgeColor: string = "bg-green-500"; // tailwind colors
+    export let shadow: string = ""; // tailwind shadow config colors
 
     let oldPriceRp: string;
     let newPriceRp: string;
@@ -21,7 +22,7 @@
 </script>
 
 <!-- HTML -->
-<div class="container w-full max-w-[400px] min-h-[650px] h-fit flex flex-col justify-between items-center px-8 py-10 rounded-lg bg-white relative {isBestSeller ? 'lg:-mt-14 shadow-lp' : ''}">
+<div class="container w-full max-w-[400px] min-h-[650px] h-fit flex flex-col justify-between items-center px-8 py-10 rounded-lg bg-white relative {isBestSeller ? `lg:-mt-14 ${shadow}`: ''}">
     {#if isBestSeller }
         <div class="badge-best-seller {bestSellerBadgeColor} px-3 py-1 rounded-md text-white absolute -top-4 text-lg font-semibold">
             PALING LARIS!

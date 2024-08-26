@@ -2,11 +2,9 @@
     export let imgSrc: string;
     export let gradientOverlayFrom: string;
     export let desc: string;
-    export let heightDesktop: number = 500;
-    export let heightMobile: number = 250;
 </script>
 
-<div class="container relative -rotate-[5deg] w-full h-[{heightMobile}px] lg:h-[{heightDesktop}px]">
+<div class="container relative -rotate-[5deg] w-full h-[250px] lg:h-[500px]">
     <div class="img w-full h-full">
         <img src={imgSrc} alt={imgSrc.toLowerCase().replaceAll(' ','-')} class="w-full max-w-[360px] h-full rounded-2xl object-cover">
         <!-- <div class="absolute inset-0 opacity-50 rounded-2xl right-0" style="background: {gradientOverlay};"/> -->

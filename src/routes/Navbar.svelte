@@ -40,7 +40,11 @@
 	const handleSubitemChange = (e: Event) => {
 		// open new page with url
 		const selectedId = (e.target as HTMLSelectElement).value;
-		goto(`${window.location.href}/${selectedId}`);
+
+		// if inside landing page -> change landing_page service page only
+		const url: string = window.location.href;
+		const newUrl: string = url.includes('landing-page') ? url.replace('landing-page', selectedId) : url.includes('online-shop') ?  url.replace('online-shop', selectedId) : url.includes('company-profile') ?  url.replace('company-profile', selectedId) : url.includes('custom-software') ?  url.replace('custom-software', selectedId) : `${url}/${selectedId}`;
+		goto(newUrl);
 	}
 
 </script>
@@ -127,7 +131,7 @@
 					{#if (item.children)}
 						<select
 							placeholder={item.name}
-							class="{baseColor} text-secondary rounded p-2 sm:text-base md:text-base lg:text-base xl:text-base !max-w-[100px]"
+							class="{baseColor} text-secondary rounded p-2 sm:text-base md:text-base lg:text-base xl:text-base !max-w-[80px]"
 							on:change={handleSubitemChange}
 						>
 							<!-- Placeholder -->

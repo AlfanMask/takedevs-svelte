@@ -10,6 +10,6 @@ VITE_HOST
 3. dropdown of services to select service landing page (DONE)
 4. fix navbar menu item cannot be clicked on landing page (DONE)
 5. mobile responsiveness (DONE)
-6. make LP for other services: Online Shop, Company Profile, Custom Software
+6. make LP for other services: Online Shop, Company Profile, Custom Software (DONE)
 7. make LP for en language
 8. error: type link manually (eg: http://localhost:5173/id/landing-page?referral=123) is 500 internal error (DONE)

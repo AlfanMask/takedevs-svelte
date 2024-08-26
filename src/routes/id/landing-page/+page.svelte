@@ -35,13 +35,13 @@
 
 	$: {
 		// put waURL with admin wa number when get referral code
-		waUrl = `https://wa.me/${import.meta.env.VITE_ADMIN_WA_NUMBER}?text=${import.meta.env.VITE_WA_CTA_HELLO_MSG} Landing Page, ${referralCode ? 'referral: ' + referralCode : ''}`
+		waUrl = `https://wa.me/${import.meta.env.VITE_ADMIN_WA_NUMBER}?text=${import.meta.env.VITE_WA_CTA_HELLO_MSG} Landing Page${referralCode ? ', referral: ' + referralCode : ''}`
 	}
 </script>
 
 
 <!-- HTML -->
-<div class="bg-base-lp-os-cp-cs h-full px-5 lg:p-0">
+<div class="bg-base-lp-os-cp-cs h-full lg:p-0">
 
 <!-- #navbar -->
 <Navbar items={navbarItems} baseColor="bg-base-lp-os-cp-cs" logoColor="#E4720B" textColor="text-secondary" />
@@ -64,7 +64,7 @@
 </div>
 
 <!-- importance of -->
-<div id="importance-of" class="flex flex-col items-center mb-28">
+<div id="importance-of" class="flex flex-col items-center mb-28 px-5">
 	<div class="header-text flex flex-col items-center gap-5 mb-14">
 		<h2 class="text-center">Kenapa Landing Page <span class="text-accent-lp !text-2xl lg:!text-3xl !font-semibold">Penting</span></h2>
 		<p class="text-secondary-lp-os-cp-cs max-w-[800px] text-center">Landing Page akan membantu mengarahkan orang-orang ke tindakan tertentu, seperti mengisi formulir atau membeli produk Anda</p>
@@ -77,10 +77,10 @@
 </div>
 
 <!-- past projects -->
-<div id="projects" class="py-14 bg-gradient-lp flex flex-col items-center mb-20">
+<div id="projects" class="py-14 bg-gradient-lp flex flex-col items-center mb-20 lg:px-5">
 	<div class="container px-4 lg:px-0">
 		<div class="header-text flex flex-col items-center gap-5 mb-14 text-white">
-			<h2 class="underline">Proyek Landing Page Kami</h2>
+			<h2 class="underline text-center">Proyek Landing Page Kami</h2>
 			<p class="max-w-[800px] text-center">Kami telah berhasil menciptakan landing page yang efektif untuk berbagai jenis bisnis. Berikut adalah beberapa contoh proyek kami</p>
 		</div>
 		<div class="project-galleries grid grid-cols-1 lg:grid-cols-3 gap-x-5 gap-y-7">
@@ -98,7 +98,7 @@
 </div>
 
 <!-- why-us -->
-<div id="why-us" class="container flex mx-auto items-center gap-5 mb-24">
+<div id="why-us" class="container flex mx-auto items-center gap-5 mb-24 px-5">
 	<ImageGradient flexSize="flex-[5]" customTailwindCSS="max-h-[650px]" imgSrc="/img/landing-pages/lp/why-us-lp.jpg" gradientOverlay="bg-primary-lp" gradientOpacity="opacity-10" isHideOnMobile />
 	<div class="right-group flex flex-[7] flex-col gap-7 items-center lg:items-start">
 		<h2 class="!font-bold">Kenapa <span class="text-accent-lp !text-2xl lg:!text-3xl !font-bold">Kami?</span></h2>
@@ -116,7 +116,7 @@
 </div>
 
 <!-- pricelist -->
-<div id="pricelist" class="py-14 bg-gradient-lp flex flex-col items-center mb-20">
+<div id="pricelist" class="py-14 bg-gradient-lp flex flex-col items-center mb-20 lg:px-5">
 	<div class="container px-4 lg:px-0">
 		<div class="header-text flex flex-col items-center gap-5 mb-7 text-white">
 			<h2 class="underline">Pilih Paket</h2>
@@ -134,6 +134,7 @@
 • Maksimal 1 kali revisi
 "
 			on:click={() => { goToUrl(`${waUrl}, paket: Basic`) }}
+			shadow="shadow-lp"
 		/>
 			<PriceCard
 				name="Premium"
@@ -149,6 +150,7 @@
 				isBestSeller={true}
 				bestSellerBadgeColor="bg-accent-lp"
 				on:click={() => { goToUrl(`${waUrl}, paket: Premium`) }}
+				shadow="shadow-lp"
 			/>
 			<PriceCard
 			name="Premium+"
@@ -159,23 +161,24 @@
 • + Toko online
 "
 			on:click={() => { goToUrl(`${waUrl}, paket: Premium+`) }}
+			shadow="shadow-lp"
 		/>
 		</div>
 	</div>
 </div>
 
 <!-- persuasion -->
-<div id="persuasion" class="container flex flex-col mx-auto mb-32 lg:mb-24 lg:w-[75%] px-4 lg:px-0">
+<div id="persuasion" class="container flex flex-col mx-auto mb-32 lg:mb-24 lg:w-[75%] lg:px-0 px-5">
 	<span class="!text-2xl text-accent-lp !font-semibold text-center mb-5">Jangan Lewatkan Kesempatan Ini</span>
 	<span class="!text-lg text-secondary-lp-os-cp-cs text-center">Semakin cepat Anda menghubungi kami, semakin cepat kami dapat membantu bisnis Anda tumbuh. Jangan biarkan pesaing Anda mengambil keuntungan. Hubungi kami sekarang untuk konsultasi gratis</span>
 </div>
 
 <!-- consultation -->
-<div id="consultation" class="w-full h-[520px] lg:h-[400px] flex justify-center mb-20 lg:mt-0">
+<div id="consultation" class="w-full h-[520px] lg:h-[400px] flex justify-center mb-20 lg:mt-0 lg:px-5">
 	<div class="container flex flex-col-reverse lg:flex-row justify-between items-center">
 		<div class="left-group flex flex-1 flex-col items-center lg:items-start">
 			<h2 class="!font-semibold text-white underline mb-5">Konsultasi Gratis</h2>
-			<p class="text-white text-center !text-lg mb-10">Hubungi kami untuk konsultasi gratis. Kami akan membantu Anda menentukan kebutuhan landing page bisnis Anda</p>
+			<p class="text-white text-center lg:text-start !text-lg mb-10">Hubungi kami untuk konsultasi gratis. Kami akan membantu Anda menentukan kebutuhan landing page bisnis Anda</p>
 			<Button text="HUBUNGI KAMI SEKARANG" size="lg" bgColor="bg-base-lp-os-cp-cs" textColor="text-primary-lp" on:click={() => { goToUrl(waUrl) }} />
 		</div>
 		<div class="right-group flex flex-1 justify-end items-center w-[75%] lg:w-full -mt-20 lg:mt-0 mb-4 lg:mb-0">
@@ -185,22 +188,22 @@
 </div>
 
 <!-- faq -->
-<div id="faq" class="container mb-20 mx-auto px-4 lg:px-0">
+<div id="faq" class="container mb-20 mx-auto lg:px-0 px-5">
 	<div class="header-text flex flex-col items-center gap-5 mb-14">
 		<h2 class="text-center !text-3xl !font-bold"><span class="text-accent-lp !text-3xl !font-bold">Pertanyaan</span>Yang Sering Diajukan</h2>
 		<p class="text-secondary-lp-os-cp-cs max-w-[650px] text-center">Berikut adalah beberapa pertanyaan yang sering diajukan tentang layanan Landing Page kami</p>
 	</div>
 	<div class="faq-items grid grid-cols-1 lg:grid-cols-2 gap-10">
-		<AccordionItem icon="fa-solid fa-info" iconBgColor="bg-primary-lp" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Apakah Anda menawarkan layanan SEO?" desc="Ya, kami menawarkan layanan SEO untuk meningkatkan visibilitas landing page Anda di mesin pencari." />
-		<AccordionItem icon="fa-solid fa-info" iconBgColor="bg-primary-lp" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Apakah Anda dapat bekerja dengan klien di luar kota?" desc="Ya, kami bekerja dengan klien dari seluruh Indonesia." />
-		<AccordionItem icon="fa-solid fa-info" iconBgColor="bg-primary-lp" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Berapa lama waktu pengerjaan?" desc="Waktu pengerjaan tergantung pada kompleksitas proyek, namun biasanya 2-4 hari." />
-		<AccordionItem icon="fa-solid fa-info" iconBgColor="bg-primary-lp" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Apakah saya dapat melihat portofolio proyek-proyek sebelumnya?" desc="Ya, Anda dapat melihat portofolio proyek-proyek kami di section Proyek  Landing Page Kami di atas." />
-		<AccordionItem icon="fa-solid fa-info" iconBgColor="bg-primary-lp" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Apakah Anda menerima pembayaran dengan kartu kredit?" desc="Maaf, untuk saat ini hanya debit dan e-wallet." />
-		<AccordionItem icon="fa-solid fa-info" iconBgColor="bg-primary-lp" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Apakah Anda memberikan garansi kepuasan?" desc="Ya, kami memberikan garansi kepuasan." />
-		<AccordionItem icon="fa-solid fa-info" iconBgColor="bg-primary-lp" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Apakah desain landing page dapat disesuaikan?" desc="Ya, desain landing page dapat disesuaikan sesuai dengan kebutuhan dan preferensi Anda." />
-		<AccordionItem icon="fa-solid fa-info" iconBgColor="bg-primary-lp" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Apakah Anda menawarkan jasa konsultasi?" desc="Ya, kami menawarkan konsultasi gratis untuk membantu Anda menentukan kebutuhan landing page Anda." />
-		<AccordionItem icon="fa-solid fa-info" iconBgColor="bg-primary-lp" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Apakah Anda menawarkan layanan pemeliharaan?" desc="Ya, kami menawarkan layanan pemeliharaan untuk menjaga landing page Anda tetap up-to-date." />
-		<AccordionItem icon="fa-solid fa-info" iconBgColor="bg-primary-lp" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Apakah Anda menawarkan layanan revisi?" desc="Ya, kami menawarkan layanan revisi untuk memastikan Anda puas dengan hasil akhir." />
+		<AccordionItem isHideOnMobile icon="fa-solid fa-info" iconBgColor="bg-primary-lp" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Apakah Anda menawarkan layanan SEO?" desc="Ya, kami menawarkan layanan SEO untuk meningkatkan visibilitas landing page Anda di mesin pencari." />
+		<AccordionItem isHideOnMobile icon="fa-solid fa-info" iconBgColor="bg-primary-lp" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Apakah Anda dapat bekerja dengan klien di luar kota?" desc="Ya, kami bekerja dengan klien dari seluruh Indonesia." />
+		<AccordionItem isHideOnMobile icon="fa-solid fa-info" iconBgColor="bg-primary-lp" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Berapa lama waktu pengerjaan?" desc="Waktu pengerjaan tergantung pada kompleksitas proyek, namun biasanya 2-4 hari." />
+		<AccordionItem isHideOnMobile icon="fa-solid fa-info" iconBgColor="bg-primary-lp" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Apakah saya dapat melihat portofolio proyek-proyek sebelumnya?" desc="Ya, Anda dapat melihat portofolio proyek-proyek kami di section Proyek  Landing Page Kami di atas." />
+		<AccordionItem isHideOnMobile icon="fa-solid fa-info" iconBgColor="bg-primary-lp" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Apakah Anda menerima pembayaran dengan kartu kredit?" desc="Maaf, untuk saat ini hanya debit dan e-wallet." />
+		<AccordionItem isHideOnMobile icon="fa-solid fa-info" iconBgColor="bg-primary-lp" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Apakah Anda memberikan garansi kepuasan?" desc="Ya, kami memberikan garansi kepuasan." />
+		<AccordionItem isHideOnMobile icon="fa-solid fa-info" iconBgColor="bg-primary-lp" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Apakah desain landing page dapat disesuaikan?" desc="Ya, desain landing page dapat disesuaikan sesuai dengan kebutuhan dan preferensi Anda." />
+		<AccordionItem isHideOnMobile icon="fa-solid fa-info" iconBgColor="bg-primary-lp" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Apakah Anda menawarkan jasa konsultasi?" desc="Ya, kami menawarkan konsultasi gratis untuk membantu Anda menentukan kebutuhan landing page Anda." />
+		<AccordionItem isHideOnMobile icon="fa-solid fa-info" iconBgColor="bg-primary-lp" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Apakah Anda menawarkan layanan pemeliharaan?" desc="Ya, kami menawarkan layanan pemeliharaan untuk menjaga landing page Anda tetap up-to-date." />
+		<AccordionItem isHideOnMobile icon="fa-solid fa-info" iconBgColor="bg-primary-lp" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Apakah Anda menawarkan layanan revisi?" desc="Ya, kami menawarkan layanan revisi untuk memastikan Anda puas dengan hasil akhir." />
 	</div>
 </div>
 

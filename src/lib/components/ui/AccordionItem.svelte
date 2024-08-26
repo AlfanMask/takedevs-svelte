@@ -5,12 +5,13 @@
     export let iconBgColor: string = "bg-gray-500"; // tailwind
     export let iconColor: string = "text-white"; // tailwind
     export let textColor: string = "text-gray-500"; // tailwind
+    export let isHideOnMobile: boolean = false;
 
 </script>
 
 <!-- HTML -->
 <div class="container flex gap-5 items-start">
-    <div class="icon-container w-16 h-16 rounded flex justify-center items-center {iconBgColor} flex-shrink-0">
+    <div class="icon-container w-16 h-16 rounded flex justify-center items-center {iconBgColor} flex-shrink-0 {isHideOnMobile ? 'hidden' : 'flex'} lg:flex">
         <i class="{icon} {iconColor} text-3xl"></i>
     </div>
     <div class="texts flex flex-col gap-2">

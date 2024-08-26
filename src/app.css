@@ -8,6 +8,9 @@
     --accent-gradient: linear-gradient(90deg, #5C75E5 0%, #2476F9 100%);
     --accent-footer-gradient: linear-gradient(180deg, #5C75E5 0%, #2476F9 100%);
     --lp-gradient: linear-gradient(225deg, #E98E3B 100%, #E4720B 100%);
+    --os-gradient: linear-gradient(225deg, #756AB6 100%, #8379BD 100%);
+    --cp-gradient: linear-gradient(225deg, #164863 100%, #2D5A72 100%);
+    --cs-gradient: linear-gradient(225deg, #0D7C66 100%, #258975 100%);
 
     body {
         font-family: 'Poppins', sans-serif;

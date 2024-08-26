@@ -5,11 +5,12 @@
     export let gradientOverlay: string = "bg-black"; // tailwind: 'bg-black'
     export let gradientOpacity: string = 'opacity-10'; // tailwind: 'opacity-10'
     export let isHideOnMobile: boolean = false;
+    export let height: string = 'h-[550px]'; // tailwind height
 </script>
 
 <!-- HTML -->
 <div class="img-gradient {flexSize} w-full lg:flex justify-end relative {customTailwindCSS} {isHideOnMobile ? 'hidden':''}">
-    <img src="{imgSrc}" alt="" class="rounded-2xl relative object-cover">
+    <img src="{imgSrc}" alt="" class="rounded-2xl relative object-cover w-full {height}">
     <div class="absolute inset-0 {gradientOverlay} {gradientOpacity} rounded-2xl right-0"></div>
 </div>
 
