@@ -8,8 +8,6 @@
 		const pageData = get(page);
 		const { pathname, search } = pageData.url;
 
-        console.log('pageData: ', pageData)
-
         // if user try to access service without lang, then force put the lang to them
         const lang = localStorage.getItem('selectedCountry') || 'id';
         if(pathname.includes('/landing-page')) {

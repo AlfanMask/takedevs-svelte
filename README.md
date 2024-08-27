@@ -13,5 +13,11 @@ VITE_HOST
 6. make LP for other services: Online Shop, Company Profile, Custom Software (DONE)
 7. make LP for en language (DONE)
 8. error: type link manually (eg: http://localhost:5173/id/landing-page?referral=123) is 500 internal error (DONE)
-9. fix error when type directly the url
-10. accept host/service-name -> redirect to Indonesian lang as default (host/id/service-name)
+9. fix error when type directly the url (DONE) -> for now, using searchParams will needed to put .html in the last paramId (eg: domain.com/landing-page?referral=123). already put .htaccess code to accept page without needing to put .html on the url
+```
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$      $1.html
+```
+10. accept host/service-name -> redirect to Indonesian lang as default (host/id/service-name) (DONE)
