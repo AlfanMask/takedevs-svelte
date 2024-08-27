@@ -44,7 +44,8 @@
 			localStorage.setItem('selectedCountry', selectedId);
 		}
 		dispatch('countrySelected', { id: selectedId });
-		const url: string = window.location.href.replace(import.meta.env.VITE_HOST, '');
+		let url: string = window.location.href;
+		url = url.replace(import.meta.env.VITE_HOST, '')
 		const openUrl: string = url.includes('id') ? url.replace('id', selectedId).replaceAll("//", "/") : url.replace('en', selectedId).replaceAll("//", "/");
 		goto(openUrl);
 	};
