@@ -19,7 +19,17 @@ const config = {
 			fallback: '',
 			precompress: false,
 			strict: true
-		})
+		}),
+		prerender: {
+			// use relative URLs similar to an anchor tag <a href="/test/1"></a>
+			// do not include group layout folders in the path such as /(group)/test/1
+			entries: [
+				'/', '/id', '/en',
+				'/landing-page', '/online-shop', '/company-profile', '/custom-software',
+				'/id/landing-page', '/id/online-shop', '/id/company-profile', '/id/custom-software',
+				'/en/landing-page', '/en/online-shop', '/en/company-profile', '/en/custom-software',
+			],
+		}
 	}
 };
 

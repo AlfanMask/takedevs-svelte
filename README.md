@@ -13,3 +13,5 @@ VITE_HOST
 6. make LP for other services: Online Shop, Company Profile, Custom Software (DONE)
 7. make LP for en language (DONE)
 8. error: type link manually (eg: http://localhost:5173/id/landing-page?referral=123) is 500 internal error (DONE)
+9. fix error when type directly the url
+10. accept host/service-name -> redirect to Indonesian lang as default (host/id/service-name)
