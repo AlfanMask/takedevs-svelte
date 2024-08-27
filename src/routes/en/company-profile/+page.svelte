@@ -87,7 +87,7 @@
 			<GalleryCard srcImg="/img/landing-pages/cp/project-1.png" />
 			<GalleryCard srcImg="/img/landing-pages/cp/project-2.png" />
 			<GalleryCard srcImg="/img/landing-pages/cp/project-3.png" />
-			<GalleryCard srcImg="/img/landing-pages/cp/project-4.png" />
+			<GalleryCard srcImg="/img/landing-pages/cp/project-4.webp" />
 			<GalleryCard srcImg="/img/landing-pages/cp/project-5.png" />
 			<GalleryCard srcImg="/img/landing-pages/cp/project-6.png" />
 		</div>

@@ -31,14 +31,14 @@
 
 	// side-by-side-gallery-datas
 	const leftImgs: Array<string> = [
-		'/img/side-by-side-gallery/sbsg-1.png',
-		'/img/side-by-side-gallery/sbsg-2.png',
-		'/img/side-by-side-gallery/sbsg-3.png'
+		'/img/side-by-side-gallery/sbsg-1.webp',
+		'/img/side-by-side-gallery/sbsg-2.webp',
+		'/img/side-by-side-gallery/sbsg-3.webp'
 	];
 	const rightImgs: Array<string> = [
-		'/img/side-by-side-gallery/sbsg-4.png',
-		'/img/side-by-side-gallery/sbsg-5.png',
-		'/img/side-by-side-gallery/sbsg-6.png'
+		'/img/side-by-side-gallery/sbsg-4.webp',
+		'/img/side-by-side-gallery/sbsg-5.webp',
+		'/img/side-by-side-gallery/sbsg-6.webp'
 	];
 
 	// scrolling-logos
@@ -61,27 +61,27 @@
 	// services-selector
 	const servicesDesc: Array<ServiceDesc> = [
 		{
-			imgUrl: '/img/services/service-uiux.png',
+			imgUrl: '/img/services/service-uiux.webp',
 			desc: 'Kami menciptakan pengalaman digital yang intuitif dan menarik secara visual yang menyenangkan pengguna. Fokus kami pada desain berpusat pada pengguna untuk memastikan kegunaan produk yang optimal.'
 		},
 		{
-			imgUrl: '/img/services/service-landing-page.png',
+			imgUrl: '/img/services/service-landing-page.webp',
 			desc: 'Kami mendesain landing page dengan konversi tinggi yang menarik perhatian dan mendorong konversi. Tujuan kami adalah menciptakan pengalaman online yang menarik yang memberikan hasil.'
 		},
 		{
-			imgUrl: '/img/services/service-online-shop.png',
+			imgUrl: '/img/services/service-online-shop.webp',
 			desc: 'Kami membangun platform e-commerce yang kuat sesuai dengan kebutuhan bisnis Anda. Solusi kami menawarkan pengalaman belanja yang mulus dan mendorong pertumbuhan penjualan.'
 		},
 		{
-			imgUrl: '/img/services/service-company-profile.png',
+			imgUrl: '/img/services/service-company-profile.webp',
 			desc: 'Kami menciptakan identitas merek yang menarik yang mencerminkan nilai-nilai perusahaan Anda. Desain kami menciptakan kehadiran visual yang kuat dan meninggalkan kesan yang tahan lama.'
 		},
 		{
-			imgUrl: '/img/services/service-website-desa.png',
+			imgUrl: '/img/services/service-website-desa.webp',
 			desc: 'Pusat digital satu atap untuk informasi desa. Akses berita, acara, layanan, dan pembaruan komunitas dengan mudah secara online.'
 		},
 		{
-			imgUrl: '/img/services/service-custom-software.png',
+			imgUrl: '/img/services/service-custom-software.webp',
 			desc: 'Kami mengembangkan solusi perangkat lunak khusus untuk mengatasi tantangan unik Anda. Tim kami memberikan aplikasi khusus yang meningkatkan operasi bisnis.'
 		}
 	];
@@ -111,169 +111,169 @@
 	// proejct-galleries
 	let projectGalleries: Array<Project> = [
 		{
-			imgUrl: '/img/projects/custom-software-kampusku.jpg',
+			imgUrl: '/img/projects/custom-software-kampusku.webp',
 			title: 'Kampusku Bot',
 			desc: ProjectTypeID['Custom Software'],
 			type: ProjectTypeID['Custom Software']
 		},
 		{
-			imgUrl: '/img/projects/custom-software-game-fighting.jpg',
+			imgUrl: '/img/projects/custom-software-game-fighting.webp',
 			title: 'Logan Paul Fighting Game',
 			desc: ProjectTypeID['Custom Software'],
 			type: ProjectTypeID['Custom Software']
 		},
 		{
-			imgUrl: '/img/projects/uiux-pamapersada-desktop.jpg',
+			imgUrl: '/img/projects/uiux-pamapersada-desktop.webp',
 			title: 'Warehouse PT. Pamapersada WebApp',
 			desc: ProjectTypeID['UI/UX Design'],
 			type: ProjectTypeID['UI/UX Design']
 		},
 		{
-			imgUrl: '/img/projects/uiux-pamapersada-mobile.png',
+			imgUrl: '/img/projects/uiux-pamapersada-mobile.webp',
 			title: 'Warehouse PT. Pamapersada Mobile App',
 			desc: ProjectTypeID['UI/UX Design'],
 			type: ProjectTypeID['UI/UX Design']
 		},
 		{
-			imgUrl: '/img/projects/uiux-refit.png',
+			imgUrl: '/img/projects/uiux-refit.webp',
 			title: 'Refit Store',
 			desc: ProjectTypeID['UI/UX Design'],
 			type: ProjectTypeID['UI/UX Design']
 		},
 		{
-			imgUrl: '/img/projects/uiux-logo-hakaplastik.png',
+			imgUrl: '/img/projects/uiux-logo-hakaplastik.webp',
 			title: 'Hakaplastik Logo',
 			desc: ProjectTypeID['UI/UX Design'],
 			type: ProjectTypeID['UI/UX Design']
 		},
 		{
-			imgUrl: '/img/projects/custom-software-airival-shuttle.png',
+			imgUrl: '/img/projects/custom-software-airival-shuttle.webp',
 			title: 'Airival Shuttle',
 			desc: ProjectTypeID['Custom Software'],
 			type: ProjectTypeID['Custom Software']
 		},
 		{
-			imgUrl: '/img/projects/custom-software-socioinvest.png',
+			imgUrl: '/img/projects/custom-software-socioinvest.webp',
 			title: 'Socioinvest',
 			desc: ProjectTypeID['Custom Software'],
 			type: ProjectTypeID['Custom Software']
 		},
 		{
-			imgUrl: '/img/projects/custom-software-vizir-marketplace.png',
+			imgUrl: '/img/projects/custom-software-vizir-marketplace.webp',
 			title: 'Vizir Marketplace',
 			desc: ProjectTypeID['Custom Software'],
 			type: ProjectTypeID['Custom Software']
 		},
 		{
-			imgUrl: '/img/projects/custom-software-undangan-ibnuabbas.png',
+			imgUrl: '/img/projects/custom-software-undangan-ibnuabbas.webp',
 			title: 'Undangan Digital Ponpes Ibnu Abbas',
 			desc: ProjectTypeID['Custom Software'],
 			type: ProjectTypeID['Custom Software']
 		},
 		{
-			imgUrl: '/img/projects/custom-software-vizir-notes.png',
+			imgUrl: '/img/projects/custom-software-vizir-notes.webp',
 			title: 'Vizir Notes Taking',
 			desc: ProjectTypeID['Custom Software'],
 			type: ProjectTypeID['Custom Software']
 		},
 		{
-			imgUrl: '/img/projects/custom-software-vizir-product-manager.png',
+			imgUrl: '/img/projects/custom-software-vizir-product-manager.webp',
 			title: 'Vizir Product Manager',
 			desc: ProjectTypeID['Custom Software'],
 			type: ProjectTypeID['Custom Software']
 		},
 		{
-			imgUrl: '/img/projects/custom-software-vizir-project-management.png',
+			imgUrl: '/img/projects/custom-software-vizir-project-management.webp',
 			title: 'Vizir Project Management',
 			desc: ProjectTypeID['Custom Software'],
 			type: ProjectTypeID['Custom Software']
 		},
 		{
-			imgUrl: '/img/projects/custom-software-vizir-ticketing.png',
+			imgUrl: '/img/projects/custom-software-vizir-ticketing.webp',
 			title: 'Vizir Ticketing',
 			desc: ProjectTypeID['Custom Software'],
 			type: ProjectTypeID['Custom Software']
 		},
 		{
-			imgUrl: '/img/projects/custom-software-vizir-ticket-manager.png',
+			imgUrl: '/img/projects/custom-software-vizir-ticket-manager.webp',
 			title: 'Vizir Ticket Manager',
 			desc: ProjectTypeID['Custom Software'],
 			type: ProjectTypeID['Custom Software']
 		},
 		{
-			imgUrl: '/img/projects/company-profile-augmented-solution.png',
+			imgUrl: '/img/projects/company-profile-augmented-solution.webp',
 			title: 'Augmented Solution',
 			desc: ProjectTypeID['Company Profile'],
 			type: ProjectTypeID['Company Profile']
 		},
 		{
-			imgUrl: '/img/projects/company-profile-bt-rorsystem.png',
+			imgUrl: '/img/projects/company-profile-bt-rorsystem.webp',
 			title: 'BT Rorsystem',
 			desc: ProjectTypeID['Company Profile'],
 			type: ProjectTypeID['Company Profile']
 		},
 		{
-			imgUrl: '/img/projects/online-shop-cimport.png',
+			imgUrl: '/img/projects/online-shop-cimport.webp',
 			title: 'C-Import',
 			desc: ProjectTypeID['Online Shop'],
 			type: ProjectTypeID['Online Shop']
 		},
 		{
-			imgUrl: '/img/projects/company-profile-hakaplastik.png',
+			imgUrl: '/img/projects/company-profile-hakaplastik.webp',
 			title: 'PT. Haka Sentral Plastik Indonesia',
 			desc: ProjectTypeID['Company Profile'],
 			type: ProjectTypeID['Company Profile']
 		},
 		{
-			imgUrl: '/img/projects/company-profile-holh.png',
+			imgUrl: '/img/projects/company-profile-holh.webp',
 			title: 'Heroes of Last Haven',
 			desc: ProjectTypeID['Company Profile'],
 			type: ProjectTypeID['Company Profile']
 		},
 		{
-			imgUrl: '/img/projects/custom-software-littlenewsears.png',
+			imgUrl: '/img/projects/custom-software-littlenewsears.webp',
 			title: 'Littlenewsears',
 			desc: ProjectTypeID['Custom Software'],
 			type: ProjectTypeID['Custom Software']
 		},
 		{
-			imgUrl: '/img/projects/online-shop-umkmpajang.png',
+			imgUrl: '/img/projects/online-shop-umkmpajang.webp',
 			title: 'UMKM Pajang',
 			desc: ProjectTypeID['Online Shop'],
 			type: ProjectTypeID['Online Shop']
 		},
 		{
-			imgUrl: '/img/projects/company-profile-yesagroworld.png',
+			imgUrl: '/img/projects/company-profile-yesagroworld.webp',
 			title: 'Yesagroworld',
 			desc: ProjectTypeID['Company Profile'],
 			type: ProjectTypeID['Company Profile']
 		},
 		{
-			imgUrl: '/img/projects/online-shop-sumberrejeki-basreng.png',
+			imgUrl: '/img/projects/online-shop-sumberrejeki-basreng.webp',
 			title: 'Bakso Goreng Sumber Rejeki',
 			desc: ProjectTypeID['Online Shop'],
 			type: ProjectTypeID['Online Shop']
 		},
 		{
-			imgUrl: '/img/projects/online-shop-alana-store.png',
+			imgUrl: '/img/projects/online-shop-alana-store.webp',
 			title: 'Alana Store',
 			desc: ProjectTypeID['Online Shop'],
 			type: ProjectTypeID['Online Shop']
 		},
 		{
-			imgUrl: '/img/projects/website-desa-giriroto.png',
+			imgUrl: '/img/projects/website-desa-giriroto.webp',
 			title: 'Desa Giriroto',
 			desc: ProjectTypeID['Website Desa'],
 			type: ProjectTypeID['Website Desa']
 		},
 		{
-			imgUrl: '/img/projects/website-desa-joho.png',
+			imgUrl: '/img/projects/website-desa-joho.webp',
 			title: 'Desa Joho',
 			desc: ProjectTypeID['Website Desa'],
 			type: ProjectTypeID['Website Desa']
 		},
 		{
-			imgUrl: '/img/projects/website-desa-sengging.png',
+			imgUrl: '/img/projects/website-desa-sengging.webp',
 			title: 'Desa Sengging',
 			desc: ProjectTypeID['Website Desa'],
 			type: ProjectTypeID['Website Desa']
