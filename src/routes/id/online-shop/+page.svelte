@@ -55,7 +55,7 @@
 				<span class="text-accent-os !text-4xl lg:!text-5xl !font-bold">Online Shop</span>
 			</h1>
 			<p class="text-center lg:text-start text-secondary mb-10">
-				Butuh bantuan untuk meningkatkan penjualan online Anda? Kami adalah tim ahli yang siap membantu bisnis Anda tumbuh.
+				Butuh bantuan untuk meningkatkan penjualan online Anda? Jangan risau, kami siap membantu bisnis Anda tumbuh.
 			</p>
             <Button text="PELAJARI LEBIH LANJUT" bgColor="bg-primary-os" textColor="text-white" size="lg" on:click={() => { scrollToSection('pricelist') }}/>
         </div>
@@ -174,7 +174,7 @@
 <!-- persuasion -->
 <div id="persuasion" class="container flex flex-col mx-auto mb-32 lg:mb-24 lg:w-[75%] lg:px-0 px-5">
 	<span class="!text-2xl text-accent-os !font-semibold text-center mb-5">Jangan Lewatkan Kesempatan Ini</span>
-	<span class="!text-lg text-secondary-lp-os-cp-cs text-center">Jangan lewatkan kesempatan untuk meningkatkan penjualan online Anda. Semakin cepat Anda menghubungi kami, semakin cepat kami dapat membantu bisnis Anda tumbuh</span>
+	<span class="!text-lg text-secondary-lp-os-cp-cs text-center">Segera ambil langkah untuk tingkatkan penjualan online Anda. Semakin cepat Anda menghubungi kami, semakin cepat kami dapat membantu bisnis Anda tumbuh</span>
 </div>
 
 <!-- consultation -->
@@ -182,7 +182,7 @@
 	<div class="container flex flex-col-reverse lg:flex-row justify-between items-center">
 		<div class="left-group flex flex-1 flex-col items-center lg:items-start">
 			<h2 class="!font-semibold text-white underline mb-5">Konsultasi Gratis</h2>
-			<p class="text-white text-center lg:text-start !text-lg mb-10">Hubungi kami untuk konsultasi gratis. Kami akan membantu Anda menentukan kebutuhan online shop bisnis Anda.</p>
+			<p class="text-white text-center lg:text-start !text-lg mb-10">Hubungi kami untuk konsultasi gratis. Kami akan membantu Anda menentukan kebutuhan online shop yang sesuai untuk bisnis Anda.</p>
 			<Button text="HUBUNGI KAMI SEKARANG" size="lg" bgColor="bg-base-lp-os-cp-cs" textColor="text-primary-os" on:click={() => { goToUrl(waUrl) }} />
 		</div>
 		<div class="right-group flex flex-1 justify-end items-center w-[75%] lg:w-full -mt-20 lg:mt-0 mb-4 lg:mb-0">
@@ -200,14 +200,14 @@
 	<div class="faq-items grid grid-cols-1 lg:grid-cols-2 gap-10">
 		<AccordionItem isHideOnMobile icon="fa-solid fa-info" iconBgColor="bg-primary-os" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Apa saja layanan yang Anda tawarkan?" desc="Kami menawarkan desain dan pengembangan web online shop, SEO, hingga Landing Page." />
 		<AccordionItem isHideOnMobile icon="fa-solid fa-info" iconBgColor="bg-primary-os" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Apakah Anda melayani seluruh Indonesia?" desc="Ya, kami melayani berbagai klien dari seluruh Indonesia." />
-		<AccordionItem isHideOnMobile icon="fa-solid fa-info" iconBgColor="bg-primary-os" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Bagaimana cara kerja layanan Anda?" desc="Setelah Anda menghubungi kami, kami akan melakukan konsultasi untuk memahami kebutuhan bisnis Anda. Kemudian, kami akan menyusun strategi yang tepat dan mulai mengerjakan proyek. Kami akan selalu berkomunikasi dengan Anda selama proses pengerjaan." />
+		<AccordionItem isHideOnMobile icon="fa-solid fa-info" iconBgColor="bg-primary-os" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Bagaimana cara kerja layanan Anda?" desc="Setelah Anda menghubungi kami, kami akan membuka sesi konsultasi untuk memahami kebutuhan bisnis Anda. Kemudian, kami akan menyusun strategi yang tepat dan mulai mengerjakan proyek. Kami akan selalu berkomunikasi dengan Anda selama proses pengerjaan." />
 		<AccordionItem isHideOnMobile icon="fa-solid fa-info" iconBgColor="bg-primary-os" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Apakah saya perlu memiliki pengetahuan teknis tentang e-commerce?" desc="Tidak, Anda tidak perlu memiliki pengetahuan teknis. Tim kami akan menangani semua aspek teknis." />
-		<AccordionItem isHideOnMobile icon="fa-solid fa-info" iconBgColor="bg-primary-os" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Apakah Anda menawarkan dukungan setelah proyek selesai?" desc="Lama waktu pengerjaan proyek tergantung pada kompleksitas dan skala proyek. Namun, kami akan memberikan estimasi waktu yang jelas sebelum memulai proyek." />
-		<AccordionItem isHideOnMobile icon="fa-solid fa-info" iconBgColor="bg-primary-os" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Berapa lama waktu yang dibutuhkan untuk menyelesaikan proyek?" desc="Ya, kami menawarkan dukungan setelah proyek selesai. Jika Anda memiliki pertanyaan atau masalah, kami siap membantu." />
-		<AccordionItem isHideOnMobile icon="fa-solid fa-info" iconBgColor="bg-primary-os" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Berapa biaya untuk layanan konsultasi?" desc="Ya, kami menawarkan garansi kepuasan. Jika Anda tidak puas dengan hasil kerja kami, kami dapat melakukan revisi agar Anda puas." />
-		<AccordionItem isHideOnMobile icon="fa-solid fa-info" iconBgColor="bg-primary-os" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Apakah Anda menawarkan garansi kepuasan?" desc="Layanan konsultasi gratis tidak dikenakan biaya." />
-		<AccordionItem isHideOnMobile icon="fa-solid fa-info" iconBgColor="bg-primary-os" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Apakah ada biaya tambahan yang harus saya bayar?" desc="Kami menerima pembayaran melalui transfer dan e-wallet." />
-		<AccordionItem isHideOnMobile icon="fa-solid fa-info" iconBgColor="bg-primary-os" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Bagaimana cara pembayaran?" desc="Biaya tambahan mungkin dikenakan untuk layanan tambahan atau permintaan khusus. Namun, kami akan memberikan informasi yang jelas tentang biaya tambahan sebelum memulai proyek." />
+		<AccordionItem isHideOnMobile icon="fa-solid fa-info" iconBgColor="bg-primary-os" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Apakah Anda menawarkan dukungan setelah proyek selesai?" desc="Ya, kami menawarkan dukungan setelah proyek selesai. Jika Anda memiliki pertanyaan atau masalah, kami siap membantu." />
+		<AccordionItem isHideOnMobile icon="fa-solid fa-info" iconBgColor="bg-primary-os" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Berapa lama waktu yang dibutuhkan untuk menyelesaikan proyek?" desc="Lama waktu pengerjaan proyek tergantung pada kompleksitas dan skala proyek. Namun, biasanya hanya 1 - 2 minggu." />
+		<AccordionItem isHideOnMobile icon="fa-solid fa-info" iconBgColor="bg-primary-os" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Berapa biaya untuk layanan konsultasi?" desc="Layanan konsultasi gratis tidak dikenakan biaya." />
+		<AccordionItem isHideOnMobile icon="fa-solid fa-info" iconBgColor="bg-primary-os" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Apakah Anda menawarkan garansi kepuasan?" desc="Ya, kami menawarkan garansi kepuasan. Jika Anda tidak puas dengan hasil kerja kami, kami dapat melakukan revisi agar Anda puas." />
+		<AccordionItem isHideOnMobile icon="fa-solid fa-info" iconBgColor="bg-primary-os" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Apakah ada biaya tambahan yang harus saya bayar?" desc="Biaya tambahan mungkin dikenakan untuk layanan tambahan atau permintaan khusus. Namun, kami akan memberikan informasi yang jelas tentang biaya tambahan sebelum memulai proyek." />
+		<AccordionItem isHideOnMobile icon="fa-solid fa-info" iconBgColor="bg-primary-os" iconColor="text-white" textColor="text-secondary-lp-os-cp-cs" title="Bagaimana cara pembayaran?" desc="Kami menerima pembayaran melalui transfer dan e-wallet." />
 	</div>
 </div>
 

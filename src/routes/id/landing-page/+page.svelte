@@ -55,7 +55,7 @@
 				<span class="text-accent-lp !text-4xl lg:!text-5xl !font-bold">Landing Page</span>
 			</h1>
 			<p class="text-center lg:text-start text-secondary mb-10">
-				Bingung cara ningkatin pelanggan? Landing Page solusinya. Kami menyediakan jasa Landing Page professional yang cock untuk bisnis Anda.
+				Bingung cara ningkatin pelanggan? Landing Page solusinya. Kami menyediakan jasa Landing Page professional yang cocok untuk bisnis Anda.
 			</p>
             <Button text="PELAJARI LEBIH LANJUT" bgColor="bg-primary-lp" textColor="text-white" size="lg" on:click={() => { scrollToSection('pricelist') }}/>
         </div>
@@ -67,7 +67,7 @@
 <div id="importance-of" class="flex flex-col items-center mb-28 px-5">
 	<div class="header-text flex flex-col items-center gap-5 mb-14">
 		<h2 class="text-center">Kenapa Landing Page <span class="text-accent-lp !text-2xl lg:!text-3xl !font-semibold">Penting</span></h2>
-		<p class="text-secondary-lp-os-cp-cs max-w-[800px] text-center">Landing Page akan membantu mengarahkan orang-orang ke tindakan tertentu, seperti mengisi formulir atau membeli produk Anda</p>
+		<p class="text-secondary-lp-os-cp-cs max-w-[800px] text-center">Landing Page akan membantu mengarahkan orang-orang untuk checkout produk Anda, selain itu karena bisa:</p>
 	</div>
 	<div class="items flex flex-col lg:flex-row gap-10">
 		<RotatedImgDesc desc="Tingkatkan Konversi" imgSrc="/img/landing-pages/lp/importance-lp-1.jpg" gradientOverlayFrom="from-primary-lp" />
