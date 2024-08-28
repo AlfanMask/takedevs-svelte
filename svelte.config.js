@@ -25,6 +25,7 @@ const config = {
 			// do not include group layout folders in the path such as /(group)/test/1
 			entries: [
 				'/', '/id', '/en',
+				'/regis-affiliate',
 				'/landing-page', '/online-shop', '/company-profile', '/custom-software',
 				'/id/landing-page', '/id/online-shop', '/id/company-profile', '/id/custom-software',
 				'/en/landing-page', '/en/online-shop', '/en/company-profile', '/en/custom-software',
