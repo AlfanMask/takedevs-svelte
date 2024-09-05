@@ -55,7 +55,9 @@
 		'/img/clients/logo-client-10.png',
 		'/img/clients/logo-client-11.png',
 		'/img/clients/logo-client-12.png',
-		'/img/clients/logo-client-13.png'
+		'/img/clients/logo-client-13.png',
+		'/img/clients/logo-client-14.png',
+		'/img/clients/logo-client-15.png',
 	];
 
 	// services-selector
@@ -307,7 +309,13 @@
 			title: 'Monitor App',
 			desc: ProjectTypeEN['Landing Page'],
 			type: ProjectTypeEN['Landing Page']
-		}
+		},
+		{
+			imgUrl: '/img/projects/website-desa-poktanmakmur1wonosari.webp',
+			title: 'Poktan Makmur 1 Wonosari',
+			desc: ProjectTypeEN['Website Desa'],
+			type: ProjectTypeEN['Website Desa']
+		},
 	];
 	let shownProjectGalleries: Array<Project> = [
 		...projectGalleries.sort((a, b) =>
