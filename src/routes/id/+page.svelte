@@ -58,6 +58,7 @@
 		'/img/clients/logo-client-13.png',
 		'/img/clients/logo-client-14.png',
 		'/img/clients/logo-client-15.png',
+		'/img/clients/logo-client-16.png',
 	];
 
 	// services-selector
@@ -247,6 +248,12 @@
 		{
 			imgUrl: '/img/projects/company-profile-yesagroworld.webp',
 			title: 'Yesagroworld',
+			desc: ProjectTypeID['Company Profile'],
+			type: ProjectTypeID['Company Profile']
+		},
+		{
+			imgUrl: '/img/projects/company-profile-org-jnukmi.webp',
+			title: 'JNUKMI UNS',
 			desc: ProjectTypeID['Company Profile'],
 			type: ProjectTypeID['Company Profile']
 		},
